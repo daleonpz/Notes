@@ -308,4 +308,170 @@ int *raisin;
 
 
 # Ch5
+Compilation workflow:
+1. Preprocessor: cpp, generate `*.i` text file. `gcc -E file.c -o file.i`
+2. Compiler: ccl, generate `*.s` text file (Syntax, semantic analysis and code generation). `gcc -S file.c`
+3. Assembler: as, generate `*.o` binary file a.k.a. relocatable object program. `gcc -O file.c -o file.o`
+4. Link-loader: ld, generate an executable (binary).
 
+Generate linker map: `gcc -Xlinker -Map=output.map file.c`
+
+
+The object file `*.o` **is not ** an executable, the linker identifies the main routine and binds symbolic references to memory address. In the following example it is clear the job of linker.
+
+```c
+/* Original code */
+#include <stdio.h>
+
+#define MAX 50
+#define max(x,y) x>=y?x:y
+
+int main (){
+
+    int x = MAX;
+    int y = 5;
+
+    int m =  max(x,y);
+
+    printf("%d\n", m);
+    
+    return 0;
+}
+
+
+/* Preprocessor example */
+// it is a part of linker.i
+// # 6 "linker.c"
+int main (){
+
+    int x = 50;
+    int y = 5;
+
+    int m = x>=y?x:y;
+
+    printf("%d\n", m);
+
+    return 0;
+}
+
+
+/* After Compiler example*/
+main:
+.LFB0:
+	.cfi_startproc
+	pushq	%rbp
+	.cfi_def_cfa_offset 16
+	.cfi_offset 6, -16
+	movq	%rsp, %rbp
+	.cfi_def_cfa_register 6
+	subq	$16, %rsp
+	movl	$50, -4(%rbp)
+	movl	$5, -8(%rbp)
+	movl	-8(%rbp), %eax
+	cmpl	%eax, -4(%rbp)
+	cmovge	-4(%rbp), %eax
+	movl	%eax, -12(%rbp)
+	movl	-12(%rbp), %eax
+	movl	%eax, %esi
+	movl	$.LC0, %edi
+	movl	$0, %eax
+	call	printf
+	movl	$0, %eax
+	leave
+	.cfi_def_cfa 7, 8
+	ret
+	.cfi_endproc
+
+/* *.o and the executable are binaries
+but we can use objdump
+*/
+
+/* Object file *.o */
+
+Disassembly of section .text:
+
+0000000000000000 <main>:
+   0:	48 83 ec 08          	sub    $0x8,%rsp
+   4:	be 32 00 00 00       	mov    $0x32,%esi
+   9:	bf 00 00 00 00       	mov    $0x0,%edi
+   e:	b8 00 00 00 00       	mov    $0x0,%eax
+  13:	e8 00 00 00 00       	callq  18 <main+0x18>
+  18:	b8 00 00 00 00       	mov    $0x0,%eax
+  1d:	48 83 c4 08          	add    $0x8,%rsp
+  21:	c3                   	retq  
+
+
+/* Executable */
+00000000004004f6 <main>:
+  4004f6:	55                   	push   %rbp
+  4004f7:	48 89 e5             	mov    %rsp,%rbp
+  4004fa:	48 83 ec 10          	sub    $0x10,%rsp
+  4004fe:	c7 45 fc 32 00 00 00 	movl   $0x32,-0x4(%rbp)
+  400505:	c7 45 f8 05 00 00 00 	movl   $0x5,-0x8(%rbp)
+  40050c:	8b 45 f8             	mov    -0x8(%rbp),%eax
+  40050f:	39 45 fc             	cmp    %eax,-0x4(%rbp)
+  400512:	0f 4d 45 fc          	cmovge -0x4(%rbp),%eax
+  400516:	89 45 f4             	mov    %eax,-0xc(%rbp)
+  400519:	8b 45 f4             	mov    -0xc(%rbp),%eax
+  40051c:	89 c6                	mov    %eax,%esi
+  40051e:	bf c4 05 40 00       	mov    $0x4005c4,%edi
+  400523:	b8 00 00 00 00       	mov    $0x0,%eax
+  400528:	e8 c3 fe ff ff       	callq  4003f0 <printf@plt>
+  40052d:	b8 00 00 00 00       	mov    $0x0,%eax
+  400532:	c9                   	leaveq 
+  400533:	c3                   	retq   
+  400534:	66 2e 0f 1f 84 00 00 	nopw   %cs:0x0(%rax,%rax,1)
+  40053b:	00 00 00 
+  40053e:	66 90                	xchg   %ax,%ax
+
+```
+
+
+## Dynamic vs static linking
+- dynamic doesn't load all the functions of a library, only the ones that have references in the c file.
+- A dynamically linked executable is smaller than its statically linked counterpart.
+- All executables dynamically linked to a particular library share a single copy of the library at
+runtime.
+- Dynamic linking permits easy versioning of libraries. The user will have access to the inferface, `*.h` in most cases, but the code itself `*.c` will be a black box and it can be updated without needing to be relinked.
+- It's possibly to link againts custom libraries, tuned for speed or memory management for example.
+
+```c
+/* dynamic linking example using printf*/
+  40051e:	bf c4 05 40 00       	mov    $0x4005c4,%edi
+  400523:	b8 00 00 00 00       	mov    $0x0,%eax
+  400528:	e8 c3 fe ff ff       	callq  4003f0 <printf@plt>
+  40052d:	b8 00 00 00 00       	mov    $0x0,%eax
+
+/* reference to printf at address 0x400528 */
+```
+
+## Some issues may be:
+- if you compile a program against library `/usr/bin/stdio.h` but in other computer `stdio.h` is in `/usr/local/bin/stdio.h` it won't run unless it will recompiled or by using a symbolic link to the compiled folder (`/usr/bin/stdio.h`)
+
+
+## How to compile
+
+```sh
+% cat tomato.c
+    #include <stdio.h>
+    void my_lib_function() {printf("library routine called\n"); }
+% gcc -c -Wall -Werror -fPIC tomato.c
+% gcc -shared -fPIC -o libfruit.so tomato.c
+
+% cat test.c
+    main() { my_lib_function(); }
+% cc test.c -L/home/linden -R/home/linden -lfruit
+```
+
+The `-L/home/linden` `-R/home/linden` options tell the linker in which directories to look
+for libraries at linktime and at runtime, respectively. You will probably also want to use the `-fPIC` compiler option to produce position-independent code for your libraries.
+
+A rule of thumb is to always use PIC (Position independent code) for libraries. Position-independent
+code is especially useful for shared libraries because each process that uses a shared library will
+generally map it at a different virtual address (though sharing one physical copy).
+
+## Five Special Secrets of Linking with Libraries
+
+1. Dynamic libraries are called `libsomething.so` , and static libraries are called `libsomething.a`
+2. You tell the compiler to link with, for example, `libthread.so` by giving the option `-lthread` 
+3. The compiler expects to find the libraries in certain directories. For example, `/usr/lib/` or you can set a path by using `-Lpathname`.
