@@ -475,3 +475,5 @@ generally map it at a different virtual address (though sharing one physical cop
 1. Dynamic libraries are called `libsomething.so` , and static libraries are called `libsomething.a`
 2. You tell the compiler to link with, for example, `libthread.so` by giving the option `-lthread` 
 3. The compiler expects to find the libraries in certain directories. For example, `/usr/lib/` or you can set a path by using `-Lpathname`.
+4. Identify your libraries by looking at the header files you have used. For example `<thread.h>` has a Library Pathname `/usr/lib/libthread.so` and compiler option to use is `-lthread`.
+5. Symbols from static libraries are extracted in a more restricted way than symbols from dynamic libraries. When working with static libraries, the linker is fussy about where libraries are mentioned, and in what order, since symbols are resolved looking from left to right. For example, if `liba.a` depends on `libb.a` then you should compile as `gcc liba.a libb.a`. 
