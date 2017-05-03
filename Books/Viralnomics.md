@@ -141,10 +141,3 @@ Here’s a sample overview:
 1. When your audience has nothing to do. For most this is first thing in the morning, lunchtime, and at night. For office workers, later on in the work day on Thursdays and Fridays is also good because that’s when people procrastinate.
 2. When your audience is physiologically aroused. In a study performed by Jonah Berger, physiological arousal increased sharing from 33%-75%. If you can figure out when your audience goes to the gym or even a walk, share your viral materials right afterwards.
 
-
-
-¿Crees que el parkour no es para ti?
- 
-Carolina es una chica universitaria de 22 años y una de nuestras primeras estudiantes. Ella se divierte moviéndose libremente por la selva de concreto, expresándose y plasmando su arte en la gente que se disfruta verla entrenar. 
-
-Su inicio no fue facil, pero no se olviden que "no se trata del destino, sino de la emoción intensa del viaje. 
