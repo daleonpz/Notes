@@ -466,9 +466,7 @@ runtime.
 The `-L/home/linden` `-R/home/linden` options tell the linker in which directories to look
 for libraries at linktime and at runtime, respectively. You will probably also want to use the `-fPIC` compiler option to produce position-independent code for your libraries.
 
-A rule of thumb is to always use PIC (Position independent code) for libraries. Position-independent
-code is especially useful for shared libraries because each process that uses a shared library will
-generally map it at a different virtual address (though sharing one physical copy).
+A rule of thumb is to always use PIC (Position independent code) for libraries. Position-independent code is especially useful for shared libraries because each process that uses a shared library will generally map it at a different virtual address (though sharing one physical copy).
 
 ## Five Special Secrets of Linking with Libraries
 
@@ -477,3 +475,75 @@ generally map it at a different virtual address (though sharing one physical cop
 3. The compiler expects to find the libraries in certain directories. For example, `/usr/lib/` or you can set a path by using `-Lpathname`.
 4. Identify your libraries by looking at the header files you have used. For example `<thread.h>` has a Library Pathname `/usr/lib/libthread.so` and compiler option to use is `-lthread`.
 5. Symbols from static libraries are extracted in a more restricted way than symbols from dynamic libraries. When working with static libraries, the linker is fussy about where libraries are mentioned, and in what order, since symbols are resolved looking from left to right. For example, if `liba.a` depends on `libb.a` then you should compile as `gcc liba.a libb.a`. 
+
+## Be careful with Interposing
+Interpositioning (some people call it "interposing") is the practice of supplanting a library function by a user-written function of the same name. This is a technique only for people who enjoy a good walk on the wild side of the fast lane without a safety net. It enables a library function to be replaced in a particular program, usually for debugging or performance reasons. But like a gun with no safety catch, while it lets experts get faster results, it also makes it very easy for novices to hurt themselves. 
+
+If an identifier is **reserved**, it means that the user is not allowed to redefine it. However, this is not a **constraint**, so it does not require an error message when it sees it happen.
+
+## Genereting linking reports files 
+Check this [link](https://www.codeproject.com/Articles/3472/Finding-crash-information-using-the-MAP-file)
+
+# Ch6:
+
+# The `auto` and `static` keywords
+if you need to return a pointer to something defined in a function, then define the thing as `static`. This will ensure that space for the variable is allocated in the data segment instead of on the stack. The lifetime of the variable is thus the lifetime of the program, and as a side effect it retains its value even after the function that defines it exits. That value will still be available when the function is next entered. 
+
+
+# `setjmp` and `longjmp`
+use this functions **ONLY** for error recovery. They are similar to `try` and `catch` in C++.
+
+```c
+jmp_buf buf;
+
+void favorite_fruit (char * fruit) {
+    
+    if (fruit == NULL) 
+        longjmp(buf,2);
+
+    if (strcmp("apple",fruit) == 0)
+        longjmp (buf,1);
+    printf("nice choice\n");
+}
+
+
+int main(int argc, char ** argv){
+
+    printf("your fruit choice: %s\n", argv[1]);
+
+    switch ( setjmp(buf)){
+    case 1: 
+        printf("bad choice\n");
+        return 1;
+    case 2:
+        printf("NO INPUT\n");
+        return 2;
+    default:
+        favorite_fruit(argv[1]);
+    }
+
+}
+```
+
+Output 
+```sh
+$  ./a.out 
+your fruit choice: (null)
+NO INPUT
+$  ./a.out apple
+your fruit choice: apple
+bad choice
+$  ./a.out banan
+your fruit choice: banan
+nice choice
+```
+
+# Ch07:
+
+## Virtual Memory
+VM is organized into pages, typically a few of Kbytes. Whenn a memory image travels between disk and physical memory (RAM) we say is being paged.
+
+The swap area will that contains all the processes that are unlikely to run soon. So it is taken away from physical memory and backed up into the disk.
+
+A process can only operate on pages that are in memory. 
+
