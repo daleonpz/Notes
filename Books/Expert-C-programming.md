@@ -545,5 +545,30 @@ VM is organized into pages, typically a few of Kbytes. Whenn a memory image trav
 
 The swap area will that contains all the processes that are unlikely to run soon. So it is taken away from physical memory and backed up into the disk.
 
-A process can only operate on pages that are in memory. 
+A process can only operate on pages that are in memory.
+
+## Segmentation fautls
+Common immediate causes of segmentation fault: 
+- dereferencing a pointer that doesn't contain a valid value 
+- dereferencing a null pointer (often because the null pointer was returned from a system routine, and used without checking) 
+- accessing something without the correct permission—for example, attempting to store a value into a read-only text segment would cause this error 
+- running out of stack or heap space (virtual memory is huge but not infinite) 
+
+# Ch08:
+## Promotions in 
+
+Table of promotions in C:
+
+- `bit-field`, `enum`, `(unsigned) char`, ` (unsigned)short` :  `int`
+- `float`: `double`
+- array of : pointer to
+ 
+## Function prototypes
+If you use a function prototype, the default argument promotions do not occur. If you prototype something as a `char`, a `char` actually gets passed.
+
+Be careful, **do not mixed up**  old C and ANSI C declaration and definitions
+
+.
+
+
 
