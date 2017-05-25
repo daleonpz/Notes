@@ -3,9 +3,9 @@ layout: post
 title: Expert C notes
 ---
 
-# Ch1:
+# Ch1: C through the mists of time
 
-# Ch2:
+# Ch2: It's not a bug it's a language feature
 
 ## sins of commission
 
@@ -21,22 +21,18 @@ switch (i) {
     /*case const-expr: statements*/
     case 1: printf("case 1 \n");
     case two: printf("case 2 \n");
-    **error** ^^^ integral constant expression expected
+**error** ^^^ integral constant expression expected
     case 3: printf("case 3 \n");
     default: ; }
 ```
 
 * Do not forget to `break` if you don't want to _fall throught_ other `case`.
 
-* "interpositioning—I should learn more about that.Interpositioning is the practice of supplanting a library function by a user-written function of the same
-name
-With the benefit of practical experience, default global visibility has been conclusively and repeatedly
-demonstrated to be a mistake. Software objects should have the most limited scope by default.
-Programmers should explicitly take action when they intend to give something global scope.
+* "interpositioning—I should learn more about that. Interpositioning is the practice of supplanting a library function by a user-written function of the same name with the benefit of practical experience, default global visibility has been conclusively and repeatedly demonstrated to be a mistake. Software objects should have the most limited scope by default. Programmers should explicitly take action when they intend to give something global scope.
 
 ## sins of mission
-covers things in C that just seem misdirected, or a bad fit to the
-language
+covers things in C that just seem misdirected, or a bad fit to the language
+
 * Overloading issues
 sizeof is an operator, not a function
 ```c
@@ -93,7 +89,7 @@ that `/*y` is considered as comment opener.
 ratio = *x/*y;
 ```
 
-To last post: avoid when possible this kind of things
+To last post: avoid when possible this kind of things (dangling pointers)
 
 ```
 int *foo(){
@@ -104,7 +100,8 @@ int *foo(){
     return x;
 }
 ```
-# Chapter 3
+
+# Ch 03: Unscrambling C declarations
 ## Declarations
 
 The Precedence Rule for Understanding C Declarations
@@ -246,7 +243,7 @@ further declarations,
 struct veg potato;
 ```
 
-# Ch4:
+# Ch04: C Arrays and Pointers 
 ## Array and Pointers are not the same
 
 ```c
@@ -307,7 +304,8 @@ int *raisin;
 `mango` will be filled with several values, and it will always have 100 consecutive memory locations. ** size of the array will depend on the number and type of elements **.
 
 
-# Ch5
+# Ch05: Thinking of linking
+
 Compilation workflow:
 1. Preprocessor: cpp, generate `*.i` text file. `gcc -E file.c -o file.i`
 2. Compiler: ccl, generate `*.s` text file (Syntax, semantic analysis and code generation). `gcc -S file.c`
@@ -484,7 +482,7 @@ If an identifier is **reserved**, it means that the user is not allowed to redef
 ## Genereting linking reports files 
 Check this [link](https://www.codeproject.com/Articles/3472/Finding-crash-information-using-the-MAP-file)
 
-# Ch6:
+# Ch06: Runtime data structures
 
 # The `auto` and `static` keywords
 if you need to return a pointer to something defined in a function, then define the thing as `static`. This will ensure that space for the variable is allocated in the data segment instead of on the stack. The lifetime of the variable is thus the lifetime of the program, and as a side effect it retains its value even after the function that defines it exits. That value will still be available when the function is next entered. 
@@ -538,7 +536,7 @@ your fruit choice: banan
 nice choice
 ```
 
-# Ch07:
+# Ch07: Thanks for the memory
 
 ## Virtual Memory
 VM is organized into pages, typically a few of Kbytes. Whenn a memory image travels between disk and physical memory (RAM) we say is being paged.
@@ -554,7 +552,7 @@ Common immediate causes of segmentation fault:
 - accessing something without the correct permission—for example, attempting to store a value into a read-only text segment would cause this error 
 - running out of stack or heap space (virtual memory is huge but not infinite) 
 
-# Ch08:
+# Ch08: Why programmers can't tell halloween from christmas day
 ## Promotions in 
 
 Table of promotions in C:
@@ -566,9 +564,58 @@ Table of promotions in C:
 ## Function prototypes
 If you use a function prototype, the default argument promotions do not occur. If you prototype something as a `char`, a `char` actually gets passed.
 
-Be careful, **do not mixed up**  old C and ANSI C declaration and definitions
+Be careful, **do not mixed up**  old C and ANSI C declaration and definitions.
 
-.
+# How and Why to Cast
+
+` (float) 3` is different from `(float) 3.0`. In the first case you are performing a **type conversion**, whereas in the latter you are performing a **disambiguation**.
+
+Casts can be written following this three-step process. 
+1. Look at the declaration of the object to which you wish to assign the casted result. 
+2. Remove the identifier (and any storage class specifiers like `extern`), and enclose what remains in parentheses. 
+3. Write the resulting text immediately to the left of the object you wish to cast. 
+
+For example:
+You want to use `qsort`.
+```c
+ void qsort(void *base, size_t nmemb, size_t size,
+                  int (*compar)(const void *, const void *));
+```
+
+but your comparison function has the following definition:
+
+```c
+int intcompare(const int *i, const int *j)  { 
+      return(*i - *j);  
+} 
+```
+
+Thus, a cast is needed.
+
+If you follow the rules from above:
+1. `int intcompare(const int *i, const int *j)`
+2. `int (const int *, const int *)` 
+3. `(int (const void *, const void *) ) intcompare`
+
+Finally, when you call `qsort`
+```c  
+ qsort(base, nmemb, size,
+                  (int (*)(const void *, const void *)) intcompare) ;
+```
 
 
+# Ch09: More about arrays
+## When an Array is a Pointer
+Declarations themselves can be further split into three cases: 
+- declaration of an external array `extern char a[];`. `a` cannot be rewritten as a pointer.
+- definition of an array (remember, a definition is just a special case of a declaration; it 
+allocates space and may provide an initial value). `char a[10];`. `a` cannot be rewritten as a pointer.
+- declaration of a function parameter `int function ( char a[]); `. `a` is rewritten as a pointer whether you like it or not.
 
+**Do not forget** that an array is fixed address, and a pointer is the address of an address.
+
+## Summary
+- Array access `a[i]` is always _rewritten_ as a pointer access `*(a+i)`.
+- Pointers are always pointers and therefore they cannot be rewritten as arrays.
+- An array in a context of function parameteres can be always rewritten as pointers.
+- Match definition with declarations
