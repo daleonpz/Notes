@@ -618,4 +618,24 @@ allocates space and may provide an initial value). `char a[10];`. `a` cannot be 
 - Array access `a[i]` is always _rewritten_ as a pointer access `*(a+i)`.
 - Pointers are always pointers and therefore they cannot be rewritten as arrays.
 - An array in a context of function parameteres can be always rewritten as pointers.
-- Match definition with declarations
+- Match definition with declaration
+
+# Ch10: More about pointers
+#Layout of a multidimensional array
+`a[i][j]` is resolved by the compiler as ` *( *(a+i) + j)`
+
+# Using pointers to Ragged arrays
+Ragged arrays are arrays in which each row has a different colmumn length.
+
+The "array name is rewritten as a pointer argument" rule isn't recursive. An array of arrays is rewritten as a "pointer to arrays" not as a "pointer to pointer". 
+
+- array of array `char a[9][4]` : `char (*a)[4]` pointer to array
+- array of pointers `char *a[4]`: `char **a` pointer to pointer
+- pointer to array `char (*a)[4]`: `char (*a)[4]` pointer to array
+- pointer to pointer `char **a`: `char **a` pointer to pointer
+
+
+
+
+
+
