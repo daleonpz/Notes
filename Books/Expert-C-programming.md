@@ -1,6 +1,6 @@
 ---
-layout: post
 title: Expert C notes
+author: Peter van der Linden
 ---
 
 # Ch1: C through the mists of time
