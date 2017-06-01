@@ -58,9 +58,9 @@ what is going to change? At this stage, everything is experimental so it is a go
 We will focus on the interface rather than what it is under the hood, so it will be easier to mantain over time.
 
 Keep it simple, but flexible. 
-• In the hierarchy chart, look for objects that are used only by one other object. Are these both fixed? Or can one change independently of the other?
-• In the layered diagram, look for collections of objects that are always used together. Can these be grouped together in a higher level interface to manage the objects? You'd be creating a hardware abstraction layer.
-• Which modules have lots of interdependencies? Can they be broken apart and simplified? Or can the dependencies be grouped together? 
+* In the hierarchy chart, look for objects that are used only by one other object. Are these both fixed? Or can one change independently of the other?
+* In the layered diagram, look for collections of objects that are always used together. Can these be grouped together in a higher level interface to manage the objects? You'd be creating a hardware abstraction layer.
+* Which modules have lots of interdependencies? Can they be broken apart and simplified? Or can the dependencies be grouped together? 
 
 ## Driver Interface
 The idea is to model your driver upon Unix drivers. A embedded system device might look like any of these:
