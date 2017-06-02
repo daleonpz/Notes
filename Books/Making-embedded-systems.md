@@ -70,7 +70,14 @@ spi.open()
 spi_open()
 spi.ioctl(CHANGE_FREQ, 30, MHZ)
 ```
+## Model-View-Controller (MVC) model
+The **model** holds the data, state, and application logic. For an MP3 player, the model consists of database of music and the codec necessary to play it.
+Traditionally thought of in contexts where there is a screen, the **view** represents the display handling functions. The **view** is what the user sees of the model. The **controller** is the somewhat nebulous cloud that sits between (or near) the model and view to help them work together. The goal of the controller is to make the view and model independent of each other so that they can each be reused.
 
+Sometimes it is needed to interface your code with your PC in order to debug or isolate a bug. 
+Your files and the way you read the data in are the view part of the MVC. The algorithm you are testing is the model, and shouldn't change.
+The controller is the part that changes when you put the algorithm on a PC.
 
+# Ch03: Getting the Code Working
 
 
