@@ -79,5 +79,40 @@ Your files and the way you read the data in are the view part of the MVC. The al
 The controller is the part that changes when you put the algorithm on a PC.
 
 # Ch03: Getting the Code Working
+## Datasheet section you need when things go wrong
 
+* I/O pins
+* pins descriptions
+* performance characteristics
+* Sample schematics
+* Timinng Diagrams
 
+## Testing HW and SW
+For most forms of memory, the pattern we've seen here is a good start:
+1. Read the original data.
+2. Write some changing but formulaic junk.
+3. Verify the junk.
+4. Re-write original.
+5. Verify the original.
+
+Designing good tests is one of those things that can make you software great.
+
+## Command and response
+To test some block you will need to use your PC as interface, and it will be done by using a CLI most likely.
+
+### Creating commands
+* *Ver*: Outputs the version information
+* *Test the flash*: Runs the flash unit test, printing out the number of errors upon completion
+* *Blink LED*: Sets an LED to blink at a given frequency
+* *Help*: Lists available commands with one-line descriptions
+ 
+## Error Handling Gracefully
+Error return codes for an application or system should be standardized over the code base. A single high-level `errorCodes.h` file (or some such) may be created to provide consistent errors in an enumerated format. Some suggested error codes are:
+* No error (should always be 0)
+* Unknown error (or unrecognized error)
+* Bad parameter
+* Bad index (pointer outside range or null)
+* Uninitialized variable or subsystem
+* Catastrophic failure (this may cause a processor reset unless it is in a development mode,x in which case it probably causes a breakpoint or spin loop)
+ 
+# Ch04: 

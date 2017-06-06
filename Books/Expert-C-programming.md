@@ -545,7 +545,7 @@ The swap area will that contains all the processes that are unlikely to run soon
 
 A process can only operate on pages that are in memory.
 
-## Segmentation fautls
+## Segmentation faults
 Common immediate causes of segmentation fault: 
 - dereferencing a pointer that doesn't contain a valid value 
 - dereferencing a null pointer (often because the null pointer was returned from a system routine, and used without checking) 
