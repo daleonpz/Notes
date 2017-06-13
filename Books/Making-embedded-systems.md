@@ -115,4 +115,16 @@ Error return codes for an application or system should be standardized over the 
 * Uninitialized variable or subsystem
 * Catastrophic failure (this may cause a processor reset unless it is in a development mode,x in which case it probably causes a breakpoint or spin loop)
  
-# Ch04: 
+# Ch04: Outputs, Inputs, and Timers
+## Outputs
+Good for testing: `0xAA, 0x55', and for anomalies `0xDEADBEEF`.
+
+## Inputs
+Be careful with the buttons bounce effect.
+
+## Using a timer
+Internal clock is not very stable
+
+# Ch05: Task Management 
+
+ 
