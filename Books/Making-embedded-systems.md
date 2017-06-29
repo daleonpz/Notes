@@ -126,5 +126,16 @@ Be careful with the buttons bounce effect.
 Internal clock is not very stable
 
 # Ch05: Task Management 
+## Scheduling and OS basics
+Some definitions:
+* Task: it's something the processor does
+* Threads: it's a task plus some overhead such as memory
+* Process: it is usually a complete unit of execution unit with its own memory space, usually compiled separately from other processes.
 
- 
+### Avoid Race Conditions
+it is when two task, let's say an interruption and no-interruption task, are called at the "same time" and both share the same memory. This leads to some unstability in the code.
+
+One way to prevent this unstability is to do a **mutual exclusion** or **mutex**. This means that only one task at a time can use the memory space.
+When dealing with normal task, non interruptions, it can be as simple as setting global variables, but if task are interruptions, the way to go is by using **atomic** action.
+An **atomic** action is the one that cannot be interrupted.
+
