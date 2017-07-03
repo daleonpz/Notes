@@ -139,18 +139,16 @@ One way to prevent this unstability is to do a **mutual exclusion** or **mutex**
 When dealing with normal task, non interruptions, it can be as simple as setting global variables, but if task are interruptions, the way to go is by using **atomic** action.
 An **atomic** action is the one that cannot be interrupted.
 
-### Table Driven State Machine
+## Table Driven State Machine
 Instead of using a flow chart to represent the state transitions, we are using a chart to represent the states and the actions.
 
 Go, STOP and timeout are commands, light is the output.
-| STATES | light | GO | STOP | Timeout |
----
-| Red | red | Green | Red | Red |
----
-| Yellow | yellow | Red | Yellow | Red |
----
-| Green | green | Yellow | Yellow | Green |
----
+
+STATES | light | GO | STOP | Timeout |
+---|---|---|---|---|
+ Red | red | Green | Red | Red |
+ Yellow | yellow | Red | Yellow | Red |
+ Green | green | Yellow | Yellow | Green |
 
 the code will be something like
 ```c
@@ -185,5 +183,61 @@ struct sStateTableEntry stateTable[] = {
 
 As conclusion, table driven state machines it an useful resource but it can get very complex.
 
+## Interrupts
 
+1. Interrupt request (IRQ) happens, inside the processor based on a peripheral, the
+software, or a fault in the system.
+2. The processor saves where it was (the context).
+3. The processor looks in the interrupt vector table to find the callback function as-
+sociated with the interrupt.
+4. The callback function (aka interrupt service routine (ISR) or interrupt handler) runs.
 
+### An IRQ happens:
+* dissable all interrupts
+* set up the interrupts
+* be careful with interrupt latency( saving the context and switching)
+* always count on interrupts may happen at the worst time
+
+### Get the ISR from table vector
+- You may want unhandled interrupts to simply return to normal execution to avoid infintive loops
+- Processor responds to reset button as an interrupt to their code
+- All the interrupts have an associated value, and the processor uses this value to get the address to the handle
+
+### Calling the ISR
+- Keep ISRs short, because longer ones increase your system latency. Generally avoid
+function calls, which may have hidden depths and increase overhead.
+- Don't call non-reentrant functions (such as `printf`), because global variables can
+be corrupted by interrupts.
+- Turn off other interrupts during the ISR to avoid priority inversion problems.
+
+An example
+```c
+volatile tBoolean gYellowTimeout = FALSE; // global variable set by the interrupt handler
+                                 // cleared by normal code when event handled
+void TIMER3_IRQHandler(void)
+{
+  __disable_irq();        // disallow nesting of interrupts
+  gYellowTimeout = TRUE;
+  __enable_irq();
+}
+
+```
+
+Many processors require that you acknowledge (or clear) the interrupt. This is usually
+accomplished by reading a status register.
+
+### Restore the context
+After your ISR has run to completion, it is time to return to normal execution. Some compilers extend C/C++ to include an `interrupt` keyword (or **__IRQ** or **_interrupt** ) to indicate which functions implement interrupt handlers.
+The processor gives these functions get special treatment both when they start (some context is saved before the ISR starts running) and when they return.
+
+## When to use Interrupts 
+- The more real-time is the requirement to handle a change on the line, the more an interrupt is appropriate for a solution.
+- Interrupts tend to make your code less portable.
+- Save interrupts for when you need their special power: when a system is time critical, when an event is expensive to check for and happens very rarely, and when a short background task will let the system run more smoothly.
+
+## Watchdog
+The watchdog system waits for the processor to send a signal that things are going well. If such a signal fails to occur in a reasonable (often configurable) amount of time, the watchdog will cause the processor to reset.  The goal is that when the system fails, it fails in a safe manner (failsafe).
+
+Generally you don't want the watchdog active during board bring-up or while using a debugger. Otherwise, the system will reset after a breakpoint. A straightforward way to turn off the watchdog will facilitate debugging. If you have a logging method, be sure to print out a message on boot if the watchdog is on. It is one of those things you don't want to forget to enable as you do production testing. Alternatively, you can toggle an LED when the watchdog is serviced to give your system a heartbeat that is easy to see from the outside, letting the user know that everything is working as expected.
+ 
+# Ch06: Communicating with Peripherals 
