@@ -139,3 +139,51 @@ One way to prevent this unstability is to do a **mutual exclusion** or **mutex**
 When dealing with normal task, non interruptions, it can be as simple as setting global variables, but if task are interruptions, the way to go is by using **atomic** action.
 An **atomic** action is the one that cannot be interrupted.
 
+### Table Driven State Machine
+Instead of using a flow chart to represent the state transitions, we are using a chart to represent the states and the actions.
+
+Go, STOP and timeout are commands, light is the output.
+| STATES | light | GO | STOP | Timeout |
+---
+| Red | red | Green | Red | Red |
+---
+| Yellow | yellow | Red | Yellow | Red |
+---
+| Green | green | Yellow | Yellow | Green |
+---
+
+the code will be something like
+```c
+struct sStateTableEntry {
+  tLight light;       // all states have associated lights
+  tState goEvent;     // state to enter when go event occurs
+  tState stopEvent;   // ... when stop event occurs
+  tState timeoutEvent;// ... when timeout occurs
+};
+```
+
+An example of the event handler:
+```c
+// event handler
+void HandleEventGo(struct sStateTableEntry *currentState)
+{
+  LightOff(currentState->light);
+  currentState = currentState->go;
+  LightOn(currentState->light);
+}
+```
+
+We need to define the actual table
+```c
+typedef enum { kRedState = 0, kYellowState = 1, kGreenState = 2 } tState;
+struct sStateTableEntry stateTable[] = {
+  { kRedLight,    kGreenState,  kRedState,    kRedState},   // Red
+  { kYellowLight, kYellowState, kYellowState, kRedState},   // Yellow
+  { kGreenLight,  kGreenState,  kYellowState, kGreenState}, // Green
+}
+```
+
+As conclusion, table driven state machines it an useful resource but it can get very complex.
+
+
+
