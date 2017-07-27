@@ -403,4 +403,210 @@ There are additional points of interest when thinking about loaders.
 - Finally, loading code is dangerous. Often the loader is the last piece of code written and so one of the least tested parts of the system. As you draw a flow chart for what goes on in your loader, look at the amount of time when the old image is erased and the new image is running. Minimizing the updating process may save your units.
 
 # Ch08: Doing more with less
+## Code Space
+### Reading a map file (part 1)
+Map files are processor specific. If you aren't sure that your map file is giving you the information you are looking for, try this: make a copy, change the code, and then diff the resulting map file with the original.
+
+The GNU linker for the LPC 13xx starts off with a list of the library modules that are included and which of your modules is responsible for the inclusion.
+
+```sh
+Archive member included because of file (symbol)
+../lib/gcc/arm-none-eabi/4.3.3/../../../../arm-none-eabi/lib/thumb2/libcr_c.a(memcpy.o)
+                              ./src/aes256.o (memcpy)
+```
+
+If you find that a library is large, this section helps you figure out which part of your code is calling functions in that library. You can then decide whether the code module needs to make that call or if there is a way around it.
+
+
+Next in the map file is a list of global variables and their size.
+
+```sh
+Allocating common symbols
+Common symbol       size              file
+gNewFirmwareVersion
+                    0x6               ./src/firmwareVersion.o
+```
+
+Limiting the scope of the variable using the static keyword will cause the variables to be later in the file, so if a common symbol like the one just shown isn't in your file, you've done a good job of getting rid of global variables.
+
+Next is a list of sections, addresses and sizes of code that is not referenced by anything.
+Some map files also give you the amount of each resource used. This is very helpful for determining how close you are to running out of resources.
+
+A reflection of the linker script is shown in a memory map:
+
+```sh
+Memory Configuration
+Name      Origin       Length      Attributes
+Flash      0x00000000  0x00008000  xr
+RAM        0x10000000  0x00002000  xrw
+*default*  0x00000000  0xffffffff
+Some map files also give you the amount of each resource use
+```
+
+In the map is also shown ELF sections such as `.text`,  `.rodata`.
+
+### Process of Elimination
+There are flags to make your code smaller (for instance, in GCC, `-Os` tries to optimize for code size instead of speed of execution). This may be enough to solve your code size issues.
+
+If the optimizations do not solve your problem, you can try comment out the code, reimplement some functions or calculate some stuff such as const table  at init time.
+
+### Libraries
+As you go through the memory map, look at the largest consumers first. You may find some libraries are included that you don't expect. Trace through the functions to see where the calls to these libraries are coming from.
+
+Many times you can write a function to replace the library. Other times, you'll need to figure out how to work around a limitation.
+
+### Functions and Macros
+Keeping your code modular is critical to readability. However, each function comes with a price, increasing code space, RAM and processor time. The code space cost is easy to quantify.
+
+Macros do have the advantage (of sorts) that they don't do type checking; the same macro could be used for integers, unsigned integers, or floating point numbers. Also, a smaller snippet of code may never have a crossover point, so a macro may always be better.
+
+## RAM
+### Free malloc
+Avoid using malloc.
+* Wasted RAM. The heap requires RAM to keep a data structure describing the memory that's in use. Every dynamic allocation has some amount of metadata overhead.
+* Lost processor cycles. Keeping track of the heap is not free. Searching the heap data structure for available memory is usually a binary search, which is pretty fast, but it is still a search.
+* Fragmentation. if you have a 30-byte heap, after you've allocated the 10-byte and 5-byte buffers, the first half of the heap is used. After you free the 10-byte buffer, there are 25 bytes available. However, there isn't a contiguous block for the 20 byte buffer. By mixing buffer sizes, the heap gets fragmented.
+
+Instead try using buffers such as ping-pong buffer (if you have two buffers), circular buffer (if you need to queue data) or chunk allocators (if all your buffer are the same size).
+
+### Reading a Map File (Part 2)
+You may find `.bss` and `.data` sections in the map file. Remember, the `.data` section contains constants for your initialized variables and `.bss` contains all of your uninitialized global and static variables.
+
+If your variables are local to your file (or static variables in a function), only the size and file name are shown.
+
+```sh
+.bss           0x10001bb4       0x14 ./SharedSrc/i2c.o
+```
+
+As with functions, the goal here is to look for the larger variables, as those are where the best savings can be had.
+
+### Registers and local variables
+If you have an N-bit processor, try to stick to N-bit variables. Larger variables generally are not candidates for precious registers. (Smaller variables often add processor steps. The compiler tries to access only the part you find interesting.). And as a rule of thumb try to use no more than 4 inputs per function.
+
+Remember that passing pointers you are sending the address of the data, and the actual value will be accessed in RAM. In case of structures it may be better to pass the pointer.
+
+### Minimize the scope
+Only use extra variables when necessary. 
+
+```c
+for (i=0;  i < MAX_ARRAY_LENGTH; i++) { array[i] = i; }
+… /* do stuff to array, need to set it up again */
+/* i still equals max array so subtract one and run through the loop again*/
+for (i--; i >= 0; i--) { array[i] = i; }
+```
+
+In this case `i` is kept in order to use it again later in the code.
+However, in the next example the compiler can forget about `i`.
+
+```c
+for (i=0;  i < MAX_ARRAY_LENGTH; i++) { array[i] = i; }
+… /* do stuff to array, need to set it up again */
+for (i=0;  i < MAX_ARRAY_LENGTH; i++) { array[i] = i; }
+
+```
+
+### Function Chains
+When possible keep your stack small by avoiding functions call inside other functions, since all local variables and pointers will be stored in RAM and not in registers.
+
+One exception to the rule that functions calling functions incur RAM costs is a technique called **tail recursion**. It isn't really recursion (remember: recursion bad in an environment with limited RAM!). In tail recursion, you call the next function as the last statement of the current one (for instance, call `bar` at the very end of `foo`). This lets you retain encapsulation for your modules and keep the stack small.
+
+The compiler will remove foo's local variables and parameters from the stack, allowing the bar function to return directly to main (without passing through foo).
+
+Macros does not use stack, instead you will use more code space but increase execution speed. 
+
+### Pros and cons of global
+* Cons: cannot be stored in registers, will always burn RAM
+* Pros: if a data must be updated multiple times through several functions, it is better to use global variables, since if it were local, it would be stored multiple times in the stack.
+
+### Memory overlays
+The idea is to use buffers that are idle. For example, the sensor input buffer isn't needed while you're waiting for an interesting event.
+
+However, with the overlay the two subsystems depend on each other in a way not obvious to the casual observer (since you've smashed encapsulation to bits).
+
+## Speed
+Before delving into serious system tuning, start by profiling your application to make sure you focus on the important parts.
+
+### Profiling
+Your profiler will change the behavior (and timing) of the code. Understanding the impact your profiler has on your code is an important part of profiling.
+
+* I/O lines and an OScope: If you've got a few open I/O lines, they can show you where to start on the path to profiling your code. As you enter a function of interest, set an output line to be high.  When you leave, set it low. Watch these lines on an oscilloscope to see how long each function takes.
+
+* Timer profiler 1 (Function timer): The function profiled should take at least 10 times longer than the timer tick. Otherwise, the function timer cannot have _accurate_ measurements.
+
+```c
+ profile.count = 0;
+  profile.sum = 0;
+ while (1) {
+    profile.start = TimeNow();
+    ImportantFunction();
+    profile.end = TimeNow();
+    profile.sum += profile.end - profile.start;
+    profile.count++;
+    if (profile.count == PROFILE_COUNT_PRINT) {
+      LogWithNum(eProfilerSystem, eDebug, "Important Function profile: ", profile.sum);
+      profile.count = 0;
+      profile.sum = 0;
+     }
+   ... // continue with other main loop functions
+  }
+}
+The function profiled (ImportantFunction) should be longer than the timer tick—at a
+```
+
+* Timer profiler 2 (Response timer):  If you want a faster profiler you may change the way you sample.
+
+```c
+  profile.count = 0;
+  profile.start = TimeNow();
+  while (1) {
+    ImportantFunction();
+    profile.count++;
+    if (profile.count == PROFILE_COUNT_PRINT) {
+      profile.end = TimeNow();
+      profile.sum = profile.end - profile.start;
+      LogWithNum(eProfilerSystem, eDebug, "Important Function profile: ", profile.sum);
+      profile.count = 0;
+      profile.start = TimeNow();
+      }
+    ... // other main loop functions are also part of the profile
+  }
+```
+
+* Sampling profiler: If you have an interrupt-driven system, profiling can be more difficult. However, if you can allocate a block of RAM to it, you can implement a sampling profiler with a timer- based interrupt.
+First create a timer interrupt, one that is asynchronous to everything else in the system.  For example, if you have 10Hz and 15Hz interrupts, make sure your new timer is not 1, 2, 3, or 5Hz. Instead make it something like 1.7Hz so it is not evenly divisible into any of your other time based interrupts. This makes sure that your results are not biased by periodic functions.
+Now, on every profiler timer interrupt, save the return pointer to the block of RAM.
+The return pointer tells you what code was running when the timer interrupted. Once the RAM buffer is full, stop the timer and output the list of addresses. Armed with a list of return addresses, figure out where these are in the image using the map file. 
+This method works best when your processor allows nested interrupts and the profiler timer is the only one allowed to interrupt other interrupts. If you have other non- maskable interrupts, you won't be able to see those in the results. 
+
+### Optimizing
+**The basics:**  
+* turn on optimization in your compiler.
+* try to get most of your variables into registers.
+
+**Techniques:**  
+* Memory timing:Wait states are a bane to efficient use of the processor resources. Many types of memory cannot be accessed as fast as the processor runs. To get information from such memory, the processor has to wait some number of processor cycles to offset the timing differ- ence. Memory has a number of wait states. For example, if your code runs from four wait state flash, every time it needs a new instruction, the processor has to wait for four clock cycles. Thus, critical functions should be copy to zero wait state RAM.
+
+* Variable size: when possible use native types and avoid type conversions. Also, converting between signed and unsigned should be avoided. Signed ints are upgraded to unsigned ints when the two are compared.
+
+* One last look at Function chains: Try to avoid small functions where the cost of calling outweight their beneficts, or think on the possibility of using macros.
+
+* Consider the instructions: The immediate lesson is use pointer arithmetic instead of arrays and indexes where possible. Pointer arithmetic uses a little less RAM and give the compiler a clearer path toward optimization. The larger lesson is to understand how your code is translated into machine language, and to make it easy for a compiler to take a faster route.
+ 
+* Reduce math in loops: For example, checking against zero is cheaper than checking against a constant (much cheaper than checking against a variable). Make your loop indexes count down. It saves only an instruction or two but it is good practice.
+
+* Loop unrolling: Loop unrolling means reducing the number of iterations by duplicating code inside a loop
+
+* Lookup tables: There is another trade between cycles and code space (or RAM) that goes beyond macros: lookup tables. When the running code needs the information, instead of performing calculations, it finds result in the table, often with a simple index. 
+
+* Coding in assembly language: If you have a function that really, really needs to be super-fast and the compiler is clearly not doing all it can, well, programming in assembly can be kind of fun, in a furtive playing-Tetris-at-work sort of way. Use the code generated by your compiler as a starting point.
+
+# Ch09: Math
+ 
+
+
+ 
+
+
+
+
  
