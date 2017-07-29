@@ -1,0 +1,10 @@
+L1 cache size : 32K
+L2 cache size : 256K
+L3 cache size : 4M
+
+when s1 it hard to determine the cache sizes since the values are similar,
+but the size in which the RAM starts working it's at 8M.
+
+However, if we analyze the performance for different "s", we can observe that
+after 32K there is a drop in performance so it means that L1 cache has reached
+its limit. The second drop was at 128K, and the third at 4M.

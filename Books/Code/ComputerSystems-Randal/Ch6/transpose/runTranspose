@@ -1,0 +1,28 @@
+#!/bin/bash
+
+max=4096 #16384
+min=16
+loops=100
+
+for (( n=$min; n<=$max; n*=2 ))
+do
+	(
+	for (( l=0; l<$loops; l+=1))
+	do
+		./transpose $n 0 0
+	done
+	) > o.$n
+
+	(
+	for (( l=0; l<$loops; l+=1))
+	do
+		./transpose $n 0 2
+	done
+	) > b.$n
+
+done
+
+echo "done!"
+mv o.* outputs/
+mv b.* outputs/
+
