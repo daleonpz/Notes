@@ -658,7 +658,31 @@ One of the difficulties with using binary scaling is recognizing the limitations
 
 For the full recipe, please read this part in the book.
 
+# Ch10: Reducing Power Consumption
+The processor is likely to be one of the largest consumers of power in the system, software can play a big role in saving electricity.
+
+## Understanding Power Consumption 
+Minimizing current consumption is the key to reducing power usage or increasing battery life. Ohm's law.
+
+## Turn off the light when you leave the room
+The easiest way to reduce power consumption is turn off components that are not needed. The downside is that those components won't be ready when you need them, and bringing them back will add both some power usage and some latency in respond- ing to events. You'll need to investigate the trade offs; I tend to use a spreadsheet to help me weigh the power savings.
 
 
+* Turn off peripherals: for example, if you have external RAM, you may be able to preload the data to a local location and then power down the RAM instead of leaving it powered on for extended periods of time.
 
+* Turn off unused i/o devices: If you've got spare I/O devices, you can save a little bit of current by configuring them to be inputs with internal pull-downs. If your chip doesn't have internal pull-downs, set it to be a low output. If that doesn't work for you, an input with pull-ups still has reasonably small amounts of leakage current.
+
+* Turn off processor subsystems: Are you using that second SPI port?
+
+* Slowing Down to Conserve Energy: the power consumption of the chip is proportional to the frequency it runs at.
+
+* Putting the Processor to Sleep: Even at a slow clock speed, the processor is consuming power. Slowing down will help, but what if your code spends a lot of time waiting for things to happen?  Many processors designed for low-power systems can go into an energy-conserving sleep when they aren't needed. They use interrupts to tell the processor when to wake up.
+
+* Interrupt-based code flow model: Instead of idling, the microprocessor spends time sleeping, waking up only when it needs to, then handling the interrupt and going back to sleep. The goal is to maximize the amount of time the processor is asleep, thereby maximizing power efficiency. 
+
+* A Closer Look at the Main Loop: Handling the interrupts in the main loop allows you to keep the interrupt service rou- tines short, because all they do is set a couple flags and exit. Long interrupts tend to decrease system responsiveness. 
+
+* Avoid Frequent Wake-ups: Since each wakeup requires some overhead from the chip (and the deeper the sleep, the more overhead is required as it wakes up), avoid frequent wake-ups.
+
+ 
 
