@@ -1,0 +1,26 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_PROGRAM_AUTHOR	Darren Hiebert	/dhiebert@users.sourceforge.net/
+!_TAG_PROGRAM_NAME	Exuberant Ctags	//
+!_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
+!_TAG_PROGRAM_VERSION	5.8	//
+Accessoire	final.cc	/^        Accessoire(string const& un_nom, double prix_de_base):$/;"	f	class:Accessoire
+Accessoire	final.cc	/^class Accessoire: public Produit{$/;"	c	file:
+Mecanisme	final.cc	/^class Mecanisme: public Produit{$/;"	c	file:
+MecanismeAnalogique	final.cc	/^class MecanismeAnalogique: public Mecanisme{$/;"	c	file:
+MecanismeDigital	final.cc	/^class MecanismeDigital: public Mecanisme{$/;"	c	file:
+MecanismeDouble	final.cc	/^class MecanismeDouble: public Mecanisme{$/;"	c	file:
+Montre	final.cc	/^        Montre& operator=(Montre)   = delete;$/;"	m	class:Montre	file:
+Montre	final.cc	/^class Montre:public Produit{$/;"	c	file:
+Produit	final.cc	/^        Produit( double valeur = 0.0):$/;"	f	class:Produit
+Produit	final.cc	/^class Produit{$/;"	c	file:
+accessoire	final.cc	/^        vector<unique_ptr<Accessoire>> accessoire;$/;"	m	class:Montre	file:
+afficher	final.cc	/^        virtual void afficher( ostream& sortie) const { sortie << prix(); }$/;"	f	class:Produit
+coeur	final.cc	/^        unique_ptr<Mecanisme> coeur;$/;"	m	class:Montre	file:
+main	final.cc	/^int main(){$/;"	f
+nom	final.cc	/^        const string nom;$/;"	m	class:Accessoire	file:
+operator +=	final.cc	/^void Montre::operator+=( Accessoire* ajout){$/;"	f	class:Montre
+operator <<	final.cc	/^ostream& operator<<(ostream& sortie, Produit const& machin){$/;"	f
+prix	final.cc	/^        virtual double prix() const { return valeur; }$/;"	f	class:Produit
+valeur	final.cc	/^        const double valeur; \/\/ base value, it must not change$/;"	m	class:Produit	file:
+~Produit	final.cc	/^Produit::~Produit() {}; $/;"	f	class:Produit
