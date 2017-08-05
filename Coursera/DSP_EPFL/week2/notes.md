@@ -58,6 +58,77 @@ $$
 * an inner product $\langle , \rangle : V \times V \to \mathbb{C}$
 * completeness
 
+## Some properties inner product
+* scaling property with respect to scalar multiplication:
+$$
+\begin{aligned}
+\langle x, \alpha y  \rangle =& \alpha \langle x, y\rangle \\
+\langle \alpha x, y \rangle =& \alpha^* \langle x, y \rangle
+\end{aligned}
+$$
+
+* communtative within complex conjugation
+$$\langle x, y \rangle = \langle y, x\rangle ^*$$
+
 # Lesson 2.3: Bases
 A basis is a vector space's "skeleton", so to speak. It gives the space structure and allows us to decompose any element in the space into a linear combination of simple building blocks, namely, the basis vectors. 
+
+Linear combination is the basic operation in vector spaces. 
+
+Canonical $\mathbb{R}^2$ basis: 
+$$
+    e^{(0)} = [1 \ 0]^T \qquad e^{(1)} = [0\ 1]^T  
+$$
+
+## Formal definiton
+Given:
+* a vector space H
+* a set of K vectors from H: $W = \{ w^{(k)} \} k = 0,1,2, ..., K-1$
+
+W is a basis for H if:
+
+1. we can write for all $\mathbf{x} \in H$:
+$$
+\mathbf{x} = \sum_{k=0}^{K-1} \alpha _k \mathbf{w}^{(k)}, \alpha _k \in \mathbb{C}
+$$
+2. coefficients $\alpha _k$ are unique
+
+## Special bases
+* Orthogonal basis: $\langle \mathbf{w}^{(k)} \mathbf{w}^{(n)}\rangle = 0$
+* Orthonormal basis: orthogonal vectors of norm equal to one are called orthonormal bases
+ $\langle \mathbf{w}^{(k)} \mathbf{w}^{(n)}\rangle = \delta [n-k]$
+
+We can always orthonormalize a basis via the Gram-Schmidt algorithm (iterative). 
+Given an orthogonal basis, you can define an orthonormal basis by dividing each basis vector by its norm.
+
+## Lesons 2.4: Subspaces and approximation
+One of the beneficts of dsp in the possibilty of making approximations of the signals.
+
+* vector subspace is a subset of vectors closed under addition and scalar multiplication. For example, $\mathbb{R}^2 \subset \mathbb{R}^3$.
+
+* subspaces have their own basis
+
+* In finite dimensions, once we find a full set of orthogonal vectors, we are sure that the set spans the space.
+
+  
+## Approximation
+Problem:
+
+* vector $\mathbf{x} \in V$
+* subspaces $S \subseteq V$
+* approximate $\mathbf{x}$ in $S$
+
+## Least squares approximation
+Since the inner product is dependent on the angular separation between the vectors, it represents a first rough measure of similarity between x and y; in broad terms, it provides a measure of the difference in shape between vectors.
+
+It will be called **filtering**, when we are trying to approximate or modify a signal or it will be called **correlation** when we are trying to detect one particular signal amongst many. In any case inner product will allow us to measure the similarity (euclidean distance).
+
+
+Orthogonal projection is the "best" approximation over $S$, because:
+
+* has the minimun-norm error: $$arg \min_{y \in S} \|x-y\| = \hat{x}$$
+* error is orthogonal to approximation: $$ \langle x-\hat{x}, \hat{x}\rangle = 0$$
+
+
+
 
