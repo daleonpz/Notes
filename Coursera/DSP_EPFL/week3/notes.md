@@ -8,7 +8,7 @@ In this Chapter we study three types of Fourier transform which apply to the thr
 * the Discrete Fourier Transform (DFT), which maps length-N signals into a set of N discrete frequency components;
 * the Discrete Fourier Series (DFS), which maps N- periodic sequences
 into a set of N discrete frequency components;
- * the Discrete-Time Fourier Transform (DTFT), which maps infinite se- quences into the space of 2π-periodic function of a real-valued argument.
+ * the Discrete-Time Fourier Transform (DTFT), which maps infinite se- quences into the space of $2\pi$-periodic function of a real-valued argument.
 
 # Lesson 3.1: Introduction to Fourier analysis
 Why should we use sines and cosines to describe a signals?
@@ -19,16 +19,19 @@ Oscillations are very easy to describe.
 Sinusoidal oscillations are eigenfunctions of linear time-invariant systems.
  
 ## Analysis
+
 * from time domain to frequency domain
 * find the contribution of different frequencies
 * discover "hidden" signal properties
 
 ## Synthesis
+
 * from frequency to time domain
 * create signals with known frequency content
 * fit signals to specific frequency regions
 
 ## Mathematical setup
+
 * let's start with finite length signals
 * Fourier analysis is a simple change of basis
 
@@ -51,6 +54,7 @@ Or in matrix notation:
 $$
 \mathbf{X} = \mathbf{W} \mathbf{x}
 $$
+
 ## Synthesis Formula
 $$
 \mathbf{x} = \frac{1}{N} \sum_{k=0}^{N-1} X_k \mathbf{w}^{(k)}
