@@ -4,13 +4,20 @@ Week: 03
 
 This module is concerned with understanding spectra and the Fourier transform. Fourier proposed to decompose any well-behaved function into a sum of harmonic sines and cosines.  The idea of Fourier that sines and cosines can be used to decompose functions is still fundamental in many areas, and not only in signal processing but also all over applied sciences and physics.
 
+In this Chapter we study three types of Fourier transform which apply to the three main classes of signals that we have seen so far: 
+* the Discrete Fourier Transform (DFT), which maps length-N signals into a set of N discrete frequency components;
+* the Discrete Fourier Series (DFS), which maps N- periodic sequences
+into a set of N discrete frequency components;
+ * the Discrete-Time Fourier Transform (DTFT), which maps infinite se- quences into the space of 2π-periodic function of a real-valued argument.
+
 # Lesson 3.1: Introduction to Fourier analysis
 Why should we use sines and cosines to describe a signals?
 * Oscillations are everywhere.
 * sustainable dynamic systems exhibit oscillatory behavior
 
 Oscillations are very easy to describe.
-
+Sinusoidal oscillations are eigenfunctions of linear time-invariant systems.
+ 
 ## Analysis
 * from time domain to frequency domain
 * find the contribution of different frequencies
