@@ -118,5 +118,4 @@ Water quality measurement is different to water safety, water quality measuremen
 * Biofilm needs to be wet always
 * Turbidity reduction 85-90%
 * Iron reduction 90-95%
-* Viruses 60-70%
  
