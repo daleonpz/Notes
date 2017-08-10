@@ -4,8 +4,9 @@ University: Ecole Polytechnique Federale de Lausanne
 Week: 02
 title: HWTS treatment options
 ---
+# HWTS treatment options
 
-# A Framework for Water Safety
+## A Framework for Water Safety
 what does safety mean?
 * There is always a risk in any activity
 * The question is then what level of risk is acceptable
@@ -18,7 +19,7 @@ what does safety mean?
 
 Water quality measurement is different to water safety, water quality measurements in general just measure the number of e.coli bacterias.
 
-## Conventional treatment processes
+### Conventional treatment processes
 * Resource protection
 * Pretreatment (reservoirs)
 * Coagulation, flocculation, sedimentation 
@@ -26,13 +27,13 @@ Water quality measurement is different to water safety, water quality measuremen
 * Primary disinfection: chlorine is the most used
 * Distribution
 
-## Conventional treatment at Household level
+### Conventional treatment at Household level
 * Sedimentation: coagulation
 * Filtration: ceramic, biosand, membrane
 * Disinfection: chlorine, uv, heat
 * Safe storage: appropiate container, hygienic location
 
-# Sedimentation
+## Sedimentation
 * It is a preliminary step
 * allows subsequent treatment steps to be more effective 
 * Turbidity
@@ -60,7 +61,7 @@ Water quality measurement is different to water safety, water quality measuremen
     * Coarser flac, settler faster but larger volumes
 * In order to have an effective coagulation we must perform some test to get right proportion
 
-# Membrane Filtration
+## Membrane Filtration
 * Rapidly growing field 
 * Size exclusion
 * Electrostatic effects, positives/ negatives particles interact with the membrane
@@ -83,7 +84,7 @@ Water quality measurement is different to water safety, water quality measuremen
     * increase in operating pressure
     * solution: periodic cleaning 
 
-# Ceramic Filtration
+## Ceramic Filtration
 * Simple operation
 * Built-in safe storage
 * No electricity or consumables
@@ -104,7 +105,7 @@ Water quality measurement is different to water safety, water quality measuremen
 * Requires periodic cleaning
 * Good against protozoas, bacterias may regrowth
 
-# Biological filtration
+## Biological filtration
 * Most known: slow sand filtration
 * recent adaptation to household level
 * biofilm fights pathogens
