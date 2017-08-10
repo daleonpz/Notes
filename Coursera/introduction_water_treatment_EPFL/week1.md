@@ -1,6 +1,8 @@
 ---
-Course: Introduction to Household Water Treatment and Safe Storage
-University: Ecole Polytechnique Federale de Lausanne
+course: Introduction to Household Water Treatment and Safe Storage
+university: Ecole Polytechnique Federale de Lausanne
+title: Introduction to HWTS
+week: 01
 ---
 
 # Outline

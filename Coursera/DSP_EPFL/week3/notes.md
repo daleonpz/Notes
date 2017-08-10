@@ -1,6 +1,6 @@
 ---
 Week: 03
---
+---
 
 This module is concerned with understanding spectra and the Fourier transform. Fourier proposed to decompose any well-behaved function into a sum of harmonic sines and cosines.  The idea of Fourier that sines and cosines can be used to decompose functions is still fundamental in many areas, and not only in signal processing but also all over applied sciences and physics.
 
@@ -43,6 +43,15 @@ $$
 is an orthogonal basis in $\mathbb{C}$, k is the index of the signal such that $\omega = 2\pi k/N$
 
 In order to be orthonormal the vectors should be normalized by a factor of $1/\sqrt{N}$
+
+Some notation:
+
+$$
+\begin{aligned}
+\mathbf{w}^{(k)} &= [1 \ W_N^{-k} \ W_N^{-2k} \ ... \ W_N^{-k(N-1)}]^T \\
+W_N &= exp(-j2\pi /N)
+\end{aligned}
+$$
 
 # Lesson 3.2: Discrete fourier transform
 ## Analysis Formula
