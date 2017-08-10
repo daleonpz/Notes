@@ -1,10 +1,11 @@
 ---
 Week: 02
 ---
+# Vector Spaces
 
-# Lesson 2.1: Signal Processing and vector space
+## Lesson 2.1: Signal Processing and vector space
 We need a common framework: vector space
-## Vector space
+### Vector space
 * same framework for different classes of signals
 * same framework for continuous-time signals
 * easy explanation of the Fourier Transform
@@ -14,12 +15,12 @@ We need a common framework: vector space
 
 Vector spaces are very general objects and are defined by their properties and not by the shape of the vector they contain. Once you meet all the requeriments you can use vector spaces.
 
-# Lesson 2.2: Vector spaces
+## Lesson 2.2: Vector spaces
 Vectors can be functions. Some vector spaces can be represented graphically. 
 * Ingrendients: set of vectors and scalars
 * We at least have to be able to resize vectors and combine vectors together
 
-## Formal properties 
+### Formal properties 
 For $x$, $y$, $z \in V$ and $\alpha , \beta \in \mathbb{C}$
 
 * $x+y = y+x$
@@ -30,7 +31,7 @@ For $x$, $y$, $z \in V$ and $\alpha , \beta \in \mathbb{C}$
 * $\exists 0 \in V | x + 0 = 0 + x = x$
 * $\forall x \in V \exists(-x) | x + (-x) = 0$
 
-## Inner product
+### Inner product
 * measure of similarity between vector
 * if it is zero then vectors are orthogonal, maximally different
 
@@ -53,12 +54,12 @@ x_n &=  \sum_{k=0}^{n} \frac{1}{k!} \in \mathbb{Q} \\
 \end{aligned}
 $$ 
 
-## Hilbert space 
+### Hilbert space 
 * a vector space $H(V, \mathbb{C}$
 * an inner product $\langle , \rangle : V \times V \to \mathbb{C}$
 * completeness
 
-## Some properties inner product
+### Some properties inner product
 * scaling property with respect to scalar multiplication:
 $$
 \begin{aligned}
@@ -70,7 +71,7 @@ $$
 * communtative within complex conjugation
 $$\langle x, y \rangle = \langle y, x\rangle ^*$$
 
-# Lesson 2.3: Bases
+## Lesson 2.3: Bases
 A basis is a vector space's "skeleton", so to speak. It gives the space structure and allows us to decompose any element in the space into a linear combination of simple building blocks, namely, the basis vectors. 
 
 Linear combination is the basic operation in vector spaces. 
@@ -80,7 +81,7 @@ $$
     e^{(0)} = [1 \ 0]^T \qquad e^{(1)} = [0\ 1]^T  
 $$
 
-## Formal definiton
+### Formal definiton
 Given:
 * a vector space H
 * a set of K vectors from H: $W = \{ w^{(k)} \} k = 0,1,2, ..., K-1$
@@ -93,7 +94,7 @@ $$
 $$
 2. coefficients $\alpha _k$ are unique
 
-## Special bases
+### Special bases
 * Orthogonal basis: $\langle \mathbf{w}^{(k)} \mathbf{w}^{(n)}\rangle = 0$
 * Orthonormal basis: orthogonal vectors of norm equal to one are called orthonormal bases
  $\langle \mathbf{w}^{(k)} \mathbf{w}^{(n)}\rangle = \delta [n-k]$
@@ -101,7 +102,7 @@ $$
 We can always orthonormalize a basis via the Gram-Schmidt algorithm (iterative). 
 Given an orthogonal basis, you can define an orthonormal basis by dividing each basis vector by its norm.
 
-## Lesons 2.4: Subspaces and approximation
+### Lesons 2.4: Subspaces and approximation
 One of the beneficts of dsp in the possibilty of making approximations of the signals.
 
 * vector subspace is a subset of vectors closed under addition and scalar multiplication. For example, $\mathbb{R}^2 \subset \mathbb{R}^3$.
@@ -111,14 +112,14 @@ One of the beneficts of dsp in the possibilty of making approximations of the si
 * In finite dimensions, once we find a full set of orthogonal vectors, we are sure that the set spans the space.
 
   
-## Approximation
+### Approximation
 Problem:
 
 * vector $\mathbf{x} \in V$
 * subspaces $S \subseteq V$
 * approximate $\mathbf{x}$ in $S$
 
-## Least squares approximation
+### Least squares approximation
 Since the inner product is dependent on the angular separation between the vectors, it represents a first rough measure of similarity between x and y; in broad terms, it provides a measure of the difference in shape between vectors.
 
 It will be called **filtering**, when we are trying to approximate or modify a signal or it will be called **correlation** when we are trying to detect one particular signal amongst many. In any case inner product will allow us to measure the similarity (euclidean distance).

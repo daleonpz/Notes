@@ -1,6 +1,7 @@
 ---
 Week: 03
 ---
+# Part 1 - Basics of Fourier Analysis
 
 This module is concerned with understanding spectra and the Fourier transform. Fourier proposed to decompose any well-behaved function into a sum of harmonic sines and cosines.  The idea of Fourier that sines and cosines can be used to decompose functions is still fundamental in many areas, and not only in signal processing but also all over applied sciences and physics.
 
@@ -10,7 +11,7 @@ In this Chapter we study three types of Fourier transform which apply to the thr
 into a set of N discrete frequency components;
  * the Discrete-Time Fourier Transform (DTFT), which maps infinite se- quences into the space of $2\pi$-periodic function of a real-valued argument.
 
-# Lesson 3.1: Introduction to Fourier analysis
+## Lesson 3.1: Introduction to Fourier analysis
 Why should we use sines and cosines to describe a signals?
 * Oscillations are everywhere.
 * sustainable dynamic systems exhibit oscillatory behavior
@@ -18,24 +19,24 @@ Why should we use sines and cosines to describe a signals?
 Oscillations are very easy to describe.
 Sinusoidal oscillations are eigenfunctions of linear time-invariant systems.
  
-## Analysis
+### Analysis
 
 * from time domain to frequency domain
 * find the contribution of different frequencies
 * discover "hidden" signal properties
 
-## Synthesis
+### Synthesis
 
 * from frequency to time domain
 * create signals with known frequency content
 * fit signals to specific frequency regions
 
-## Mathematical setup
+### Mathematical setup
 
 * let's start with finite length signals
 * Fourier analysis is a simple change of basis
 
-## Fourier Basis for $\mathbb{C}^N$
+### Fourier Basis for $\mathbb{C}^N$
 $$
 w_k[n] = exp(j\frac{2\pi}{N}nk) \quad n,k = 0,1,...,N-1
 $$   
@@ -53,8 +54,8 @@ W_N &= exp(-j2\pi /N)
 \end{aligned}
 $$
 
-# Lesson 3.2: Discrete fourier transform
-## Analysis Formula
+## Lesson 3.2: Discrete fourier transform
+### Analysis Formula
 $$
  X_k = \langle \mathbf{w}^{(k)}, \mathbf{x}\rangle
 $$
@@ -64,7 +65,7 @@ $$
 \mathbf{X} = \mathbf{W} \mathbf{x}
 $$
 
-## Synthesis Formula
+### Synthesis Formula
 $$
 \mathbf{x} = \frac{1}{N} \sum_{k=0}^{N-1} X_k \mathbf{w}^{(k)}
 $$
@@ -80,23 +81,23 @@ $1/N$ is the normalization factor that comes from the orthonormal normalization.
 * In general terms, the magnitude of the DFT is "symmetric"
 * We will only need $\lfloor N/2 \rfloor +1$ coefficients to specify the magnitude of the DFT of a real signal of length N
 
-# Lesson 3.3: DFT in Practice
+## Lesson 3.3: DFT in Practice
 * The fastest positive frequency is $\omega = \pi$
 * sinusoid at $\omega = \pi$  needs two samples to do a full revolution
 * time between samples $T_s = 1/F_s$ seconds
 * real-world period for fastest sinusoid is $2T_s$ seconds
 * real-world frequency for fastest sinusoid $F_s/2$ Hz
 
-# Lesson 3.4: The short-time Fourier Transform
+## Lesson 3.4: The short-time Fourier Transform
 The fundamental tradeoff:
 * time representation obfuscates frequency
 * frequency representation obfuscates time
 
-## The short time fourier transform 
+### The short time fourier transform 
 * take small signal pieces of length L
 * look at the DFT of each piece
 
-## Spectrogram
+### Spectrogram
 * color-code the magnitude: dark is small, white is large
 * use $10log_{10}( \|X[m: k]\|)$ to see better (power in dB)
 * plot spectral slices one after another
@@ -106,7 +107,7 @@ Some questions:
 * position of the window (overlapping?)
 * shape of the window (weighing the samples)
 
-## Wideband vs Narrowband
+### Wideband vs Narrowband
 
 * Long window: narrowband spectogram
     * long window implies more DFT points and therefore more frequency resolution
@@ -116,7 +117,7 @@ Some questions:
     * short window implies many time slices therefore precise location of transitions
     * short window implies fewer DFT points therefore poor frequency resolution
 
-## Tilding
+### Tilding
 * let's define $\Delta t$ as the time resolution of the spectogram
 * let's define $\Delta f$ as the frequency resolution of the spectogram
 
