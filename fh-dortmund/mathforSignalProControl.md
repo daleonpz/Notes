@@ -33,7 +33,37 @@ where $P$ and $Q$ are polynomials in $x$ and $Q$ is not the zero polynomial. The
 
 * Transcendental functions: Any function that cannot be solved through arithmetic operations. (exponential, logarithmic , trigonometrics)
 
-## Differential Calculus
+## Differential Calculus (HAVE NOT COMPLETED THE EXCERCISES)
 * Derivative: $f'(a)=\lim _{h\to 0}{\frac {f(a+h)-f(a)}{h}}$
 
 * $f$ is **smooth** if $f: D \rightarrow \mathbb{R}$ has **continuous** derivatives of all orders in all points of $D$
+
+## Integral Calculus 
+* $f$ is defined in $[a, b]$, then the antiderivative $F(x): \frac{dF(x)}{dx} = f(x)$
+
+* $\forall x \in [a,b]$ se cumple que $F(b)- F(a) = \int_a^b f(x)dx$
+
+## Series Aprox
+* Taylor series (function must be smooth)
+* $f$ is analytic if it can be described **locally** by a convergent power series
+
+# Complex Analysis
+## Complex functions 
+* $f: D \subseteq \mathbb{C} \rightarrow \mathbb{C}$
+* $f$ is holomorphic, if it is differentiable
+* $f$ is meromorphic if it is holomorphic on all $D$ except in the poles (read more about)
+* Partial fraction expansion
+* if the first derivative exists then $f^n(x) \ \exists \ \forall \ n$
+
+## Contour integral
+* it is calculating using a parametric curve  $\gamma (z)$ that maps the real line onto the complex plane. For example $z = x+iy$.
+$$ \gamma :[a,b] \rightarrow \mathbb{C} \quad \int_\gamma f(z)dz = \int_a^b f(z(\gamma))dz $$
+
+* A usefull [link](https://www.youtube.com/watch?v=wN45dqYyrOE). 
+
+## Residue theorem
+* The residue is a complex number proportional to the contour integral of a **meromorphic**  function along a path enclosing one of singularities.
+
+## Cauchy-integral formula
+
+
