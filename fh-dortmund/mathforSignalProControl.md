@@ -33,7 +33,7 @@ where $P$ and $Q$ are polynomials in $x$ and $Q$ is not the zero polynomial. The
 
 * Transcendental functions: Any function that cannot be solved through arithmetic operations. (exponential, logarithmic , trigonometrics)
 
-## Differential Calculus (HAVE NOT COMPLETED THE EXCERCISES)
+## Differential Calculus 
 * Derivative: $f'(a)=\lim _{h\to 0}{\frac {f(a+h)-f(a)}{h}}$
 
 * $f$ is **smooth** if $f: D \rightarrow \mathbb{R}$ has **continuous** derivatives of all orders in all points of $D$
@@ -48,7 +48,7 @@ where $P$ and $Q$ are polynomials in $x$ and $Q$ is not the zero polynomial. The
 * $f$ is analytic if it can be described **locally** by a convergent power series
 
 # Complex Analysis
-## Complex functions 
+## Complex functions(HAVE NOT COMPLETED THE EXCERCISES) 
 * $f: D \subseteq \mathbb{C} \rightarrow \mathbb{C}$
 * $f$ is holomorphic, if it is differentiable
 * $f$ is meromorphic if it is holomorphic on all $D$ except in the poles (read more about)
