@@ -1,6 +1,6 @@
 ---
 course: Introduction to embedded systems Designs
-professor Prof. Dr. Henkler / Schuster:
+professor: Prof. Dr. Henkler / Schuster
 semester: Winter 2017
 ---
 
@@ -40,7 +40,7 @@ semester: Winter 2017
 - Abstract and simplified representation of something
 
 ## Design:
-- Defining things (interfaces, architecture, components)  and results (documentation)
+- It the process of defining things (interfaces, architecture, components)  and results (documentation)
 - Create abstract implementation model
 
 ## Role of Design:
