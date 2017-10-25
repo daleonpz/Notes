@@ -182,9 +182,127 @@ Versus:
 ### Software components
 A software component is a unit of composition with contractually-specified interfaces and explicit context dependencies only. A software component can be deployed independently and is subject to composition by third parties. 
 
-
-# Introduction to UML
+-----
+# Introduction to UML (NEED TO STUDY FROM HERE)
 - It is a visual language
 - Neutral: independent form language programming
+- **Model**: abstract representation of a systems
+- **Diagram**: correspond to one view of a model
+- UML diagrams illustrate  the quantifable aspects of a system that can be described visually
+- Types: 
+    - Structure Diagrams
+    - Behaviour Diagrams 
 
 Some good [tutorial](https://www.youtube.com/watch?v=UI6lqHOVHic)
+
+# Class Diagram
+- Based on Entity-Relationship-Modell: Conceptional model to describe the structure of data (Entities) and the relationship between the data.
+
+- Tasks:
+    - Analysis: identify object model of system and context (environment)
+    - Design: design object model of the systems
+    - Implementation: realize object model of the system
+
+- UML Class diagrams:
+    - Consists of definitions of classes and relation types
+    - Classes: define structure (attributes) and behavior (signature of operations) of uniform objects
+    - Relation types: define relation between objects
+
+## Analysis Phase
+- Step 1: Determine relevant classes of problem domain: all substantives  are candidates for classes
+- Step 2: not relevant classes are eliminated
+- Step 3: determine attributes and operations
+- Step 4: determine relations between objects (Association, Aggregation) 
+- Step 5: Determine common properties of different classes. Define common properties in a common super class
+- Step 6: Repeat step 2 to 5 till class diagram is stable
+
+## Design Phase 
+- Analysis:  Analysis model of the problem domain
+- Design:
+    - Define the software architecture (coarse design):
+        - Decompose system into subsystem
+        - Identify components
+        - Relations and cooperation between components (connectors)
+        - Result: architectural description
+    - Detailed Design
+        - Determine interfaces (contracts)
+        - Result: component specification
+    - Identify properties in your system (and model) where e.g. flexibility is required. Apply design pattern 
+- Important: Analysis model  **IS NOT EQUAL TO** Design model!
+
+# Object Diagram
+- Emphasize the relationship between instances of classes
+- Use a subset of elements of a class diagram
+- template for object (instances)
+
+# Behavioral Model 
+## Interactions and Collaborations
+- Interaction: a collection of communications between instances, including all ways to affect instances, like operation invocation, as well as creation and destruction of instances
+- The communications are partially ordered (in time)
+- Show interactions between instances in the model
+- is focusing in communication between concrete objects, includes all possible effects of the communication
+- show when the instances are creating or deleting
+- ordering of the  operations
+- **Sequence Diagram**:
+    - Sequence diagram is the most common kind of interaction diagram, which focuses on the message interchange between a number of objects 
+    - has simple semantics in a specific point of time
+    - one possible communication is representing
+    - show message interaction between objects
+- **Collaboration/Communication Diagram**: 
+    - structural effects
+    - representation of a concrete possible diagram includes and ordering of calls (check this line)
+
+### When to use Model Interaction
+- To specify how the instances are to interact with each other.
+- To identify the interfaces of the classifiers.
+- To distribute the requirements.
+
+### Interaction Model Tips (super important)
+- Set the context for the interaction. Context must be simple and clear
+- Include only those features of the instances that are relevant.
+- Express the flow from left to right and from top to bottom.
+- Put active instances to the left/top and passive ones to the right/bottom.
+- Use sequence diagrams
+    - to show the explicit ordering between the stimuli
+    - when modeling real-time
+- Use collaboration diagrams
+    - when structure is important
+    - to concentrate on the effects on the instances
+
+### What is collaboration
+- Colaboration defines the roles that a set of instances play when performing a particular task, like an operation or a use case
+- Interaction specifies a communication pattern to be performed by instances playing the roles of a collaboration.
+- An instance can have more than one role
+- Pattern is a solution used many times 
+
+### When to use Model Collaborations
+- Use Collaborations as a tool to find the classifiers 
+- Trace a Use Case/ Operation onto classifiers 
+
+### Colaboration Modelling tips
+- A collaboration should consist of both structure and behavior relevant for the task
+- A role is an abstraction of an instance, it is **not** a class
+
+### Wrap up
+- Instances, Links and Stimuli are used for expressing the dynamics in a model
+- Collaboration is a tool:
+    - Identification of classifiers 
+    - specification of the usage of instances
+    - expressing a mapping between different levels of abstraction
+- Different kinds of diagrams focus on time or on structure
+
+## State Charts (From here)
+- Discrete behaviours
+- Event driven behaviours
+
+## Activity Diagram
+- Method or business behaviours are specified 
+- Control flow and object flow
+- specify behaviours of an operation
+- Action is the core
+
+### Coordinate steps
+- inherited from state machines
+
+### When to use activity diagrams
+- Not many or none exceptions 
