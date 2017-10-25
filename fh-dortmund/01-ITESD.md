@@ -128,15 +128,15 @@ Each loop in the spiral represents a phase of the software process. Thus, the in
 
 - Information hiding:
     - Work with black boxes (interfaces)
-    - Maintendable and extensable
+    - Maintainable and extensible
 
 - Abstraction: Focus on giving the relevant information to a particular purpose.
 
-- Modularity: no coupling (full independency), functional (strong dependency)
+- Modularity: no coupling (full independent), functional (strong dependency)
 
 ### Object orientation
-- An object has states and behaviours
-- Classes: abstraction that defines propertios and characteristics of an object, are used as templates for objects.
+- An object has states and behavior
+- Classes: abstraction that defines properties and characteristics of an object, are used as templates for objects.
 - Usually we think in an oriented-object way
 
 ### Structured Analysis and Design
@@ -188,15 +188,15 @@ A software component is a unit of composition with contractually-specified inter
 - Neutral: independent form language programming
 - **Model**: abstract representation of a systems
 - **Diagram**: correspond to one view of a model
-- UML diagrams illustrate  the quantifable aspects of a system that can be described visually
+- UML diagrams illustrate  the quantifiable aspects of a system that can be described visually
 - Types: 
     - Structure Diagrams
-    - Behaviour Diagrams 
+    - Behavior Diagrams 
 
 Some good [tutorial](https://www.youtube.com/watch?v=UI6lqHOVHic)
 
 # Class Diagram
-- Based on Entity-Relationship-Modell: Conceptional model to describe the structure of data (Entities) and the relationship between the data.
+- Based on Entity-Relationship-Model: Conceptional model to describe the structure of data (Entities) and the relationship between the data.
 
 - Tasks:
     - Analysis: identify object model of system and context (environment)
@@ -270,7 +270,7 @@ Some good [tutorial](https://www.youtube.com/watch?v=UI6lqHOVHic)
     - to concentrate on the effects on the instances
 
 ### What is collaboration
-- Colaboration defines the roles that a set of instances play when performing a particular task, like an operation or a use case
+- Collaboration defines the roles that a set of instances play when performing a particular task, like an operation or a use case
 - Interaction specifies a communication pattern to be performed by instances playing the roles of a collaboration.
 - An instance can have more than one role
 - Pattern is a solution used many times 
@@ -279,7 +279,7 @@ Some good [tutorial](https://www.youtube.com/watch?v=UI6lqHOVHic)
 - Use Collaborations as a tool to find the classifiers 
 - Trace a Use Case/ Operation onto classifiers 
 
-### Colaboration Modelling tips
+### Collaboration Modeling tips
 - A collaboration should consist of both structure and behavior relevant for the task
 - A role is an abstraction of an instance, it is **not** a class
 
@@ -292,13 +292,13 @@ Some good [tutorial](https://www.youtube.com/watch?v=UI6lqHOVHic)
 - Different kinds of diagrams focus on time or on structure
 
 ## State Charts (From here)
-- Discrete behaviours
-- Event driven behaviours
+- Discrete behaviors
+- Event driven behaviors
 
 ## Activity Diagram
-- Method or business behaviours are specified 
+- Method or business behaviors are specified 
 - Control flow and object flow
-- specify behaviours of an operation
+- specify behaviors of an operation
 - Action is the core
 
 ### Coordinate steps
