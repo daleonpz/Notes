@@ -27,3 +27,25 @@ semester: Winter 2017
     - Are implementable
     - Should meet the requirements, the assumptions can be wrong
 
+- **Functional Requirement**: explains the what
+- **Quality Requirement**: 
+    - How good? How can you specify reliability and maintainability
+    - How to measure so we make sure we meet the requirements
+    - A requirement that related to a quality concern that is not covered by functional requirement
+ 
+## Constrains 
+- Requirement gives to much room, so we must constrain the requirement
+- Additional constrains that are not covered by functional requirements
+
+## What is requirements engineering
+- A systematic approach for delivering requirements 
+- Is an informal process, it is hard to subdivide in procedures
+- It is a phase, it is a continuous activity
+- It is a part of the software development life cycle
+- It is the basics for  verification
+- Traceability is very helpful to decide whether the software development may change due to new requirements 
+
+## Some empirical data
+- Misconception or misunderstanding in the requirements phase are the main cause of failures in the test phase. 
+
+
