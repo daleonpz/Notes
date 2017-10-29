@@ -123,7 +123,10 @@ Each loop in the spiral represents a phase of the software process. Thus, the in
     - Otherwise difficult to test
 - If there is a good design, it will be much simple to update a system.
 - What are the attributes of good software?  Good software should deliver the required functionality and performance to the user and should be maintainable, dependable and usable.
-- Good design: User view, Administrative/ Deployment view and Internal view
+- Good design: 
+    - User view (easy to use, stable, efficient, performance)
+    - Administrative/ Deployment (interoperability) 
+    - view and Internal view (well documented, reusable, easy to maintain, portability))
 
 ### Design principles:
 - Separation of concerns: 
