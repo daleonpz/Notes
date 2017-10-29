@@ -252,10 +252,10 @@ Some good [tutorial](https://www.youtube.com/watch?v=UI6lqHOVHic)
         - Result: architectural description
     - Detailed Design
         - Determine interfaces (contracts)
-        - Result: component specification
-    - Identify properties in your system (and model) where e.g. flexibility is required. Apply design pattern 
+        - Result: component specification - Identify properties in your system (and model) where e.g. flexibility is required. Apply design pattern 
 - Important: Analysis model  **IS NOT EQUAL TO** Design model!
 
+----
 # Object Diagram
 - Emphasize the relationship between instances of classes
 - Use a subset of elements of a class diagram
@@ -272,6 +272,7 @@ Some good [tutorial](https://www.youtube.com/watch?v=UI6lqHOVHic)
 - **Sequence Diagram**:
     - Sequence diagram is the most common kind of interaction diagram, which focuses on the message interchange between a number of objects 
     - has simple semantics in a specific point of time
+    - Specifies timing intervals
     - one possible communication is representing
     - show message interaction between objects
 - **Collaboration/Communication Diagram**: 
@@ -295,6 +296,7 @@ Some good [tutorial](https://www.youtube.com/watch?v=UI6lqHOVHic)
     - when structure is important
     - to concentrate on the effects on the instances
 
+---
 ### What is collaboration
 - Collaboration defines the roles that a set of instances play when performing a particular task, like an operation or a use case
 - Interaction specifies a communication pattern to be performed by instances playing the roles of a collaboration.
@@ -318,17 +320,44 @@ Some good [tutorial](https://www.youtube.com/watch?v=UI6lqHOVHic)
 - Different kinds of diagrams focus on time or on structure
 
 ## State Charts (From here)
+### Automata
+- A machine whose output behavior is not only a direct consequence of the current input, but of some past history of its inputs
+- Characterized by an internal state which represents this past experience
+
+### Mealy state machine
+- a set of input signals
+- a set of output signals
+- a set of states
+- a set of transitions
+- a set of extended state variables
+- a set of final states
+- an initial states
+
+### What kind of behaviors?
 - Discrete behaviors
 - Event driven behaviors
+- Event: a type of observable occurrence
+
+### Wrap up:
+- Used to model event-driven
+- Includes a number of sophisticated features that realize common state-machine usage pattern
+- Provides a hierarchical modeling
 
 ## Activity Diagram
+- The difference in the three models is how step in a process is initiated, specially with respect to how the step gets its inputs
 - Method or business behaviors are specified 
 - Control flow and object flow
 - specify behaviors of an operation
-- Action is the core
-
-### Coordinate steps
-- inherited from state machines
+- Action is the core: an action is used for anything that does not directly start another activity graph. However, an action can invoke an operation that has another activity graph as a method.
 
 ### When to use activity diagrams
+- The behavior does not depend much on external  events
+- has steps that run to completion, rather than being interrupted by events
+- requires data/object flow between steps
 - Not many or none exceptions 
+- You are concerned with which activities happen, rather than which objects are responsible for them.
+
+### Wrap up:
+- Use activity diagrams for application that are primarily control and data-driven
+- not for embedded systems (event driven applications)
+- control and data/object flow do not have separate semantics
