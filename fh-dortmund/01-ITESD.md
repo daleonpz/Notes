@@ -127,6 +127,7 @@ Each loop in the spiral represents a phase of the software process. Thus, the in
 
 ### Design principles:
 - Separation of concerns: 
+    - Group tasks that belong to the same concern
     - Try not to focus on the whole system as a unit
     - Breakdown the system, develop and design each part
 - Information hiding:
