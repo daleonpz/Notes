@@ -117,6 +117,10 @@ Each loop in the spiral represents a phase of the software process. Thus, the in
 - Software will change during maintenance
 
 ## Software Quality requires design: (READ slides)
+- Importance of software design: **quality**
+    - Translate accurately requirements into products
+    - Still stable systems for small changes
+    - Otherwise difficult to test
 - If there is a good design, it will be much simple to update a system.
 - What are the attributes of good software?  Good software should deliver the required functionality and performance to the user and should be maintainable, dependable and usable.
 - Good design: User view, Administrative/ Deployment view and Internal view
@@ -125,14 +129,15 @@ Each loop in the spiral represents a phase of the software process. Thus, the in
 - Separation of concerns: 
     - Try not to focus on the whole system as a unit
     - Breakdown the system, develop and design each part
-
 - Information hiding:
+    - Hide design decisions within modules especially when changes are expected
     - Work with black boxes (interfaces)
     - Maintainable and extensible
-
 - Abstraction: Focus on giving the relevant information to a particular purpose.
-
-- Modularity: no coupling (full independent), functional (strong dependency)
+- Modularity:
+    - Modularization: the process of breaking a system into components to facilitate design and development
+    - Encapsulation: A software development technique that consists of isolating  a system function within a module and providing precise specifications for the module
+     no coupling (full independent), functional (strong dependency)
 
 ### Object orientation
 - An object has states and behavior
@@ -142,7 +147,23 @@ Each loop in the spiral represents a phase of the software process. Thus, the in
 ### Structured Analysis and Design
 - Classes are used at all levels.
 
-### OO & Modularity: 5 Principles
+### OO & Modularity: 5 Criteria (READ SLIDES)
+- Decomposability
+- Composability
+- Understandability
+- Continuity
+- Protection
+
+### OO & Modularity: 5 Rules (READ SLIDES)
+- Direct mapping
+- Few interfaces
+- Small interfaces 
+- Explicit interfaces
+- Information hiding
+
+### OO & Modularity: 5 Principles (READ SLIDES)
+- Linguistic Modular Units
+- Self documentation
 - Uniform access: All services offer by a module should be available through a uniform notation, which does not betray whether they are implemented through storage or through computation. 
 For example in Ruby:
 
@@ -154,6 +175,7 @@ For example in Ruby:
  journey_plan.title
 ```
 
+- Open-Closed Principle
 - Single choice: The goal is to put things which change for the same reason into the same place.
 Structurally, it is a matter of inverting a nested relationship:
 
@@ -178,6 +200,10 @@ Versus:
   --variation 2
   etc...
 ```
+
+### Object structuring: Limitations
+- Object Abstraction results usually in stable entities, the requirements may change.
+- Encapsulation is sometimes weak
 
 ### Software components
 A software component is a unit of composition with contractually-specified interfaces and explicit context dependencies only. A software component can be deployed independently and is subject to composition by third parties. 
