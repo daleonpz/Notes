@@ -5,8 +5,12 @@ semester: Winter 2017
 ---
 
 # Introduction
-- Without result: a manager or someone changes the status of the project as _closed_ or _finished_.
-- Realistic expectation: user and management views. The  user may ask for something that it is not possible under certain circumstances.
+Reasons for project success:
+    - Without result: a manager or someone changes the status of the project as _closed_ or _finished_.
+    - Realistic expectation: user and management views. The  user may ask for something that it is not possible under certain circumstances.
+    - Clear statement of requeriments
+    - Management support 
+    - Experience project manager
 - Motivation: 
     - legal perspective: contracts
     - keep the supply chain working
@@ -17,8 +21,11 @@ semester: Winter 2017
     - it is powerful, UML cannot model quality for example.
     - user are most likely to not understand UML
     - But natural language may be unclear
-- A requirement is a need that the user or stakeholder needs. 
-- It is given from the perspective of the system (check slides for more information).
+- A requirement is:
+    - a need of the user or stakeholder
+    - a capability or property that a system shall have.
+- **def**: Soren Lausen: “A requirement specification is a document that describes what the system should do.”
+- It is given from the perspective of the system (check examples in slides for more information).
 - What and how depends on the perspective. It is not always easy to identify requirements.
 - Requirements talk about real word, what the user can observe
 - Some requirements are not visible to the system.
@@ -26,8 +33,9 @@ semester: Winter 2017
     - Are things that the system can observed and it is also observed in the real world.
     - Are implementable
     - Should meet the requirements, the assumptions can be wrong
-
-- **Functional Requirement**: explains the what
+- **Functional Requirement**: 
+    - explains the what
+    -  A requirement concerning a result of behavior that shall be provided by a function of a system.
 - **Quality Requirement**: 
     - How good? How can you specify reliability and maintainability
     - How to measure so we make sure we meet the requirements
@@ -39,6 +47,13 @@ semester: Winter 2017
 
 ## What is requirements engineering
 - A systematic approach for delivering requirements 
+- **Goal**: minimize the risk of delivering a system that does not meet the stakeholders’ desires and needs
+- Ingredients:
+    - Knowing your stakeholders 
+    - understanding the stakeholders’ needs
+    - achieving a consensus among the stakeholders about requirements
+    - documenting them according to given standards
+    - managing them systematically to cope with changes
 - Is an informal process, it is hard to subdivide in procedures
 - It is a phase, it is a continuous activity
 - It is a part of the software development life cycle
