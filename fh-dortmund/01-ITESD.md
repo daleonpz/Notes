@@ -365,3 +365,36 @@ Some good [tutorial](https://www.youtube.com/watch?v=UI6lqHOVHic)
 - Use activity diagrams for application that are primarily control and data-driven
 - not for embedded systems (event driven applications)
 - control and data/object flow do not have separate semantics
+
+## Interaction Diagram (DRAFT VERSION)
+- Try to model how different diagrams work together
+
+## Use Case Diagram 
+- External visible activites that interacts with the system
+- Functional requirements
+- Include: For example "Driving a car" is include in "using a car"
+- Extend: For example "Turn on a radio" is an extention but it is not need to "using a car"
+- Note the direction of the arrows when using _include_ and _extend_
+
+### Use Case Description
+- Is a textual way to represent use case diagrams 
+- Preconditions: it is written
+- Actor: an actor could be anything (another system, client, database)
+
+### When to model Use Case Diagram 
+-  Could be possible to use it as a starting point for analysis.
+
+## Timing Diagram
+- when we change from one state to another in a certain time
+
+## Component Diagram
+- The only way to communicate with components is by using interfaces
+- We can specify the port behavior
+- There could be a set of classes that implements interfaces 
+- Contracts: methods
+
+## Deployment Diagram 
+- Show the hardware of the system
+- Map the software it the specific hardware elements
+- The idea is to represent a real physical environment
+- Artifact: it is kind of executable, binary file, source code
