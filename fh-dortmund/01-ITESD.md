@@ -366,14 +366,16 @@ Some good [tutorial](https://www.youtube.com/watch?v=UI6lqHOVHic)
 - not for embedded systems (event driven applications)
 - control and data/object flow do not have separate semantics
 
-## Interaction Diagram (DRAFT VERSION)
+## Interaction Diagram (DRAFT VERSION AFTER SLIDES - need to check with our homework)
+- Form of activity diagram 
 - Try to model how different diagrams work together
 
 ## Use Case Diagram 
-- External visible activites that interacts with the system
+- view of a system that emphasizes the **behavior** as it appears to outside **users**. 
+- External visible activities that interacts with the system
 - Functional requirements
 - Include: For example "Driving a car" is include in "using a car"
-- Extend: For example "Turn on a radio" is an extention but it is not need to "using a car"
+- Extend: For example "Turn on a radio" is an extension but it is not need to "using a car"
 - Note the direction of the arrows when using _include_ and _extend_
 
 ### Use Case Description
@@ -382,19 +384,41 @@ Some good [tutorial](https://www.youtube.com/watch?v=UI6lqHOVHic)
 - Actor: an actor could be anything (another system, client, database)
 
 ### When to model Use Case Diagram 
--  Could be possible to use it as a starting point for analysis.
+- A use case model partitions system functionality into transactions (‘use cases’) that are meaningful to users (‘actors’).  
+- Could be possible to use it as a starting point for analysis.
+- Model user requirements with use cases.
+- Model test scenarios with use cases.
+- If you are using a use-case driven method: start with use case and then use structural and behavioral diagrams 
+- If you are not using a use-case driven method: make sure that your use case is consistent with your structural and behavioral diagrams.
 
 ## Timing Diagram
-- when we change from one state to another in a certain time
+- Timing diagrams show change in state or other condition of a structural element over time. 
 
-## Component Diagram
+## Implementation Diagram
+- describe the different elements required for implementing a system Component diagrams
+
+### Component Diagram
+- Modular unit with well-defined interfaces that is replaceable within its environment
+- **Autonomous** unit within a system
 - The only way to communicate with components is by using interfaces
 - We can specify the port behavior
-- There could be a set of classes that implements interfaces 
-- Contracts: methods
+- Interfaces:
+    - Is the definition of a collection of one or more operations
+    - Provides only the operations but not the implementation
+    - Implementation is normally provided by a class or component
+- Component:
+    - Specifies Contracts (methods) of the services that are provided or required 
+    - Can be replaced
+    - The system can be extended
+- Ports:
+    - All interactions of a component with its environment are achieved through a port
+    - The internals are fully isolated from the environment
+    - This allows using a component in any context that satisfies the constraints specified by its ports
 
-## Deployment Diagram 
+### Deployment Diagram 
+- Are used to show the nodes where software components reside in the run-time system
 - Show the hardware of the system
 - Map the software it the specific hardware elements
 - The idea is to represent a real physical environment
+- Node: usually represents a piece of hardware
 - Artifact: it is kind of executable, binary file, source code
