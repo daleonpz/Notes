@@ -8,7 +8,7 @@ semester: Winter 2017
 Reasons for project success:
     - Without result: a manager or someone changes the status of the project as _closed_ or _finished_.
     - Realistic expectation: user and management views. The  user may ask for something that it is not possible under certain circumstances.
-    - Clear statement of requeriments
+    - Clear statement of requirements
     - Management support 
     - Experience project manager
 - Motivation: 
@@ -63,4 +63,42 @@ Reasons for project success:
 ## Some empirical data
 - Misconception or misunderstanding in the requirements phase are the main cause of failures in the test phase. 
 
+# RE in a nutshell (No slides)
+## Where do RE come from?
+- from stakeholders
+
+## Who analyzes the requirements
+
+## Project Type
+- In-house: requirements are there
+- Product dev: new product for a market
+- Time and materials:
+    - built a customer with effort
+    - External company gives the order to develop a product
+    - It's to risky
+- COTS (commercial off the shelf): 
+    - somebody is selling something to you
+    - Need high level requirement engineering to systematically evaluates products
+- Tender: company selects supplier in a bidding process
+- Contract dev: third-parties companies develop parts of the software
+- Unknown: no idea what to do
+
+## System types
+
+## Corner stones of RE
+- 3x3 Model:
+    - Activities: 
+        - Research information
+        - design, decision making
+    - Documentation:
+        - What the system is actually doing
+        - requirements vs specifications
+
+## Communications
+- Noise, infer what other people is trying to say
+- Not all the information is given
+- Neuro linguistic programming 
+
+## Documentation
+- What the user wants
 

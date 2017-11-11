@@ -22,7 +22,7 @@ semester: Winter 2017
 - Distributed system cannot be in the same hardware
 
 ## Characteristics
-- Concurrency: is focus on cyberphysical systems. Concurrency is a property of a system representing the fact that multiple activities are executed at the same time. Only executing two different tasks simultaneously yields true parallelism.
+- **Concurrency**: is focus on cyberphysical systems. Concurrency is a property of a system representing the fact that multiple activities are executed at the same time. Only executing two different tasks simultaneously yields true parallelism.
 - Shared resources (memory, bus)
 - No global clock: no time stamp, it is an issue
 - Independent failure; some parts may fail due to power consumption
@@ -101,3 +101,74 @@ semester: Winter 2017
     - End users and developers view
     - Describes user focused scenarios 
 
+---
+# General Challenges and Solutions
+## Why parallelism
+- Physical limits of frequency scaling already met years ago
+- Advantanges:
+    - meet efficiency / performance demands / requirements
+    - Better resource utilization, innovation and advancement
+- Disadvantages: 
+    - More complex design
+    - Overheads: context switches, resource consumption (local mem, os resources for management)
+
+## Concurrency - Parallelism
+- **Process**: program instance
+- **Task** is a specific part of a program
+- **Thread**: has a virtual address space. runs in a single core
+- **Runnable**: interface of a task
+-  An application may process one task at at time (sequentially) or work on multiple tasks at the same time (concurrently). Subtasks can be calculated in parallel.
+
+### Concurrency Models:
+- Useful [link](http://tutorials.jenkov.com/java-concurrency/concurrency-models.html)
+- Delegator:
+    - Incoming jobs are assigned to different workers. Each worker completes the full job. 
+    - Workers share states, complex and non-deterministic: shared states can be modified by other threads in the system
+- Reactive Systems:
+    - The system's workers react to events occurring in the system, either received from the outside world or emitted by other workers
+    - Event driven system
+    - No shared state between workers: they can be implemented without having to think about all the concurrency problems that may arise from concurrent access to shared state.
+    - Deterministic
+    - Hard to debug
+- Functional Parallelism:
+    - The basic idea of functional parallelism is that you implement your program using function calls. All parameters passed to the function are copied, so no entity outside the receiving function can manipulate the data.
+    - Similar to atomic operation
+
+## Problems
+- Parallel and Distributed systems:
+    - Race conditions, visibility
+    - Deadlocks: program get stuck no more executions
+    - livelocks: program get stuck but keep executing instructions
+    - spinlock: stuck in a loop, `while(1)` for example
+    - priority inversion: high priority task is indirectly preempted by a lower priority
+- Coordination solutions for mutual exclusion
+    - Semaphores
+    - OS services, monitors
+    - Mutex algorithms for critical sections
+    - Syncronization
+
+## Race conditions
+- If result of multiple threads executing a critical section depends on the sequence in which the threads execute the critical section, then the program contains a race condition 
+- **Solution**: Synchronized block or atomic operations
+- Atomic operation: is the one that  appears to the rest of the system to occur instantaneously. Atomicity is a guarantee of isolation from interrupts, signals, concurrent processes and threads.
+
+## 
+
+## Lampart's Bakery algorithm
+- Similar to when you draw a number and wait for your turn.
+
+## Semaphore
+- Can be seen as a counter that organized the resources
+- With a queue the access to a resource can be schedule (fairness)
+
+## Monitor 
+- Semaphore + condition variable
+- Multiple threads can be access the monitor, and the monitor manage the resources for the threads
+
+## Coffman condition
+- A deadlock situation on a resource can arise if and only if all of the following conditions hold simultaneously in a system
+
+- Mutual exclusion: The resources involved must be unshareable; otherwise, the processes would not be prevented from using the resource when necessary. Only one process can use the resource at any given instant of time.
+- Hold and wait or resource holding: A process holding resources can request more resources 
+- No preemption: a resource can be released only voluntarily by the process holding it.
+- Circular wait: each process must be waiting for a resource which is being held by another process, which in turn is waiting for the first process to release the resource. In general, there is a set of waiting processes, P = {P1, P2, …, PN}, such that P1 is waiting for a resource held by P2, P2 is waiting for a resource held by P3 and so on until PN is waiting for a resource held by P1.
