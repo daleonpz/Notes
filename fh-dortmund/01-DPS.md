@@ -105,7 +105,7 @@ semester: Winter 2017
 # General Challenges and Solutions
 ## Why parallelism
 - Physical limits of frequency scaling already met years ago
-- Advantanges:
+- Advantages:
     - meet efficiency / performance demands / requirements
     - Better resource utilization, innovation and advancement
 - Disadvantages: 
@@ -117,7 +117,7 @@ semester: Winter 2017
 - **Task** is a specific part of a program
 - **Thread**: has a virtual address space. runs in a single core
 - **Runnable**: interface of a task
--  An application may process one task at at time (sequentially) or work on multiple tasks at the same time (concurrently). Subtasks can be calculated in parallel.
+-  An application may process one task at at time (sequentially) or work on multiple tasks at the same time (concurrently). Sub-tasks can be calculated in parallel.
 
 ### Concurrency Models:
 - Useful [link](http://tutorials.jenkov.com/java-concurrency/concurrency-models.html)
@@ -145,7 +145,7 @@ semester: Winter 2017
     - Semaphores
     - OS services, monitors
     - Mutex algorithms for critical sections
-    - Syncronization
+    - Synchronization
 
 ## Race conditions
 - If result of multiple threads executing a critical section depends on the sequence in which the threads execute the critical section, then the program contains a race condition 
@@ -157,25 +157,25 @@ semester: Winter 2017
 - Two threads have a copy of a value in memory and then they modify each copy, but they return the new value there are inconsistencies.
 
 ```c
-/*No real code, just pseudocode*/
+/*No real code, just pseudo-code*/
 i = 0;
 
-\\ Call threads
-\\ Thread 1:
+// Call threads
+// Thread 1:
     i++;
 
-\\ Thread 2
+// Thread 2
     i += 2;
 
-\\ What's the value of i?
-\\ 3?, 2? ,1?
+// What's the value of i?
+// 3?, 2? ,1?
 ```
 
 - **Solution** Use `volatile` keyword
 
 ## Java Conventions
-- Syncronized: only one thread access to variable
-- Volatile: inmediate memory storage change at all accessing threads; prevent caching, no atomic
+- Synchronized: only one thread access to variable
+- Volatile: immediate memory storage change at all accessing threads; prevent caching, no atomic
 - Atomic: no interrupts
 - Persistent data structures preserve previous version of themselves (immutability); operation always yields a new update structure and keeps previous structure
 
@@ -198,19 +198,20 @@ It is the requirement that one thread of execution never enter its critical sect
 - `sync` primitives can be used by the OS
 - Can be seen as a counter that organized the resources. Two operations: incrementor `.v()` or `.release()` and decrementor `.p()` or `.acquire()`
 - If `counter >= 0` the access to CS is granted.
-- **Starvation**: If a thread disproportionally or never receives CPU time 
+- **Starvation**: If a thread disproportionately or never receives CPU time 
 „starves (to death)“
 - **Fairness**: With a queue (FIFO), the access to a resource can be schedule
 
-## Monitor 
-- Mutex + Condition variable/Partial syncronization
+### Monitor 
+- Mutex + Condition variable/Partial synchronization
 - Locks are not necessary if the buffer is empty
-- Partial syncronization
+- Partial synchronization
 - Semaphores can be used to implement monitors
 - Monitors are reentrant: if a thread holds the lock of a CS and calls a synchronized method on the same object again, the lock does not need to be acquired again
 - Multiple threads can be access the monitor, and the monitor manage the resources for the threads
 
 ```java
+// One queue for the conditions
 public class Monitor{
     private Semaphore mutex;
     Monitor(){
@@ -235,10 +236,41 @@ public synchronized void action(){
 }
 ```
 
-## Coffman condition
+## Deadlock
+- Resource hierarchy
+    - assign forks id
+    - inefficient when requesting more than 2 resources 
+- Arbitrator
+    - New central entity manages the fork request
+    - Reduced parallelism 
+- Chandy/ Mirsa 
+    - Philosopher's talk
+```c
+// Philosophers talk
+while(1){
+    think();
+    takeForks();
+    eat();
+    putForks();
+}
+```
+
+### Coffman condition
 - A deadlock situation on a resource can arise if and only if all of the following conditions hold simultaneously in a system
 
 - Mutual exclusion: The resources involved must be unshareable; otherwise, the processes would not be prevented from using the resource when necessary. Only one process can use the resource at any given instant of time.
 - Hold and wait or resource holding: A process holding resources can request more resources 
 - No preemption: a resource can be released only voluntarily by the process holding it.
-- Circular wait: each process must be waiting for a resource which is being held by another process, which in turn is waiting for the first process to release the resource. In general, there is a set of waiting processes, P = {P1, P2, …, PN}, such that P1 is waiting for a resource held by P2, P2 is waiting for a resource held by P3 and so on until PN is waiting for a resource held by P1.
+- Circular wait:  The processes in the system form a circular list or chain where each process in the list is waiting for a resource held by the next process in the list. In general, there is a set of waiting processes, P = {P1, P2, …, PN}, such that P1 is waiting for a resource held by P2, P2 is waiting for a resource held by P3 and so on until PN is waiting for a resource held by P1.
+
+### Deadlock handling
+- Ignore: assuming there is no deadlock
+- Detect: monitoring resources allocation and process states, and correct them if detected.
+- Prevent: coffman conditions.
+- Avoid: determine request that result in safe states. Banker's algorithm
+- Livelocks
+
+### Deadlock prevention
+- Non-blocking or lock-free algorithm
+- Use atomic read-modify-write primitives. For example, an atomic call can be done in the following way:
+    - Change mem iff it did not change since last read otherwise repeat with new value
