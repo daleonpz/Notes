@@ -196,15 +196,44 @@ It is the requirement that one thread of execution never enter its critical sect
 ### Semaphore
 - Lamport's algorithms wastes clocks cycles (`while` waitings)
 - `sync` primitives can be used by the OS
-- Can be seen as a counter that organized the resources. Two operations: incrementor `.release()` and decrementor `.acquire()`
+- Can be seen as a counter that organized the resources. Two operations: incrementor `.v()` or `.release()` and decrementor `.p()` or `.acquire()`
 - If `counter >= 0` the access to CS is granted.
 - **Starvation**: If a thread disproportionally or never receives CPU time 
 „starves (to death)“
 - **Fairness**: With a queue (FIFO), the access to a resource can be schedule
 
 ## Monitor 
-- Semaphore + condition variable
+- Mutex + Condition variable/Partial syncronization
+- Locks are not necessary if the buffer is empty
+- Partial syncronization
+- Semaphores can be used to implement monitors
+- Monitors are reentrant: if a thread holds the lock of a CS and calls a synchronized method on the same object again, the lock does not need to be acquired again
 - Multiple threads can be access the monitor, and the monitor manage the resources for the threads
+
+```java
+public class Monitor{
+    private Semaphore mutex;
+    Monitor(){
+        mutex = new Semaphore(1);
+    }
+    public void enter(){
+        mutex.p(); // decrementor
+    }
+    
+    public void leave(){
+        mutex.v(); // incrementor
+    }
+}
+
+public synchronized void action(){
+    /* threads waiting to 
+        meet the condition variable   */
+    while (!B) wait(); 
+    
+    // notify monitor data
+    notifyAll();
+}
+```
 
 ## Coffman condition
 - A deadlock situation on a resource can arise if and only if all of the following conditions hold simultaneously in a system
