@@ -82,3 +82,25 @@ $$\int_{-\infty}^{\infty}  \frac{1}{x^2+1} dx = \pi$$
 * Definition in slides
 
 # Lesson 2
+
+# Lesson 3
+## Transforms
+- Helpful identities
+
+$$sin(\theta) = \frac{(1 - cos(2\theta))}{2}$$
+$$cos(x) = \frac {e^{ix}+e^{-ix}}{2}$$
+$$sin(x) = \frac {e^{ix}-e^{-ix}}{2i}$$
+$$Fourier( te^{-at}) = \frac{1}{(j\omega + a)^2}$$
+
+## Relation Fourier series and transform
+- Note:
+
+$$x(t) = \sum_{n=-N}^{N} F_n e^{jn\omega_0 t}$$
+Where $F_n$ is the Fourier transform of $x(t)$  at same frequency $\omega_n$
+
+## Laplace transform
+- Note the integration limits **from $0$ to $\infty$**
+- Don't forget to check the exponential to get the ROC. For example:  
+in the case of $exp(-t(s+a) )$ when $t \to \infty$  
+if $(s+a)<0$, then $exp(-t(s+a))$ is $\infty$, so the integral doesn't converge
+
