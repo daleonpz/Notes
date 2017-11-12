@@ -149,17 +149,58 @@ semester: Winter 2017
 
 ## Race conditions
 - If result of multiple threads executing a critical section depends on the sequence in which the threads execute the critical section, then the program contains a race condition 
+- Critical section:  It cannot be executed by more than one process.  the critical section accesses a shared resources.
 - **Solution**: Synchronized block or atomic operations
 - Atomic operation: is the one that  appears to the rest of the system to occur instantaneously. Atomicity is a guarantee of isolation from interrupts, signals, concurrent processes and threads.
 
-## 
+## Visibility
+- Two threads have a copy of a value in memory and then they modify each copy, but they return the new value there are inconsistencies.
 
-## Lampart's Bakery algorithm
+```c
+/*No real code, just pseudocode*/
+i = 0;
+
+\\ Call threads
+\\ Thread 1:
+    i++;
+
+\\ Thread 2
+    i += 2;
+
+\\ What's the value of i?
+\\ 3?, 2? ,1?
+```
+
+- **Solution** Use `volatile` keyword
+
+## Java Conventions
+- Syncronized: only one thread access to variable
+- Volatile: inmediate memory storage change at all accessing threads; prevent caching, no atomic
+- Atomic: no interrupts
+- Persistent data structures preserve previous version of themselves (immutability); operation always yields a new update structure and keeps previous structure
+
+- Why not always use `sync` or `volatile`?
+    - Too strict, inefficient, no compiler optimization possible
+    - Trade-off between parallelism potential, performance, 
+    - careful design, prone to bugs, development overhead;
+
+## Mutex (Mutual exclusion)
+It is the requirement that one thread of execution never enter its critical section at the same time that another concurrent thread of execution enters its own critical section
+
+### Lamport's Bakery algorithm
 - Similar to when you draw a number and wait for your turn.
+- People = threads with ID (used for priority in case of equal numbers)
+- Used as mutex implementation for memory that lacks in synchronization primitives; does not rely on lower level atomic operations
+- Pseudocode [link](https://en.wikipedia.org/wiki/Lamport%27s_bakery_algorithm#Pseudocode)
 
-## Semaphore
-- Can be seen as a counter that organized the resources
-- With a queue the access to a resource can be schedule (fairness)
+### Semaphore
+- Lamport's algorithms wastes clocks cycles (`while` waitings)
+- `sync` primitives can be used by the OS
+- Can be seen as a counter that organized the resources. Two operations: incrementor `.release()` and decrementor `.acquire()`
+- If `counter >= 0` the access to CS is granted.
+- **Starvation**: If a thread disproportionally or never receives CPU time 
+„starves (to death)“
+- **Fairness**: With a queue (FIFO), the access to a resource can be schedule
 
 ## Monitor 
 - Semaphore + condition variable
