@@ -103,6 +103,7 @@ Where $F_n$ is the Fourier transform of $x(t)$  at same frequency $\omega_n$
 - Don't forget to check the exponential to get the ROC. For example:  
 in the case of $exp(-t(s+a) )$ when $t \to \infty$  
 if $(s+a)<0$, then $exp(-t(s+a))$ is $\infty$, so the integral doesn't converge
+- If the imaginary axes belong to the ROC the it is possible to calculate the Fourier transform where $s = j\omega$
 
 # Differential equations
 - Uselful link about second order differential equations [link](http://www.stewartcalculus.com/data/CALCULUS%20Concepts%20and%20Contexts/upfiles/3c3-2ndOrderLinearEqns_Stu.pdf)
