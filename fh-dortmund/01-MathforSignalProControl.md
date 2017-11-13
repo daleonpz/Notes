@@ -112,4 +112,4 @@ if $(s+a)<0$, then $exp(-t(s+a))$ is $\infty$, so the integral doesn't converge
 $$f^{(n)}(t) =  s^{n}F(s)-\sum _{k=1}^{n}s^{n-k}f^{(k-1)}(0)$$
 
 ## Linear Algebra
-
+- In a interscetion of lines both equations must be satisfied
