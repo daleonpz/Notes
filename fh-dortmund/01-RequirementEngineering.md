@@ -63,7 +63,7 @@ Reasons for project success:
 ## Some empirical data
 - Misconception or misunderstanding in the requirements phase are the main cause of failures in the test phase. 
 
-# RE in a nutshell (No slides)
+# RE in a nutshell 
 ## Where do RE come from?
 - from stakeholders
 
