@@ -104,3 +104,10 @@ Where $F_n$ is the Fourier transform of $x(t)$  at same frequency $\omega_n$
 in the case of $exp(-t(s+a) )$ when $t \to \infty$  
 if $(s+a)<0$, then $exp(-t(s+a))$ is $\infty$, so the integral doesn't converge
 
+# Differential equations
+- Uselful link about second order differential equations [link](http://www.stewartcalculus.com/data/CALCULUS%20Concepts%20and%20Contexts/upfiles/3c3-2ndOrderLinearEqns_Stu.pdf)
+- Laplace General derivatives:
+$$f^{(n)}(t) =  s^{n}F(s)-\sum _{k=1}^{n}s^{n-k}f^{(k-1)}(0)$$
+
+# Linear Algebra
+
