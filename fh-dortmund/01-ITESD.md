@@ -422,3 +422,13 @@ Some good [tutorial](https://www.youtube.com/watch?v=UI6lqHOVHic)
 - The idea is to represent a real physical environment
 - Node: usually represents a piece of hardware
 - Artifact: it is kind of executable, binary file, source code
+
+### Example
+This is an example of the component diagram:
+!["RUP Model"](./images/ITESD_01.jpg "Component diagram")
+
+We can model the behavior of the port by using a sequence diagram:
+!["RUP Model"](./images/ITESD_02.jpg " Sequence diagram")
+
+But also it is possible to use state diagram to model port behavior
+!["RUP Model"](./images/ITESD_03.jpg "State diagram")

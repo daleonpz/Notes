@@ -4,7 +4,7 @@ professor: Prof. Dr. Kamsties
 semester: Winter 2017
 ---
 
-# Introduction
+# Ch01: Introduction
 Reasons for project success:
     - Without result: a manager or someone changes the status of the project as _closed_ or _finished_.
     - Realistic expectation: user and management views. The  user may ask for something that it is not possible under certain circumstances.
@@ -63,7 +63,8 @@ Reasons for project success:
 ## Some empirical data
 - Misconception or misunderstanding in the requirements phase are the main cause of failures in the test phase. 
 
-# RE in a nutshell 
+---
+# Ch02: RE in a nutshell 
 ## Where do RE come from?
 - from stakeholders
 
