@@ -100,6 +100,24 @@ Reasons for project success:
 - Not all the information is given
 - Neuro linguistic programming 
 
-## Documentation
+## Documentation (NOTES NO SLIDES)
 - What the user wants
+- Functional requirements: in form of a function, it recieves an input and return and output
 
+## Domain and product level
+- Systems can have subsystems
+- the domain describes user activities. the activities are more constant than interfaces
+- Product level requirements
+    - shows the why by correcting requirements
+    - the goals are very short
+- Asking the **why** can give you information about the real requirement
+- Consumers tend to think to concrete in the sense that one think on concrete objects
+- the **how** helps to get the idea down when it is too abstract
+- it is a fast approach, but no very precise
+- Design level information can be used as a complement of some requirements 
+
+## Real World
+- What we are doing have an impact on what we perceive
+- Requirement should not be technology biased, but since the How includes technology it is not always possible to set requirements that are not based on a specific technologies
+
+# Ch03: Documentation
