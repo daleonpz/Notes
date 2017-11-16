@@ -248,7 +248,7 @@ Thread(integer i) {
 - Two operations: incrementor `.v()` or `.release()` and decrementor `.p()` or `.acquire()`
 - In the decrementor the `counter-=1`
     - If `counter >= 0` the access to CS is granted
-    - If `counter = 0` the process is put to sleep and without completing the decrementor for the moment.
+    - If `counter < 0` the process is put to sleep and without completing the decrementor for the moment.
 - In the incrementor the `counter+=1` given the opportunity to other processes to access the CS
 - **Starvation**: If a thread disproportionately or never receives CPU time 
 „starves (to death)“
