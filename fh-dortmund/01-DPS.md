@@ -114,8 +114,8 @@ semester: Winter 2017
 
 ## Concurrency - Parallelism
 - **Process**: program instance
-- **Task** is a specific part of a program
-- **Thread**: has a virtual address space. runs in a single core
+- **Task** is a specific part of a program. Has its own memory space.
+- **Thread**: is the smallest sequence of programmed instructions that can be managed independently by a scheduler. has a virtual address space. runs in a single core. A thread is part of a Process, many threads can share memory.
 - **Runnable**: interface of a task
 -  An application may process one task at at time (sequentially) or work on multiple tasks at the same time (concurrently). Sub-tasks can be calculated in parallel.
 
@@ -242,11 +242,18 @@ Thread(integer i) {
 ### Semaphore
 - Lamport's algorithms wastes clocks cycles (`while` waitings)
 - `sync` primitives can be used by the OS
-- Can be seen as a counter that organized the resources. Two operations: incrementor `.v()` or `.release()` and decrementor `.p()` or `.acquire()`
-- If `counter >= 0` the access to CS is granted.
+- Semaphore should use _atomic_ operations
+- There is a counter that keeps track of how many resources are available.
+- Can be seen as a counter that organized the resources.
+- Two operations: incrementor `.v()` or `.release()` and decrementor `.p()` or `.acquire()`
+- In the decrementor the `counter-=1`
+    - If `counter >= 0` the access to CS is granted
+    - If `counter = 0` the process is put to sleep and without completing the decrementor for the moment.
+- In the incrementor the `counter+=1` given the opportunity to other processes to access the CS
 - **Starvation**: If a thread disproportionately or never receives CPU time 
 „starves (to death)“
 - **Fairness**: With a queue (FIFO), the access to a resource can be schedule
+
 
 ### Monitor 
 - Mutex + Condition variable/Partial synchronization
