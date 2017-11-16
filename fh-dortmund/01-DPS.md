@@ -185,7 +185,14 @@ i = 0;
     - careful design, prone to bugs, development overhead;
 
 ## Mutex (Mutual exclusion)
-It is the requirement that one thread of execution never enter its critical section at the same time that another concurrent thread of execution enters its own critical section
+- It is the requirement that one thread of execution never enter its critical section at the same time that another concurrent thread of execution enters its own critical section
+- Software:
+    - owner concept for unlocking and locking
+    - may provide deletion safety and inversion safety 
+    - Semaphores
+- Hardware
+    - Cache coherency protocols
+    - disabling interrupts, context switching
 
 ### Lamport's Bakery algorithm
 - Similar to when you draw a number and wait for your turn.
