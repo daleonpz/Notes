@@ -274,3 +274,39 @@ while(1){
 - Non-blocking or lock-free algorithm
 - Use atomic read-modify-write primitives. For example, an atomic call can be done in the following way:
     - Change mem iff it did not change since last read otherwise repeat with new value
+
+---
+# Resource management protocols (NO SLIDES)
+## Priority inversion
+- Resource locking prevents high priority tasks to access the resource. So a high priority task is indirectly preempted by a lower priority task effectively "inverting" the relative priorities of the two tasks.
+- Solution:
+- Deletion safety also prevents deadlocks
+
+## Protocols
+- NPP: any task that locks a resource receive the highest priority of among all the task
+- HLP: any task that locks a resource receive the highest priority of among all the running tasks
+- PLP: assign the highest priority only another task wants to use the resource 
+- PCP: if one task locks resource 1 and then resource 2, it unlocks the resource 2 and then resource 1
+
+### Multiprocessor
+- Needs an extension of the protocols
+
+# Time and clocks
+## Ordering mechanism
+## Timestamp
+- need information about what clock is used, resolution, clock drift
+- **clock drifting**: Clock drift refers to several related phenomena where a clock does not run at exactly the same rate as a reference clock. That is, after some time the clock "drifts apart" or gradually desynchronizes from the other clock. 
+
+## Berkeley algorithm 
+- There is a master clock 
+- _outlayer_ clocks are not considered in the estimation
+
+## Network time protocol
+### logical clocks
+- give us information about which event happens before, after or in concurrency.
+
+### Matrix clock
+- "I know that you know about me and the others"
+
+### CAP theorem
+- tells you on what to focus your system
