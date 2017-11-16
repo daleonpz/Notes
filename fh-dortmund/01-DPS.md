@@ -269,7 +269,9 @@ semaphore full = 0;/*counts full buffer slots*/
 // Decrementor -> V or release
 // in this example to enter to CS, counter > 0
 /*
-Semaphores that are initialized to 1 and used by two or more processes to ensure that only one of them can enter its critical region at the same time are called binary semaphores. 
+Semaphores that are initialized to 1 and used by two or more processes
+to ensure that only one of them can enter its critical region at the 
+same time are called binary semaphores. 
 */
 void producer(void)
 {
