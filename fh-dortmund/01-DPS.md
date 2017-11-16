@@ -253,7 +253,44 @@ Thread(integer i) {
 - **Starvation**: If a thread disproportionately or never receives CPU time 
 „starves (to death)“
 - **Fairness**: With a queue (FIFO), the access to a resource can be schedule
+- Example: Producer-Consumer Problem 
+    - There is N slots
+    - Producer: creates a resource an put it on a slot, if the all slots are full then, the producer stops producing until  there is a slot
+    - Comsumer: uses a resource in a slot, if all the slots are empty then the consumer stops comsuming resources until there is a resource.
 
+```c
+#define N 100/*number of slots in the buffer*/
+typedef int semaphore;/*semaphores are a special kind of int*/
+semaphore mutex = 1;/*controls access to critical region*/
+semaphore empty = N;/*counts empty buffer slots*/
+semaphore full = 0;/*counts full buffer slots*/
+
+void producer(void)
+{
+    int item;
+    while (TRUE) {/*TRUE is the constant 1*/
+        item = produce_item( );/*generate something to put in buffer*/
+        down(&empty);/*decrement empty count*/
+        down(&mutex);/*enter critical region*/
+        insert_item(item);/*put new item in buffer*/
+        up(&mutex);/*leave critical region*/
+        up(&full);/*increment count of full slots*/
+    }
+}
+
+void consumer(void)
+{
+    int item;
+    while (TRUE) {/*infinite loop*/
+        down(&full);/*decrement full count*/
+        down(&mutex);/*enter critical region*/
+        item = remove_item( );/*take item from buffer*/
+        up(&mutex);/*leave critical region*/
+        up(&empty);/*increment count of empty slots*/
+        consume_item(item);/*do something with the item*/
+    }
+}
+```
 
 ### Monitor 
 - Mutex + Condition variable/Partial synchronization
