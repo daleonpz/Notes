@@ -374,37 +374,124 @@ while(1){
     - Change mem iff it did not change since last read otherwise repeat with new value
 
 ---
-# Resource management protocols (NO SLIDES)
+# Resource management protocols 
 ## Priority inversion
 - Resource locking prevents high priority tasks to access the resource. So a high priority task is indirectly preempted by a lower priority task effectively "inverting" the relative priorities of the two tasks.
+- Priority inversion: critical section access is not in priority order
 - Solution:
-- Deletion safety also prevents deadlocks
+    - disabling interruption
+    - priority ceiling: CS manager has highest priority
+    - priority inheritance: preemption prevention via temporarily high priority assignment for CS release
+    - random boosting: ready tasks holding locks are randomly boosted in priority until they exit the critical section
+- Deletion safety: process holding a Mutex cannot be accidentally deleted, this also prevents deadlocks
+    
 
 ## Protocols
-- NPP: any task that locks a resource receive the highest priority of among all the task
-- HLP: any task that locks a resource receive the highest priority of among all the running tasks
-- PLP: assign the highest priority only another task wants to use the resource 
-- PCP: if one task locks resource 1 and then resource 2, it unlocks the resource 2 and then resource 1
+- Non Preemption Protocol - NPP: any task that locks a resource receive the highest priority of among all the task
+- Highest Lower Protocol - HLP: any task that locks a resource receive the highest priority of among all the running tasks
+- Priority Inheritance Protocol - PIP: assign the highest priority only another task wants to use the resource 
+- Priority Ceiling Protocol - PCP: Enter to CS only if it is free and there is no chained block risk ( a HP task is waiting for a resource locked by a lower priority task that is waiting for a resource locked by even a lower priority task)
 
 ### Multiprocessor
-- Needs an extension of the protocols
+- Remote blocking: A resource is locked by a task on a different processor
+- Needs an extension of the protocols (more info slides)
 
 # Time and clocks
+- Use to causally order events (cause & effect)
+- Ensure temporal correctness
+- Determine deadlines and temporal coherences
+- Embedded system development: debugging, profiling and trace
+- Synchronization 
+- Coordination
+- Event serialization
+- Causality: 
+    - $a \mapsto b$ means that _b is causally effect by a_, also implies that _a happened before b_
+    - $a \succ b$ means that _a happened before b_ (temporal order)
+
 ## Ordering mechanism
-## Timestamp
+- Central observer: (monitor)
+    - Are simple architectures
+    - Slow down the system, and non-functional behavior
+- Descentralized synchronization
+    - Logical clocks
+        - provide causally order
+    - Real/ physical clocks
+        - provide temporal order
+        - Differ in resolution, accuracy and drift
+        - it is possible to calculate elapsed time, current time
+
+## Timestamps
+- can be compared to each other with respect to their temporal precedence, if and only if they were derived from the same global clock or a set of synchronized clocks.
 - need information about what clock is used, resolution, clock drift
 - **clock drifting**: Clock drift refers to several related phenomena where a clock does not run at exactly the same rate as a reference clock. That is, after some time the clock "drifts apart" or gradually desynchronizes from the other clock. 
 
+## Physical clocks
+- Physical clock is a device which is based on some periodic physical oscillation (e.g. pendulum, quartz crystal, atom) in order to measure the progression of time. 
+- Have desviations from the ideal clock 
+- Granularity: duration between two consecutive ticks
+- Clock measure $\Delta t_g = n_g/f$, $n_g$ is the numbers of ticks 
+- Drift: $d = \frac{n_g}{f.\Delta t_g}$, ideally 1
+- Deviation: $\delta = \|1-d\|$
+
+### Clock synchronization 
+- Two clocks hardly ever run synchronously
+- Drift: rate deviation (per tick)
+- Skew: deviation at specific point in time
+- Apply adjustments continuously (e.g. Linux: POSIX, adjtime an system calls)
+
+### Christian's algorithm
+- synchronize with other machine
+- Client gets data from a time server (e.g. access to radio clock)
+- Computation of round trip time to compensate delay while adjusting own clock:
+- With T0 = request sent time ant T1 = receive time; assuming network delays symmetric $T_new = T_server+(T1-T0)/2$
+
 ## Berkeley algorithm 
+- Assumption: no machine has an accurate time source
 - There is a master clock 
+- Having multiple computers in a network, drift tendencies can be minimized by calculating average
 - _outlayer_ clocks are not considered in the estimation
 
-## Network time protocol
-### logical clocks
+## Network time protocols
+- Use Stratums to clasify clocks. 
+    - Stratum 0: high precision clocks/ reference clocks
+    - Stratum 16: unsynchronized
+- Intended for multiple up- & downstream servers
+- dispersion, jitter, clock filter calculation
+- protocol definitions for declaring falsetickers
+
+## Simple network protocol
+- No mitigation algorithms / peer process operations / clock filter algorithm (compared with NTP)
+- same protocol but time synchronization quality lower
+- recommended to use only at highest stratums 
+- intended for primary servers with single reference clock; no upstream servers
+
+## Precision time protocol
+- master slave architecture: ordinary clock and boundary 
+- To transfer clock to another LAN
+- low jitter, low latency
+
+## Logical clocks
 - give us information about which event happens before, after or in concurrency.
 
-### Matrix clock
+![Lamport's clock](images/Lamport-Clock.png)
+
+- Lamport's clock: every Process P keeps scalar counter C, increments it at each event, sends it with each send event
+- Vector clock:  B4 and C2 are concurrent $B4 \| B2$ since $4 \geq 3$ and $1 \leq 2$
+![Vector clock](images/Vector_Clock.png) 
+
+
+## Matrix clock
+- Idea: keeping local state (LC), global state (VC) and each node’s view of the state (MC) a n x n matrix (n= number of nodes)
 - "I know that you know about me and the others"
 
-### CAP theorem
+![Matrix clock](images/Matrix_clock.png)
+
+### Amazon DynamoDB (NO SLIDES)
+
+## CAP theorem
 - tells you on what to focus your system
+-  It is impossible to guarantee consistency, availability, and partition tolerance at once
+- Availability: all messages are served
+- Consistency: all nodes see the same data at all times
+- Partition-tolerance: system keeps working even if nodes or messages are lost
+
