@@ -212,7 +212,6 @@ Versus:
 ### Software components
 A software component is a unit of composition with contractually-specified interfaces and explicit context dependencies only. A software component can be deployed independently and is subject to composition by third parties. 
 
------
 # Introduction to UML (NEED TO STUDY FROM HERE)
 - It is a visual language
 - Neutral: independent form language programming
@@ -259,7 +258,6 @@ Some good [tutorial](https://www.youtube.com/watch?v=UI6lqHOVHic)
         - Result: component specification - Identify properties in your system (and model) where e.g. flexibility is required. Apply design pattern 
 - Important: Analysis model  **IS NOT EQUAL TO** Design model!
 
-----
 # Object Diagram
 - Emphasize the relationship between instances of classes
 - Use a subset of elements of a class diagram
@@ -300,7 +298,6 @@ Some good [tutorial](https://www.youtube.com/watch?v=UI6lqHOVHic)
     - when structure is important
     - to concentrate on the effects on the instances
 
----
 ### What is collaboration
 - Collaboration defines the roles that a set of instances play when performing a particular task, like an operation or a use case
 - Interaction specifies a communication pattern to be performed by instances playing the roles of a collaboration.
