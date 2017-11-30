@@ -486,12 +486,51 @@ while(1){
 
 ![Matrix clock](images/Matrix_clock.png)
 
-### Amazon DynamoDB (NO SLIDES)
+### Amazon DynamoDB 
+Check slides - not that important
 
 ## CAP theorem
 - tells you on what to focus your system
--  It is impossible to guarantee consistency, availability, and partition tolerance at once
+-  It is impossible to guarantee consistency, availability, and partition tolerance at once for a distributed data store
 - Availability: all messages are served
 - Consistency: all nodes see the same data at all times
 - Partition-tolerance: system keeps working even if nodes or messages are lost
+
+## Summary on logical clocks
+- Cons: 
+    - implementation overhead does not suit to DPS when there are constrains such as minimal resources, computation and communication
+    - can not be used to determine physically quantifiable time values (e.g. latencies, deadlines, …)
+    - problematic in dynamic systems where processes come and leave
+- Pros:
+    - use case: banking or booking systems: time between two events is not important, but the casual correct order is!
+    - in distributed systems, synchronization with logical clocks created significant less overhead
+
+- Logical clock:  “happened before” => smaller clock value
+- Vector clock:  smaller clock value, determination of concurrency
+- Matrix clock: keep track of other process’ view (which events occurred)
+
+---
+# Network interprocess communications (NO SLIDES)
+## Network topologies
+- Ring interconnect: Huge delay, privacy (all packages are known by all participants)
+- Bus interconnect: cheap, reliable, easy extendable, does not support many participants , support master-slave topology
+- Mesh interconnect: more option to communicate (many neighbors), high load is the mesh is large (use of clusters)
+- Crossbar interconnect:  manage which participants will be connected (delay), and once they are connected the transmition is fast. 
+
+## OSI model
+![OSI model](images/DPS_OSI.png)
+
+## Interprocess communications 
+- Synchronous: same as in sequence diagram in UML, send a message and waits for the answer
+- Asynchronous: send a message and keep doing other tasks
+
+- Indirect communication: do not wait for the suscriber, there is also an intermediary (sync decoupling)
+- Time decoupling: The sender and the receiver(s) can have independent lifetimes
+- Space decoupling: The sender does not know or need to know the identity of the receiver(s), and vice versa
+
+## Shared memory communication
+## Distributed shared memory communication
+- Message passing (not memory addresses)
+- MPI: supports direct (with memory addresses) and indirect (messages) communication.
+
 
