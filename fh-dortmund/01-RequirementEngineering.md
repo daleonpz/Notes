@@ -102,7 +102,7 @@ Reasons for project success:
 
 ## Documentation (NOTES NO SLIDES)
 - What the user wants
-- Functional requirements: in form of a function, it recieves an input and return and output
+- Functional requirements: in form of a function, it receives an input and return and output
 
 ## Domain and product level
 - Systems can have subsystems
@@ -121,3 +121,42 @@ Reasons for project success:
 - Requirement should not be technology biased, but since the How includes technology it is not always possible to set requirements that are not based on a specific technologies
 
 # Ch03: Documentation
+- Examples: ambiguous, not verifiable, not atomic
+- Pros and cons of using both natural language and models:
+    - Hard to link natural language (informal) with models
+    - Models typically captures one aspect
+- Ingredients:
+    - Good structure, organization
+    - Precise meaning
+    - Semantics
+    - Good practices (atomic)
+    - think on the reader
+
+## Standards for Requirement Documents
+- It's a contract between writer and reader
+- It's also a checklist
+
+## Hierarchy of requirement documents
+- System Requirements: 
+    - Requirements subsystem A
+        - Requirements subsystem A.1
+    - Requirements subsystem B
+
+## Goal analysis 
+- It's particular to requirement engineering
+- Goal: describes an intention with regards to the objectives, properties or use of a system
+- It's easier to resolve conflicts in the goal phase
+- Tend to be more stables overtime
+- Goals are decompose into sub goals:
+    - AND decomposition: all sub-goals must be satisfied in order to satisfied the main goal
+    - OR decomposition: not all sub-goal must be satisfied (used as alternative strategies)
+    - The documents must make clear if a sub-goal is AND or OR
+
+## Coal Hierarchy
+- The top most goal is called vision
+- Vision: try to catch the essence of the project
+
+## iStar approach
+- Task (use cases)
+- includes quality goals (really important)
+- Goal is something measurable in some sense
