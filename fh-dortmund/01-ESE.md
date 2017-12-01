@@ -201,7 +201,7 @@ statements about its reliability and its safety are unreliable
 ![Non-deterministic](images/ESE_non_deterministic.jpg)
 
 ## System model Properties (Read SLIDES)
-- Computation Tree logic (CTL)
+### Computation Tree logic (CTL)
 
 ![CTL operators](images/ESE_CTL_operator.png)
 
@@ -211,5 +211,26 @@ statements about its reliability and its safety are unreliable
     - M, s |- AFg
     - M, s |- EFg
     - M, s |- EGg
+
 - Safety: avoid that something bad happens 
 - Liveness: avoid starvation and deadlocks
+
+### State and sequence properties
+- State property: a property _p_ is a state property if and only if _p_ belongs to some state given a specific state variable 
+- Sequence property: a property _p_ is a sequence property if and only if _p_ belongs to the trajetory described by a specific path
+- Safety:
+    - non-empty (exists a sequence propertie)
+    - if for all _t_ >= t0 the property _p_ belongs to _S_, then _p+1_ also belongs to _S_
+    - this also applies if _k_ goes to infinity
+- liveness:
+    - exist in some point _t_  a property _p_ that belongs to _S_
+    - slides examples: 
+        - exists a point in the _Future_ in which _p_ belongs to _S_
+        - There is a paths (**G**) that have points in the _Future_ in which _p_ belongs to _S_
+        - There is a point in time (**F**) from when _p_ in paths  belongs to _S_
+
+## Summary
+- Semantics of automatas
+- Zeno behavior and deadlocks
+- Non-deterministic and what is refinement in hybrid automatas
+- Difference State properties, sequence properties, stability and controllability 
