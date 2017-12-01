@@ -57,15 +57,26 @@ semester: Winter 2017
 - Bespoken system-on-chip: ASICs, FPGA
 
 ## Dependable systems: (from here)
+- is defined as the trustworthiness of a computer system such that reliance can justifiably be placed on the services it delivers.  
 - We need to trust the system realization
-- Dependability:
+- Two aspects of reliance:
+    - system performs according to its service specification
+    - system avoids hazards,
+- Attributes:
     - reliability: the ability of a system to deliver services as specified
     - availability: the ability of a system to deliver services on request
     - safety: operate without catastrophic failure
     - security: protect itself against accidental or deliberate intrusion
-- fault: is a defect within the system
-- error: implies memory
-- system failure: fails to perform its required task
+- fault: is a defect within the system (error cause).  It is a condition that causes the software to fail to perform its required function. 
+- error: is a derivation of the required operation of the subsystem or system. Refers to difference between Actual Output and Expected output. 
+- system failure: fails to perform its required task according to its specification. 
+- Fault > Error: a fault is active when it produces an error
+- Error > Failure: 
+    - an error is latent when it has not been recognized
+    - an error is detected by a detection algorithm
+- Failure > Fault: 
+    - A failure occurs when an error passes through and affects the systems
+    - A failure causes a fault
 
 ## Faults:
 - Nature - critical distinction: 
@@ -73,34 +84,97 @@ semester: Winter 2017
     - logical/ systematic/ design
 - Nature - degradation faults
     - the system does not working anymore
+- Nature - Design faults
+    - The system never worked
+    - the design is flawed
+- Duration:
+    - permanent, transient, intermittent
+    - localized, global
 
 ## Reliability
+- Reliability is the probability of a component, or system, functioning correctly over a given period of time under a given set of operating conditions.  
 - Quantitative: in terms of probability in time (my car must be reliable for 4-5 years)
 
 ## Availability:
+- The availability of a system is the probability that the system will be functioning correctly at any given time.  
 - Quantitative: probability of a system in a specific time (my car is available tomorrow at 6pm)
 
-## Reliability achievement
-- Fault avoidance: test-driven development
+### Availability vs Reliability
+- Obviously if a system is unavailable it is not delivering the specified system services
+- It is possible to have systems with low reliability that must be available
+    - So long as system failures can be repaired quickly and do not damage data, low reliability may not be a problem
+    - Availability takes repair time into account
+
+### Reliability achievement
+- Fault avoidance: the system minimize human error and the development process is organized so the faults are detected and solved. test-driven development
 - Fault detection: detect the faults before deployment
 - Fault tolerance: faults in the system does not result in a system crash
+- Removing X% of the faults in a system will not necessarily improve the reliability by X%. 
+- Program defects may be in rarely executed sections of the code so may never be encountered by users. Removing these does not affect the perceived reliability
 
 ## Safety
-- related to harm humans or the environment
+- Safety is a property of a system that it will not endanger human life or the environment.
+- Terminology:
+    - Accident: An unplanned event or sequence of events which results in human death or injury, damage to property or to the environment. 
+    - Hazard: A condition with the potential for causing or contributing to an accident
+    - Damage: A measure of the loss resulting from an accident. Damage can range from many people killed as a result of an accident to minor injury or property damage.
+    - Hazard severity: An assessment of the worst possible damage that could result from a particular hazard. Hazard severity can range from catastrophic where many people are killed to minor where only minor damage results.
+    - Hazard probability: The probability of the events occurring which create a hazard 
+    - Risk: This is a measure of the probability that the system will cause an accident. The risk is assessed by considering the hazard probability, the hazard severity and the probability that a hazard will result in an accident.
+
+### Safety avoidance 
+- Hazard avoidance
+- Hazard detection and removal: before they result in an accident
+- Damage limitation: minimize the damage
 
 ## Security
+- Prevention of or protection against (a) access to information by unauthorized recipients or (b) intentional but unauthorized destruction or alteration of that information.
 - related to prevention or protection of the information
+- The security of a system is a system property that reflects the system’s ability to protect itself from accidental or deliberate external attack 
+- When an unauthorized access can result in an accident, then safety requires some security
 - security is an essential prerequirement for availability, safety and reliability.
-- Fundamental security: you cannot trust anything
+- Fundamental security: If a system is a networked system and is insecure then 
+statements about its reliability and its safety are unreliable 
+- Attributes:
+    - Confidentiality: Only authorized individuals have access to data
+    - Integrity: Data cannot be altered without the knowledge of those who own it
+    - Availability: Data is available when needed
+- Terminology:
+    - Exposure: Possible loss or harm in a computing system. 
+    - Vulnerability: A weakness in a computer-based system that may be exploited to cause an exposure.
+    - Attack: An exploitation of a system vulnerability. Generally, this is from outside the system and is a deliberate attempt to cause some damage.
+    - Threats: Circumstances that have potential to cause an exposure. 
+    - Control: A protective measure that reduces a system vulnerability. 
 - What causes security failure: AAA attributes
     - Architecture: software faults, bad designs
     - Administration: poor use of features
     - Attacks: Active intrusion
+- No intrusions, then secure. Better administration minimizes risk. Better architecture limits impact of attacks.
+- Security assurance:
+    - Vulnerability avoidance: good design to avoid vulnerabilities
+    - Attack detection and  elimination: early attack detection and elimination before they result in an exposure
+    - Exposure limitation: the consequences of an attack are minimized
 
-----
+## Distributed system:
+- A collection of autonomous computers linked by a computer network, and communicate and coordinate their actions only by message passing. 
+
+## Challenges
+- Software is a bottleneck: complexity vs productivity
+- Complexity of design flows and supply chains: difficulties on specification and system integration
+- Need for self-adaptive/ self-optimized behavior: higly dynamic environments
+- New sofware design paradigm: future of software-intensive systems - ultra large, networked, distributed and diffuse-control nature
+- Model based deployment: vehicle for communication between engineers from different areas.
+
+## Summary
+- Definition of software-intensive systems
+- Characteristics of software-intensive systems
+- Typical application domains (Automative, transportation, medicine, industrial automation, telecomunications)
+- Challenges
+
 # Foundations
-- Model based specifications
-- Specification: a description of required properties that an artifact must ensure
+- **Model**: a simplified representation of something, may be restricted to certain properties.
+- **Specification**: a formal description of a system or component intended as a basis for further development. Rrequired properties that an artifact must ensure
+- **Model based specifications**: a form of specification, usually software, that is develop based on a mathematical model of a system.
 - Relation: a model can fulfill a specification
 - A model is also a specification
 
