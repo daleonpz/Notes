@@ -16,8 +16,8 @@ semester: Winter 2017
 - **Control engineering**: is the engineering discipline that focuses on the mathematical modeling systems of a diverse nature, analyzing their dynamic behavior, and using control theory to make a controller that will cause the systems to behave in a desired manner.
 - Control engineering uses extensively computer software and hardware due to its strong mathematical foundations
 - Other relevant disciplines:
-    - Mechatronics: is the sinergystic combination of mechanical, electronic and software engineering
-    - Telematics: is the integrade use of telecomunications and informatics
+    - Mechatronics: is the synergistic combination of mechanical, electronic and software engineering
+    - Telematics: is the integrate use of telecommunications and informatics
 
 ## System characteristics
 - Reactive systems: continuously sensing and reacting to the environment
@@ -25,7 +25,7 @@ semester: Winter 2017
     - Deadline: the latest time until which the response to a stimulus is required.
     - Synchronous/periodic task: Can be used to address required activities with a period p. 
     - Asynchronous/aperiodic task: Can be used to address required activities for stimulus without knowledge about the occurrence.
-    - Not only the correct behaviour is important, but also its timely provision.
+    - Not only the correct behavior is important, but also its timely provision.
 - Hard and soft Real-time systems:
     - The utility describes the time-dependent value of a result.
     - Soft real-time: it's allowed to miss the deadline and reduces the utility, but does not lead to a significant financial loss 
@@ -41,17 +41,17 @@ semester: Winter 2017
     - Relevant hardware:     
         - real-time clock: highly accurate ticks
         - Interrupt controller: hardware supports for asynchronous stimulus
-        - Hardware timers: more precise and flexble than RTOS ticks
-        - Watchdog timers: a one-shot hardware timer that results  in a non-maskable interrupt when not retriggered
+        - Hardware timers: more precise and flexible than RTOS ticks
+        - Watchdog timers: a one-shot hardware timer that results  in a non-maskable interrupt when not re triggered
         - A/D and D/A converters: special support for converting analogous external signals to digital and vice versa
         - Serial communication controller: often at least used for development and debugging
         - Bus controller: direct support for special bus system 
 
 ## Possible HW-platforms 
 - General purpose microprocessors: x86
-- Highly integrate microprocessors: aditional I/O on the chip
+- Highly integrate microprocessors: additional I/O on the chip
 - Single chip microcomputer: ROM, RAM
-- Single chip microcontroller
+- Single chip micro controller
 - DSP
 - Mixed-signal processor 
 - Bespoken system-on-chip: ASICs, FPGA
@@ -161,19 +161,19 @@ statements about its reliability and its safety are unreliable
 ## Challenges
 - Software is a bottleneck: complexity vs productivity
 - Complexity of design flows and supply chains: difficulties on specification and system integration
-- Need for self-adaptive/ self-optimized behavior: higly dynamic environments
-- New sofware design paradigm: future of software-intensive systems - ultra large, networked, distributed and diffuse-control nature
+- Need for self-adaptive/ self-optimized behavior: highly dynamic environments
+- New software design paradigm: future of software-intensive systems - ultra large, networked, distributed and diffuse-control nature
 - Model based deployment: vehicle for communication between engineers from different areas.
 
 ## Summary
 - Definition of software-intensive systems
 - Characteristics of software-intensive systems
-- Typical application domains (Automative, transportation, medicine, industrial automation, telecomunications)
+- Typical application domains (Automotive, transportation, medicine, industrial automation, telecommunications)
 - Challenges
 
 # Foundations
 - **Model**: a simplified representation of something, may be restricted to certain properties.
-- **Specification**: a formal description of a system or component intended as a basis for further development. Rrequired properties that an artifact must ensure
+- **Specification**: a formal description of a system or component intended as a basis for further development. Required properties that an artifact must ensure
 - **Model based specifications**: a form of specification, usually software, that is develop based on a mathematical model of a system.
 - Relation: 
     - A model can fulfill a specification
@@ -217,9 +217,9 @@ statements about its reliability and its safety are unreliable
 
 ### State and sequence properties
 - State property: a property _p_ is a state property if and only if _p_ belongs to some state given a specific state variable 
-- Sequence property: a property _p_ is a sequence property if and only if _p_ belongs to the trajetory described by a specific path
+- Sequence property: a property _p_ is a sequence property if and only if _p_ belongs to the trajectory described by a specific path
 - Safety:
-    - non-empty (exists a sequence propertie)
+    - non-empty (exists a sequence property)
     - if for all _t_ >= t0 the property _p_ belongs to _S_, then _p+1_ also belongs to _S_
     - this also applies if _k_ goes to infinity
 - liveness:
@@ -228,6 +228,18 @@ statements about its reliability and its safety are unreliable
         - exists a point in the _Future_ in which _p_ belongs to _S_
         - There is a paths (**G**) that have points in the _Future_ in which _p_ belongs to _S_
         - There is a point in time (**F**) from when _p_ in paths  belongs to _S_
+
+### Stability
+- A trajectory _traj1_ is stable iff for any other trajectory _traj2_ the distance between these two is bounded for all time >= 0.
+- A trajectory is asymptotically stable if the distance tends to zero overtime
+- A model M is asymptotically stable if all its trajectories are asymptotically stables.
+
+### Controlability
+- State controllability: is usually taken to mean that it is possible – by admissible inputs - to steer the states from any initial value to any final value within some time window. In other words, that you will able to reach a state within some time window
+- Output controllability: means the ability to manipulate the outputs of a system by admissible inputs. 
+    - it may be the case in which it won't be possible to manipulate all the outputs of a system with several outputs just by the valid inputs. Thus, this system is not output controllable
+- Observability: a system is observable if it is possible to know the current state just by knowing the output
+
 
 ## Summary
 - Semantics of automatas
