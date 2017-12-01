@@ -175,8 +175,29 @@ statements about its reliability and its safety are unreliable
 - **Model**: a simplified representation of something, may be restricted to certain properties.
 - **Specification**: a formal description of a system or component intended as a basis for further development. Rrequired properties that an artifact must ensure
 - **Model based specifications**: a form of specification, usually software, that is develop based on a mathematical model of a system.
-- Relation: a model can fulfill a specification
-- A model is also a specification
+- Relation: 
+    - A model can fulfill a specification
+    - A model is also a specification
+    - All models fulfill the empty specification
 
-## Systems model types
+## Different kinds of model (Read SLIDES for notation)
+- Phase specific models:
+    - Requirement model: fulfills informal costumer need? specification for architecture model
+    - Architectural model: fulfills requirement model? specification for design model
+    - Design model: fulfills architectural model? specification for implementation model
+    - Implementation model: fulfills design model?
+- $M_r$ is a refinement of M if $M_r \subseteq M$
+- $M_a$ is an abstraction of M if $M \subseteq M_a$
+
+## System model types (Read SLIDES)
+## System model Properties (Read SLIDES)
+- Computation Tree logic (CTL)
+
+![CTL operators](images/ESE_CTL_operator.png)
+
+- Example CTL: 
+    - M, s |- AGg 
+    - M, s |- AFg
+    - M, s |- EFg
+    - M, s |- EGg
 
