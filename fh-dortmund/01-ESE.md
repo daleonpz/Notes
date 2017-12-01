@@ -190,14 +190,26 @@ statements about its reliability and its safety are unreliable
 - $M_a$ is an abstraction of M if $M \subseteq M_a$
 
 ## System model types (Read SLIDES)
+- Zeno behavior: described informally as the system making an infinite number of jumps in a finite amount of time
+
+- Time stopping deadlock: when S2 goes to S1 there is a time stopping deadlock.
+
+![Time deadlock](images/ESE_deadlock.jpg)
+
+- Non-deterministic
+
+![Non-deterministic](images/ESE_non_deterministic.jpg)
+
 ## System model Properties (Read SLIDES)
 - Computation Tree logic (CTL)
 
 ![CTL operators](images/ESE_CTL_operator.png)
 
+- Note:  W is X
 - Example CTL: 
     - M, s |- AGg 
     - M, s |- AFg
     - M, s |- EFg
     - M, s |- EGg
-
+- Safety: avoid that something bad happens 
+- Liveness: avoid starvation and deadlocks
