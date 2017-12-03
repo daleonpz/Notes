@@ -190,6 +190,7 @@ statements about its reliability and its safety are unreliable
 - $M_a$ is an abstraction of M if $M \subseteq M_a$
 
 ## System model types (Read SLIDES)
+- Hybrid Automata: the states  **may** change as soon as the conditions are satisfied.
 
 
 ## System Semantics (Read SLIDES)
