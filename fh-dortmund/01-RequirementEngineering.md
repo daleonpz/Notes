@@ -69,6 +69,7 @@ Reasons for project success:
 - from stakeholders
 
 ## Who analyzes the requirements
+- A requirements engineer / business analysis / product manager.
 
 ## Project Type
 - In-house: requirements are there
@@ -84,10 +85,11 @@ Reasons for project success:
 - Contract dev: third-parties companies develop parts of the software
 - Unknown: no idea what to do
 
-## System types
-
 ## Corner stones of RE
 - 3x3 Model:
+    - Real world:
+        - System 
+        - Context/ environment
     - Activities: 
         - Research information
         - design, decision making
@@ -95,18 +97,32 @@ Reasons for project success:
         - What the system is actually doing
         - requirements vs specifications
 
-## Communications
-- Noise, infer what other people is trying to say
-- Not all the information is given
-- Neuro linguistic programming 
+## Activities: 
+- Communications
+    - Noise, infer what other people is trying to say
+    - Not all the information is given
+    - Neuro linguistic programming 
 
-## Documentation (NOTES NO SLIDES)
+- Design/ decisions:
+    - Design implies decisions about:
+        - Framing the problem
+        - Shaping the functionality of the system
+        - Selecting technologies
+    - Design requires innovation & creativity
+    - Design follows rationales
+
+## Documentation 
+- Typically two kinds of documentation:
+    - User requirements
+    - System specifications
 - What the user wants
 - Functional requirements: in form of a function, it receives an input and return and output
 
-## Domain and product level
+### Domain and product level
 - Systems can have subsystems
 - the domain describes user activities. the activities are more constant than interfaces
+- Domain-level req: The product shall support user activities (Tasks and support)
+- Product-level reqs: The product shall accept input.(features)
 - Product level requirements
     - shows the why by correcting requirements
     - the goals are very short
@@ -121,6 +137,14 @@ Reasons for project success:
 - Requirement should not be technology biased, but since the How includes technology it is not always possible to set requirements that are not based on a specific technologies
 
 # Ch03: Documentation
+- Motivation:
+    - Persistence: without documentation it is hard to remember the requirements
+    - Common reference: all the participants have the same information
+    - Promotes communication: the requirements are analyzed
+    - Promotes objectivity: minimize subjective interpretation
+    - Training of new employees: basis to be familiar with the project
+    - Preserve export knowledge
+    - Helps to reflect the problem
 - Examples: ambiguous, not verifiable, not atomic
 - Pros and cons of using both natural language and models:
     - Hard to link natural language (informal) with models
@@ -131,10 +155,33 @@ Reasons for project success:
     - Semantics
     - Good practices (atomic)
     - think on the reader
+- Lastenheft:
+    - legal contract between costumer and supplier
+    - define miles stones in project manager
+- Pflichtenheft:
+    - design and information
+    - reference for verification and validation
+    - basis for change and release management
+    - to derive user manual
 
 ## Standards for Requirement Documents
 - It's a contract between writer and reader
 - It's also a checklist
+- Reference for validation
+- System and project specific
+
+![Lastenheft vs Pflichtenheft](images/ReqEng-lastenheft-pflinchtenheft.png)
+
+- System specific requirements (read slides)
+- Project specific requirements (read slides)
+- Requirement pattern
+    - WHEN SYSTEM_NAME (should/shall/will) PROCESS OBJECT
+    - when: under what conditions
+    - “shall” indicates a legally binding requirement
+    - “should” indicates a requirement that is highly recommended but would not make the system unacceptable if it is not implemented.
+- Example:
+    - R114: If the glass break detector detects the damaging of a window, the system shall inform the head office of the security service. 
+    - [<When>: If the glass break detector detects the damaging of a window] THE SYSTEM SHALL [<Process>: inform] [<Object>: the head office of the security service]. 
 
 ## Hierarchy of requirement documents
 - System Requirements: 
@@ -147,6 +194,12 @@ Reasons for project success:
 - Goal: describes an intention with regards to the objectives, properties or use of a system
 - It's easier to resolve conflicts in the goal phase
 - Tend to be more stables overtime
+- Benefits:
+    - Better understanding of the system: clarify the value of the system
+    - Elicitation: goals drive and guide the elicitation of requirements 
+    - Systematic identification and evaluation of alternative realizations: by decomposing goals into sub-goals, alternative realizations can be identified systematically. 
+    - Rationales for requirements: requirements without rationales are irrelevant
+    - Low effort: Modeling goal does not imply a significant additional effort compared to the overall effort for RE. 
 - Goals are decompose into sub goals:
     - AND decomposition: all sub-goals must be satisfied in order to satisfied the main goal
     - OR decomposition: not all sub-goal must be satisfied (used as alternative strategies)
@@ -154,9 +207,26 @@ Reasons for project success:
 
 ## Coal Hierarchy
 - The top most goal is called vision
-- Vision: try to catch the essence of the project
+- Vision > goals > requirements > design > implementation
+- Vision: try to catch the essence of the project. The ultimate answer to all Why
 
 ## iStar approach
+- Proposed to document and analyze goals
 - Task (use cases)
 - includes quality goals (really important)
 - Goal is something measurable in some sense
+- Strategic Dependency Model (SDM)
+    - Captures the dependencies between actors
+- Strategic Rationale Model (SRM) 
+    - Describe the internal rationale structure of the actors
+
+### Strategic Dependency Model (SMD)
+- Actor: person/ system that has relationship to the system to be develop
+- Resource: what the actor needs to achieve a goal or perform a task. It's important to know if the resource is available and from whom
+- Soft goal: a condition in the world which the actor would like to achieve which is not sharply defined. It is a quality attribute of a goal, task, or a resource.
+- Goal: answers why? questions. Achievement can be measured.
+- Task: consists of a number of steps that an actor needs to perform to execute the goal.
+
+### Strategic Rationale Model (SRM)
+- Models the stakeholders interests and how they might be met.  That is, it describes the capabilities of an actor by detailing its internal structure.
+- Actor boundaries indicate intentional boundaries of a particular actor. All of the elements within a boundary for an actor are explicitly desired by that actor. 
