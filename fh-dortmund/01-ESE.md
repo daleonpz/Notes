@@ -56,7 +56,7 @@ semester: Winter 2017
 - Mixed-signal processor 
 - Bespoken system-on-chip: ASICs, FPGA
 
-## Dependable systems: (from here)
+## Dependable systems: 
 - is defined as the trustworthiness of a computer system such that reliance can justifiably be placed on the services it delivers.  
 - We need to trust the system realization
 - Two aspects of reliance:
@@ -261,3 +261,89 @@ statements about its reliability and its safety are unreliable
 - Zeno behavior and deadlocks
 - Non-deterministic and what is refinement in hybrid automatas
 - Difference State properties, sequence properties, stability and controllability 
+
+# The Development life cycle (NO SLIDES)
+## Software Engineering life cycle model
+[link](https://www.tatvasoft.com/blog/top-12-software-development-methodologies-and-its-advantages-disadvantages/#anchor1)
+- Waterfall model:
+    - Sometimes the requirements are not very clear at the beginning
+- Prototyping process:
+    - Based on the inital requirements
+    - iterative process
+    - sometimes it's used to see if it will be possible to develop the final product (internal process)
+    - no focusing in the verification system
+- V development process:
+    - Validation: process of finding out if the system is well develop
+    - Verification: process of finding out if the requirements are fulfill
+    - quality management
+    - problem: no iterations that consider the update of the requirements
+- Spiral model
+- RUP model
+    
+IMPORTANT: when we could apply the different models?
+- Waterfall: well defined systems. critcal safety systems.
+- Prototyping: Prototype model should be used when the desired system needs to have a lot of interaction with the end users.  Typically, online systems, web interfaces have a very high amount of interaction with end users, 
+- V development: The V-Shaped model should be chosen when ample technical resources are available with needed technical expertise
+- Spiral: When costs and risk evaluation is important, New product line, Significant changes are expected  
+- RUP: development of  large, complex, engineered systems,
+
+## System engineering life cycle model
+- Basically waterfall model
+- During the development of the system there is no idea how the system will be development.
+- Deployment phase:
+    - We have an idea of the overall system before deploy it into subsytems
+    - We distribute the system into subsytems 
+- Focus on the complete system
+
+## Embedded engineering life cycle model
+- 3V Model: 
+    - Model level: simulate in MATLAB for example
+    - Prototype: 
+        - the system should be able to run into specific hardware correctly. It's important to see how the hardware reacts in the environment
+        - Idea of safety requirements 
+    - Final product: 
+        - complete system (real hardware and real environment)
+        - the system is stable, safety and reliable
+
+- Multilevel V model:
+    - the development of the complete system is decomposed into components 
+    - typically stat in the prototyping phase
+    - the components could be developed by different companies (could be in parallel)\
+
+## Advanced life cycle model and model driven development 
+- Model driven architecture (MDA):
+    - models the perfect system for the problem domain
+    - PIM: all the requirements must be fulfill
+    - PSM: take into account things such as delays. checking is a correct refinement of PIM
+    - It is good to have some kind of trace between elements from different models
+
+- Y model:
+    - Manual coding: the requirements must be checked
+    - Standard automatic: check if the generated code is correct with tests
+    - Qualified code generator: model properties should not have conflicts
+    - Design verified: guaranties that all the parts of the system works as expected
+    - There is the need to specify the requirements in a formal way
+- Platform model design
+    - it could be the case that the designed model cannot run in any platforms 
+    - it is good idea to have platform information to restrict the model design
+    - bottom-top approach
+    - platform design space: 
+        - try to find which is the best platform for the system
+        - focusing on the relevant parts
+- Process improvement:
+    - from conceptual to production there is only investment
+    - you have to know at which point in time our product will be still required
+    - breakever point: your investment is fulfill (return in investment point)
+    - how long it's good idea to keep the development of a product 
+- Process management:
+    - define processes in a well define way
+- CMMI project
+    - how much of the process is supported by a company
+    - level 0: no process model
+    - level 1: 
+    - level 2: we are able to monitor the end of an activity 
+    - level 3: we have activities, and sub activities and we know when the sub activities are finished. We are able to measure
+    - level 4: we are able to measure and control sub activities 
+    - level 5: well defined process model. it's observable and verifiable
+
+
