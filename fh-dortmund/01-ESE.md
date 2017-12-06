@@ -287,34 +287,48 @@ IMPORTANT: when we could apply the different models?
 - Spiral: When costs and risk evaluation is important, New product line, Significant changes are expected  
 - RUP: development of  large, complex, engineered systems,
 
-## System engineering life cycle model
+## System engineering life cycle model (check slides)
 - Basically waterfall model
-- During the development of the system there is no idea how the system will be development.
+- Phases: Definition, development and deployment 
 - Deployment phase:
     - We have an idea of the overall system before deploy it into subsystems
     - We distribute the system into subsystems 
 - Focus on the complete system
 
 ## Embedded engineering life cycle model
-- 3V Model: 
-    - Model level: simulate in MATLAB for example
+- 3V Model:
+    - Each V has a design, built and test phase 
+    - Model level:
+        - covers the definition and simulation of the overall system functionality 
+        - Implementation aspects are not considered 
+        - simulate in MATLAB for example
     - Prototype: 
+        - is characterized by rapid prototyping hardware specific parameters become important 
+        - deployment & message scheduling 
+        - local design addresses the scheduling of tasks on each node 
         - the system should be able to run into specific hardware correctly. It's important to see how the hardware reacts in the environment
         - Idea of safety requirements 
     - Final product: 
         - complete system (real hardware and real environment)
+        - typical problem: limited performance of the target system 
         - the system is stable, safety and reliable
 
 - Multilevel V model:
     - the development of the complete system is decomposed into components 
-    - typically stat in the prototyping phase
+    - typically start in the prototyping phase
     - the components could be developed by different companies (could be in parallel)\
 
 ## Advanced life cycle model and model driven development 
 - Model driven architecture (MDA):
+    - An approach to IT system specification that separates the specification of system functionality from the specification of the implementation of that functionality on a particular technology platform 
+    - Design once and built it on any platform
     - models the perfect system for the problem domain
-    - PIM: all the requirements must be fulfill
-    - PSM: take into account things such as delays. checking is a correct refinement of PIM
+    - Platform independent model - PIM: all the requirements must be fulfill. UML
+    - Platform specific model PSM: take into account things such as delays. checking is a correct refinement of PIM
+    - Models permit to detect some problems early 
+    - Reduced defect detection costs 
+    - Reduced costs for defect removal 
+    - Traceability and portability 
     - It is good to have some kind of trace between elements from different models
 
 - Y model:
@@ -330,20 +344,34 @@ IMPORTANT: when we could apply the different models?
     - platform design space: 
         - try to find which is the best platform for the system
         - focusing on the relevant parts
+
+    - **Platform**: a family of architectures satisfying a set of constraints imposed to
+allow the reuse of hardware and software components. 
+    - **Platform-based design**: meet-in-the-middle approach: In the top-down design flow, designers map an instance of the upper platform to an instance of the lower, and propagate design constraints. 
+
 - Process improvement:
-    - from conceptual to production there is only investment
-    - you have to know at which point in time our product will be still required
-    - breakever point: your investment is fulfill (return in investment point)
-    - how long it's good idea to keep the development of a product 
+    - System product life cycle:
+        - from conceptual to production there is only investment
+        - you have to know at which point in time our product will be still required
+        - breakeven point: your investment is fulfill (return in investment point)
+        - how long it's good idea to keep the development of a product 
 - Process management:
+    - The quality outcome and timeliness of the system development is highly influenced by the quality of the process used to acquire, develop, and maintain it. 
+    - Common Misconceptions 
+        - I don’t need process, I have really good people, advanced technology, an experienced manager 
+        - Process: interferes with creativity, equals bureaucracy + regimentation, isn’t needed when building prototypes, is only useful on large projects, hinders agility in fast-moving markets, costs too much 
     - define processes in a well define way
 - CMMI project
     - how much of the process is supported by a company
-    - level 0: no process model
-    - level 1: 
-    - level 2: we are able to monitor the end of an activity 
-    - level 3: we have activities, and sub activities and we know when the sub activities are finished. We are able to measure
-    - level 4: we are able to measure and control sub activities 
-    - level 5: well defined process model. it's observable and verifiable
+    - level 1 - initial: no process model, unpredictable, poorly controlled, it is reactive
+    - level 2 - managed: we are able to monitor the end of an activity. it is often reactive
+    - level 3 - defined: is organized and proactive. we have activities, and sub activities and we know when the sub activities are finished. We are able to measure
+    - level 4 - quantitatively managed: we are able to measure and control sub activities and the whole process
+    - level 5 - Optimizing: Focus on continous quantitative improvement. well defined process model. it's observable and verifiable
+    - the greater the level, the lower the risk
 
+## Summary 
+- We have nearly the same life cycle models in the different disciplines. 
+- Advanced life cycle models and model driven approaches try to increase the degree of automation and decrease time to-market. 
+- Especially for organizations which develop large-scale software-intensive systems process improvement is crucial. 
 
