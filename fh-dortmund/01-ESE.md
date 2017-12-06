@@ -268,7 +268,7 @@ statements about its reliability and its safety are unreliable
 - Waterfall model:
     - Sometimes the requirements are not very clear at the beginning
 - Prototyping process:
-    - Based on the inital requirements
+    - Based on the initial requirements
     - iterative process
     - sometimes it's used to see if it will be possible to develop the final product (internal process)
     - no focusing in the verification system
@@ -281,7 +281,7 @@ statements about its reliability and its safety are unreliable
 - RUP model
     
 IMPORTANT: when we could apply the different models?
-- Waterfall: well defined systems. critcal safety systems.
+- Waterfall: well defined systems. critical safety systems.
 - Prototyping: Prototype model should be used when the desired system needs to have a lot of interaction with the end users.  Typically, online systems, web interfaces have a very high amount of interaction with end users, 
 - V development: The V-Shaped model should be chosen when ample technical resources are available with needed technical expertise
 - Spiral: When costs and risk evaluation is important, New product line, Significant changes are expected  
@@ -291,8 +291,8 @@ IMPORTANT: when we could apply the different models?
 - Basically waterfall model
 - During the development of the system there is no idea how the system will be development.
 - Deployment phase:
-    - We have an idea of the overall system before deploy it into subsytems
-    - We distribute the system into subsytems 
+    - We have an idea of the overall system before deploy it into subsystems
+    - We distribute the system into subsystems 
 - Focus on the complete system
 
 ## Embedded engineering life cycle model
