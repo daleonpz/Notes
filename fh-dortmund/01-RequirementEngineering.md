@@ -205,12 +205,12 @@ Reasons for project success:
     - OR decomposition: not all sub-goal must be satisfied (used as alternative strategies)
     - The documents must make clear if a sub-goal is AND or OR
 
-## Coal Hierarchy
+## Goal Hierarchy
 - The top most goal is called vision
 - Vision > goals > requirements > design > implementation
 - Vision: try to catch the essence of the project. The ultimate answer to all Why
 
-## iStar approach
+## iStar approach (Read SLIDES)
 - Proposed to document and analyze goals
 - Task (use cases)
 - includes quality goals (really important)
@@ -219,6 +219,8 @@ Reasons for project success:
     - Captures the dependencies between actors
 - Strategic Rationale Model (SRM) 
     - Describe the internal rationale structure of the actors
+- Dependum: help to characterized the association between actors
+- Soft-goal: is related to quality
 
 ### Strategic Dependency Model (SMD)
 - Actor: person/ system that has relationship to the system to be develop
@@ -230,3 +232,16 @@ Reasons for project success:
 ### Strategic Rationale Model (SRM)
 - Models the stakeholders interests and how they might be met.  That is, it describes the capabilities of an actor by detailing its internal structure.
 - Actor boundaries indicate intentional boundaries of a particular actor. All of the elements within a boundary for an actor are explicitly desired by that actor. 
+- Mean ends link: describe how a goal is relized.
+- Contribution link: describe the impact of the soft goals
+- The root cause of conflicts in requirements are conflict goals
+- The goals are redundant information, the main focus is on actors and boundaries
+
+
+## Data Requirements (NO SLIDES)
+- Describes the data that goes in and out
+- Avoid implementation details
+- There is a dependency between data and task
+- Data dictionary: helps to express the data rules
+- Basis for functional requirements
+
