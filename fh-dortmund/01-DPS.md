@@ -510,7 +510,7 @@ Check slides - not that important
 - Matrix clock: keep track of other process’ view (which events occurred)
 
 ---
-# Network interprocess communications (NO SLIDES)
+# Network interprocess communications 
 ## Network topologies
 - Bus interconnect: cheap, reliable, easy extendable, does not support many participants , support master-slave topology
 - Ring interconnect: Huge delay, privacy (all packages are known by all participants)
