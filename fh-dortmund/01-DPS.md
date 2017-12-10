@@ -512,9 +512,9 @@ Check slides - not that important
 ---
 # Network interprocess communications (NO SLIDES)
 ## Network topologies
-- Ring interconnect: Huge delay, privacy (all packages are known by all participants)
 - Bus interconnect: cheap, reliable, easy extendable, does not support many participants , support master-slave topology
-- Mesh interconnect: more option to communicate (many neighbors), high load is the mesh is large (use of clusters)
+- Ring interconnect: Huge delay, privacy (all packages are known by all participants)
+- Mesh interconnect: more options to communicate (many neighbors), high load is the mesh is large (use of clusters)
 - Crossbar interconnect:  manage which participants will be connected (delay), and once they are connected the transmition is fast. 
 
 ## OSI model
@@ -523,14 +523,36 @@ Check slides - not that important
 ## Interprocess communications 
 - Synchronous: same as in sequence diagram in UML, send a message and waits for the answer
 - Asynchronous: send a message and keep doing other tasks
-
-- Indirect communication: do not wait for the suscriber, there is also an intermediary (sync decoupling)
+- Indirect communication: do not wait for the suscriber, there is also an intermediary or Event Service (sync decoupling)
 - Time decoupling: The sender and the receiver(s) can have independent lifetimes
+- Space coupling: Communication direct towards a given receiver(s)
 - Space decoupling: The sender does not know or need to know the identity of the receiver(s), and vice versa
 
 ## Shared memory communication
+- Common resources on platform: FIFO, lpthreads, Sockets, shared memory, etc
+- Example: shared memory - `shmget()`, `shmat()`
+
 ## Distributed shared memory communication
 - Message passing (not memory addresses)
-- MPI: supports direct (with memory addresses) and indirect (messages) communication.
+    - Share nothing approach
+    - Robust
+    - Asynchronous communication
+- MPI:
+    - supports direct (with memory addresses) and indirect (messages) communication.
+    - blocking and non-blocking communication 
+- Communications:
+    - Generic:
+        - Blocking: Sender blocks until message is in transit or delivered
+        - Non-blocking: Returns immediately, additional commands to check status
+    - Synchronous
+        - Blocking: Sender and receiver synchronize, returns when message has been delivered
+        - Non-blocking: Synchronization possible using additional commands
+    - Buffered:
+        - Blocking: Creates a sending buffer; returns, when message has been successfully copied
+        - Non-blocking: Waiting is possible using additional commands
+    - Ready:
+        - Blocking: Similar to Generic; indicates that the receiver is ready to receive (optimization)
+        - Non-blocking: Similar to Generic; guarantees that the receiver is ready to receive (optimization)
+
 
 
