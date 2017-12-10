@@ -554,5 +554,28 @@ Check slides - not that important
         - Blocking: Similar to Generic; indicates that the receiver is ready to receive (optimization)
         - Non-blocking: Similar to Generic; guarantees that the receiver is ready to receive (optimization)
 
+# Parallelization and Optimization (NO SLIDES)
+## Parallelization 
+- Agglomeration: merge entities that have strong communication dependency to avoid context switch overhead
+- Challenges
+    - Instruction set: MMX, SSE4. For example a DPS have the multiplication optimized
+    - Locality/ grouping: usually you try to cluster the information
+    - Size: size of the memory
 
+### Levels of parallelism
+- Instruction level: pipelines. Problems: instruction fetch misses
+- Task level: functions/ tasks which parameters are independent.
+```c
+a = func1();
+b = funt2(c);
+```
+- Data level: for example data blocks in GPU
+- Loop parallelism: 
 
+### OpenMP
+
+## Optimization
+- When a parallel software is optimal? fulfills all the optimization requirements 
+- What does optimal means? depends on the application
+- How can software be optimized?
+- Is the optimized software really optimal? 
