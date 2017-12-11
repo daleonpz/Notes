@@ -92,6 +92,12 @@ $$cos(x) = \frac {e^{ix}+e^{-ix}}{2}$$
 $$sin(x) = \frac {e^{ix}-e^{-ix}}{2i}$$
 $$Fourier( te^{-at}) = \frac{1}{(j\omega + a)^2}$$
 
+- Sine and cosine
+$$a\sin x+b\cos x=c\cdot \sin(x+\varphi )$$
+$$c=\sqrt {a^{2}+b^{2}}$$
+$$\varphi =\operatorname{atan2} \left(b,a\right)$$
+
+
 ## Relation Fourier series and transform
 - Note:
 
@@ -113,3 +119,6 @@ $$f^{(n)}(t) =  s^{n}F(s)-\sum _{k=1}^{n}s^{n-k}f^{(k-1)}(0)$$
 
 ## Linear Algebra
 - In a interscetion of lines both equations must be satisfied
+- Eigenvalues:
+$$|A-\lambda I| = 0$$
+
