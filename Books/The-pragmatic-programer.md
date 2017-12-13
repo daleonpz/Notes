@@ -27,4 +27,29 @@ author: Androw Hund / David Thomas
 how to do it. The entire system just appears before your eyes—you know it's 
 right. But the  "start-up fatigue" will be there. So try to ask for something reasonable to develop and do it well, and say things such as "I would be great if we add ...".
 
+- **Tip 06**: Remember the big picture
+    - Keep an eye on the big picture. Constantly review what's happening around you, not just what you personally are doing. 
+    - Good-enough software: it's impossible to create bug-free code, but do a good-enough code for your users, future maintainers and your our peace.
+
+- **Tip 07**: Make quality a requirements issue
+    - Know when to stop: artists will tell you that all the hard work is ruined if you don't know when to stop. If you add layer upon layer, detail over detail, the painting becomes lost in the paint. 
+    - Sometimes it's better to ship good code sooner than perfect code in the future. Users can give you feedback and make your code better in the future.
+
+- **Tip 08**: Invest regulary in your knowdlegde portafolio
+    - Your knowledge portafolio:
+        - Serious investors invest regularly—as a habit. 
+        - Diversification is the key to long-term success. 
+        - Smart investors balance their portfolios between conservative and high-risk, high-reward investments. 
+        - Investors try to buy low and sell high for maximum return. 
+        - Portfolios should be reviewed and rebalanced periodically. 
+    - Goals:
+        - Learn a new language every year: new perspectives
+        - Read a technical book each quarter: new technologies
+        - Read non-technical books also: understand people
+        - Meet people outside your "company"
+        - Stay current
+        - Try to use what you have learned in your new project
+
+
+    
 
