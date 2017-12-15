@@ -587,7 +587,7 @@ Check slides - not that important
 - Integration 
     - low-end computing integrates with high-end computing
 - Biological evolution
-    - Hummans are too slow to read and process all the date around
+    - Humans are too slow to read and process all the date around
 
 ## Characteristics
 - embedded systems integrated in a physical world (check this statement)
@@ -595,5 +595,5 @@ Check slides - not that important
     - put some intelligent to embedded network
 
 ## Operation modes
-- Automomic: you read the sensor but someone has to decide what to do
+- Autonomic: you read the sensor but someone has to decide what to do
 

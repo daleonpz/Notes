@@ -245,3 +245,23 @@ Reasons for project success:
 - Data dictionary: helps to express the data rules
 - Basis for functional requirements
 
+## Functional Requirements  (NO SLIDES)
+- Who does what
+- Design decision
+- Context Diagram:
+    - is used to make design decisions
+    - comes from structural programming
+    - The boundaries can be drawn in different ways
+    - surroundings: what it is given
+    - System is what we have to design 
+
+### Event list and function list
+- "Use cases" is used to get feature requirements
+- to complement the specification we use screens and prototypes
+- Traditional functional requirements it's not good for COTS 
+
+### Task description
+- Applicable whet the users have a big role
+- In use case the actors and the system are separated
+- Task: should "tell a story" (task vs feature)
+
