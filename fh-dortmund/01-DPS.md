@@ -102,6 +102,77 @@ semester: Winter 2017
     - Describes user focused scenarios 
 
 ---
+# Network interprocess communications 
+## Network topologies
+- Bus interconnect: cheap, reliable, easy extendable, does not support many participants , support master-slave topology
+- Ring interconnect: Huge delay, privacy (all packages are known by all participants)
+- Mesh interconnect: more options to communicate (many neighbors), high load is the mesh is large (use of clusters)
+- Crossbar interconnect:  manage which participants will be connected (delay), and once they are connected the transmition is fast. 
+
+## OSI model
+![OSI model](images/DPS_OSI.png)
+
+## Interprocess communications 
+- Synchronous: same as in sequence diagram in UML, send a message and waits for the answer
+- Asynchronous: send a message and keep doing other tasks
+- Indirect communication: do not wait for the suscriber, there is also an intermediary or Event Service (sync decoupling)
+- Time decoupling: The sender and the receiver(s) can have independent lifetimes
+- Space coupling: Communication direct towards a given receiver(s)
+- Space decoupling: The sender does not know or need to know the identity of the receiver(s), and vice versa
+
+## Shared memory communication
+- Common resources on platform: FIFO, lpthreads, Sockets, shared memory, etc
+- Example: shared memory - `shmget()`, `shmat()`
+
+## Distributed shared memory communication
+- Message passing (not memory addresses)
+    - Share nothing approach
+    - Robust
+    - Asynchronous communication
+- MPI:
+    - supports direct (with memory addresses) and indirect (messages) communication.
+    - blocking and non-blocking communication 
+- Communications:
+    - Generic:
+        - Blocking: Sender blocks until message is in transit or delivered
+        - Non-blocking: Returns immediately, additional commands to check status
+    - Synchronous
+        - Blocking: Sender and receiver synchronize, returns when message has been delivered
+        - Non-blocking: Synchronization possible using additional commands
+    - Buffered:
+        - Blocking: Creates a sending buffer; returns, when message has been successfully copied
+        - Non-blocking: Waiting is possible using additional commands
+    - Ready:
+        - Blocking: Similar to Generic; indicates that the receiver is ready to receive (optimization)
+        - Non-blocking: Similar to Generic; guarantees that the receiver is ready to receive (optimization)
+
+# Parallelization and Optimization (NO SLIDES)
+## Parallelization 
+- Agglomeration: merge entities that have strong communication dependency to avoid context switch overhead
+- Challenges
+    - Instruction set: MMX, SSE4. For example a DPS have the multiplication optimized
+    - Locality/ grouping: usually you try to cluster the information
+    - Size: size of the memory
+
+### Levels of parallelism
+- Instruction level: pipelines. Problems: instruction fetch misses
+- Task level: functions/ tasks which parameters are independent.
+```c
+a = func1();
+b = funt2(c);
+```
+- Data level: for example data blocks in GPU
+- Loop parallelism: 
+
+### OpenMP
+
+## Optimization
+- When a parallel software is optimal? fulfills all the optimization requirements 
+- What does optimal means? depends on the application
+- How can software be optimized?
+- Is the optimized software really optimal? 
+
+---
 # General Challenges and Solutions
 ## Why parallelism
 - Physical limits of frequency scaling already met years ago
@@ -510,72 +581,19 @@ Check slides - not that important
 - Matrix clock: keep track of other process’ view (which events occurred)
 
 ---
-# Network interprocess communications 
-## Network topologies
-- Bus interconnect: cheap, reliable, easy extendable, does not support many participants , support master-slave topology
-- Ring interconnect: Huge delay, privacy (all packages are known by all participants)
-- Mesh interconnect: more options to communicate (many neighbors), high load is the mesh is large (use of clusters)
-- Crossbar interconnect:  manage which participants will be connected (delay), and once they are connected the transmition is fast. 
+# Cyber physical systems
+- Uses embedded systems
+- Device proliferation
+- Integration 
+    - low-end computing integrates with high-end computing
+- Biological evolution
+    - Hummans are too slow to read and process all the date around
 
-## OSI model
-![OSI model](images/DPS_OSI.png)
+## Characteristics
+- embedded systems integrated in a physical world (check this statement)
+- CPS compared to:
+    - put some intelligent to embedded network
 
-## Interprocess communications 
-- Synchronous: same as in sequence diagram in UML, send a message and waits for the answer
-- Asynchronous: send a message and keep doing other tasks
-- Indirect communication: do not wait for the suscriber, there is also an intermediary or Event Service (sync decoupling)
-- Time decoupling: The sender and the receiver(s) can have independent lifetimes
-- Space coupling: Communication direct towards a given receiver(s)
-- Space decoupling: The sender does not know or need to know the identity of the receiver(s), and vice versa
+## Operation modes
+- Automomic: you read the sensor but someone has to decide what to do
 
-## Shared memory communication
-- Common resources on platform: FIFO, lpthreads, Sockets, shared memory, etc
-- Example: shared memory - `shmget()`, `shmat()`
-
-## Distributed shared memory communication
-- Message passing (not memory addresses)
-    - Share nothing approach
-    - Robust
-    - Asynchronous communication
-- MPI:
-    - supports direct (with memory addresses) and indirect (messages) communication.
-    - blocking and non-blocking communication 
-- Communications:
-    - Generic:
-        - Blocking: Sender blocks until message is in transit or delivered
-        - Non-blocking: Returns immediately, additional commands to check status
-    - Synchronous
-        - Blocking: Sender and receiver synchronize, returns when message has been delivered
-        - Non-blocking: Synchronization possible using additional commands
-    - Buffered:
-        - Blocking: Creates a sending buffer; returns, when message has been successfully copied
-        - Non-blocking: Waiting is possible using additional commands
-    - Ready:
-        - Blocking: Similar to Generic; indicates that the receiver is ready to receive (optimization)
-        - Non-blocking: Similar to Generic; guarantees that the receiver is ready to receive (optimization)
-
-# Parallelization and Optimization (NO SLIDES)
-## Parallelization 
-- Agglomeration: merge entities that have strong communication dependency to avoid context switch overhead
-- Challenges
-    - Instruction set: MMX, SSE4. For example a DPS have the multiplication optimized
-    - Locality/ grouping: usually you try to cluster the information
-    - Size: size of the memory
-
-### Levels of parallelism
-- Instruction level: pipelines. Problems: instruction fetch misses
-- Task level: functions/ tasks which parameters are independent.
-```c
-a = func1();
-b = funt2(c);
-```
-- Data level: for example data blocks in GPU
-- Loop parallelism: 
-
-### OpenMP
-
-## Optimization
-- When a parallel software is optimal? fulfills all the optimization requirements 
-- What does optimal means? depends on the application
-- How can software be optimized?
-- Is the optimized software really optimal? 
