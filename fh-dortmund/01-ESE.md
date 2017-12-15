@@ -374,4 +374,57 @@ allow the reuse of hardware and software components.
 - We have nearly the same life cycle models in the different disciplines. 
 - Advanced life cycle models and model driven approaches try to increase the degree of automation and decrease time to-market. 
 - Especially for organizations which develop large-scale software-intensive systems process improvement is crucial. 
+- System LC vs Software LC: 
+    - Retirement phase in the system
+    - In software we focus on the development
+- Software LC vs Embedded LC:
+    - Embedded: 
+        - we consider several phases, real Hardware, check if the control algorithm works
+        - Consider also if the system is safe or the possibility of a hardware crash
+- Model driven development: 
+    - Ideal case no implementation
+    - Ideal case there is code generator
+    - You trust the automation tool
+- Prototype model development: hardware constrains
+
+# Requirements Engineering (NO SLIDES)
+## Elements
+- Requirement elicitation:
+    - find out which person / regulation
+- Requirement analysis:
+    - conflicts, feasible
+- Requirement specification: 
+    - write down the requirements 
+    - sometimes there is a need to formalize
+- Requirement management:
+    - process of management the requirements elements
+
+## Requirements for complex systems
+- Most cases we must specify, and refine the requirements during all the phases
+
+## Requirements specification
+## Requirements diagram
+- You should be able to trace system requirements
+- should be able to link elements of the system
+- The specification is given in a textual way
+- Able to specify further properties of a requirements
+
+# Analysis and design
+- Analysis: what we would like to develop
+- Break down the system
+- In the level of design is **how** to implement the elements
+- we need to specify the environmental context (country regulations)
+- what are the system boundaries
+- Design
+    - Requirements are not stable
+    - Change is important during development 
+    - A designed system is more stable
+    - Focus on the relevant elements of the real world
+    - we must specify the constrains that reflects the real world
+    - View: conforms to a particular viewpoint. specify purpose
+
+# SysML
+- Port flow: continuous interact with the environment
+- Item flow: precise type across blocks
+- Object flow: "no buffer" - only one element can be in the buffer, the rest are discarded
 
