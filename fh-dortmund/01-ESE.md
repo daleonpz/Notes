@@ -387,29 +387,86 @@ allow the reuse of hardware and software components.
     - You trust the automation tool
 - Prototype model development: hardware constrains
 
-# Requirements Engineering (NO SLIDES)
-## Elements
-- Requirement elicitation:
-    - find out which person / regulation
-- Requirement analysis:
-    - conflicts, feasible
-- Requirement specification: 
-    - write down the requirements 
-    - sometimes there is a need to formalize
-- Requirement management:
-    - process of management the requirements elements
+# Requirements Engineering 
+    - bad requirements are the main cause of errors in software
+    - bad requirements are really expensive. 56% of costs of rectifying errors
+    - **Requirement Engineering** is the science and discipline concerned with analyzing and documenting requirements.
+    - ** Requirement**: 
+    - A condition or capability needed by a user to solve a problem or achieve an objective, and its documented representation
+    - A condition or capability that must be met or possessed by a system or system component to satisfy a contract, standard, specification, or other formally imposed documents, and its documents representation
+    - Inputs:
+        - Existing information systems: Information about the functionality of the systems to be replaced or systems that will interact with the system being specified.
+        - Stakeholders needs: what the stakeholders need from the systems to support their work
+        - Organizationl standards: organzational practices, quality management
+        - Regulations
+        - Domain information: general information about the application domain
+    - Outputs
+        - Agreed requirements: a description of the requirements which is understandable by stakeholders and which has been agreed by them
+    - Useful [link](https://re-magazine.ireb.org/issues/2015-2-bridging-the-impossible/modeling-requirements-with-sysml/)
 
-## Requirements for complex systems
-- Most cases we must specify, and refine the requirements during all the phases
+## Requirement elements:
+- Requirement elicitation:
+    - the process through which the customer and developer discover, review, articulate, and understand the users’ needs and constraints on the software and development activities
+    - Requirements elicitation is about discovering what requirements a system should be based upon
+    - This doesn’t involve just asking stakeholders what they want. It requires a careful analysis of: The organisation, The application domain, Organisation processes where the system will be used, to determine the stakeholders need.
+    - Elicitation process:
+        - Establish objectives (Business goals, system constraints)
+        - Understand background (Organizational structure, Application domain, Existing systems)
+        - Organize knowledge (Stakeholder identification, Goal prioritization)
+        - Collect requirements (Stakeholder requirements, Domain requirements, Organizational requirements)
+    - Stakeholders: Anyone with a stake in creating or using a new system
+    - Uncovered knowledge: 
+        - Application domain knowledge: knowledge about airport systems
+        - Context knowledge: knowledge about Denver Airport
+        - Problem knowledge: knowledge about Denver’s baggage-handling system
+        - Stakeholders needs and work processes to be supported
+    - Requirements elicitation techniques: Intervies, questionnaries, examintation of documentation (standards, laws), prototyping, contextual design
+- Requirement Analysis:
+    - the process of analyzing the customers’ and users’ needs to arrive at a definition of the requirements
+    - The process of studying user needs to arrive at a definition of system, hardware, or software requirements.
+    - The process of studying and refining system, hardware, or software requirements.
+    - Analyze the results of elicitation: are the answers consistent?, identify trouble spots, identify boundaries, identify most important requirements
+    - possibly iterate over elicitation again
+    - The analysis has to establish an agreed set of requirements which are complete, consistent, and unambiguous. Such a set can be used as the basis for systems development.
+    - Negotiation: Stakeholders often disagree over requirements. Therefore they need to negotiate to try to reach agreement.
+- Requirement specification:
+    - he development of a document that clearly and precisely records each of the requirements of the software.
+    - Different specification methods have different levels of formality 
+- Requirement validation:
+    - the process of ensuring that the requirement specification is in compliance with the user needs
+    - system requirements, conforms to document standards, and is an adequate basis for the architectural design.
+- Requirement management: 
+    - the planning and controlling of the requirements elicitation, specification, analysis, and verification activities.
+
+## Requirement for complex systems
+- A system of any but the smallest size will be decomposed into a hierarchy of elements (partitioning):
+- Allocation: assigning requirements to elements
+- Flowdown: requirements which respond to the allocated high level requirements
+- Traceability: keep track of the dependencies
+- Requirement engineering continues during design
+- Design solution: HOW to achieve something
+- Requirements: WHAT to achieve
 
 ## Requirements specification
-## Requirements diagram
-- You should be able to trace system requirements
-- should be able to link elements of the system
-- The specification is given in a textual way
-- Able to specify further properties of a requirements
+- A document that specifies the requirements for a system or component. Typically included are functional requirements, performance requirements, interface requirements, design requirements, and development standards. 
+- A Good Requirement Specification should be correct, unambiguous, complete, consistent, ranked for importance and/or stability, verifiable, modifiable, traceable
 
-# Analysis and design
+## SysML
+- Relation with uml: activity, class, state machine, sequence, use case, composite structures
+- New diagrams: requirements, allocations, parametric constrains
+
+## Requirement diagram
+- offers a graphical representation of the requirements
+- Basic properties of a requirement: unique identifier, textual description of requirement
+- Further properties of a requirement: priority, source, risk, status, verification method 
+- Containment: A Composite Requirement can contain sub-requirements in terms of a requirements hierarchy, specified using the namespace containment mechanism. A composite requirement may state that the system shall do A and B, which can be decomposed into the child requirements that the system shall do A, and the system shall do B 
+- Refine: consist in adding precision
+- Derivation: connect requirements from different levels. Usually involves some choice of architecture. A simple example would be a vehicle acceleration requirement that is analyzed to derive requirements for engine power, so the engine power is DeriveReq of the acceleration
+- Satisfy: describes how a design or implementation model concept satisfies one or more requirements. It is not a proof
+- Verify:  defines how a test case or other model element verifies a requirement
+- Useful [link](https://re-magazine.ireb.org/issues/2015-2-bridging-the-impossible/modeling-requirements-with-sysml/)
+
+# Analysis and design (NO SLIDES)
 - Analysis: what we would like to develop
 - Break down the system
 - In the level of design is **how** to implement the elements
