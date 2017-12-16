@@ -388,10 +388,10 @@ allow the reuse of hardware and software components.
 - Prototype model development: hardware constrains
 
 # Requirements Engineering 
-    - bad requirements are the main cause of errors in software
-    - bad requirements are really expensive. 56% of costs of rectifying errors
-    - **Requirement Engineering** is the science and discipline concerned with analyzing and documenting requirements.
-    - ** Requirement**: 
+- bad requirements are the main cause of errors in software
+- bad requirements are really expensive. 56% of costs of rectifying errors
+- **Requirement Engineering** is the science and discipline concerned with analyzing and documenting requirements.
+- ** Requirement**: 
     - A condition or capability needed by a user to solve a problem or achieve an objective, and its documented representation
     - A condition or capability that must be met or possessed by a system or system component to satisfy a contract, standard, specification, or other formally imposed documents, and its documents representation
     - Inputs:
@@ -402,7 +402,6 @@ allow the reuse of hardware and software components.
         - Domain information: general information about the application domain
     - Outputs
         - Agreed requirements: a description of the requirements which is understandable by stakeholders and which has been agreed by them
-    - Useful [link](https://re-magazine.ireb.org/issues/2015-2-bridging-the-impossible/modeling-requirements-with-sysml/)
 
 ## Requirement elements:
 - Requirement elicitation:
