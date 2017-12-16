@@ -397,7 +397,7 @@ allow the reuse of hardware and software components.
     - Inputs:
         - Existing information systems: Information about the functionality of the systems to be replaced or systems that will interact with the system being specified.
         - Stakeholders needs: what the stakeholders need from the systems to support their work
-        - Organizationl standards: organzational practices, quality management
+        - Organizational standards: organizational practices, quality management
         - Regulations
         - Domain information: general information about the application domain
     - Outputs
@@ -408,7 +408,7 @@ allow the reuse of hardware and software components.
 - Requirement elicitation:
     - the process through which the customer and developer discover, review, articulate, and understand the users’ needs and constraints on the software and development activities
     - Requirements elicitation is about discovering what requirements a system should be based upon
-    - This doesn’t involve just asking stakeholders what they want. It requires a careful analysis of: The organisation, The application domain, Organisation processes where the system will be used, to determine the stakeholders need.
+    - This doesn’t involve just asking stakeholders what they want. It requires a careful analysis of: The organization, The application domain, Organization processes where the system will be used, to determine the stakeholders need.
     - Elicitation process:
         - Establish objectives (Business goals, system constraints)
         - Understand background (Organizational structure, Application domain, Existing systems)
@@ -420,7 +420,7 @@ allow the reuse of hardware and software components.
         - Context knowledge: knowledge about Denver Airport
         - Problem knowledge: knowledge about Denver’s baggage-handling system
         - Stakeholders needs and work processes to be supported
-    - Requirements elicitation techniques: Intervies, questionnaries, examintation of documentation (standards, laws), prototyping, contextual design
+    - Requirements elicitation techniques: Interviews, questionnaires, examination of documentation (standards, laws), prototyping, contextual design
 - Requirement Analysis:
     - the process of analyzing the customers’ and users’ needs to arrive at a definition of the requirements
     - The process of studying user needs to arrive at a definition of system, hardware, or software requirements.
@@ -459,7 +459,7 @@ allow the reuse of hardware and software components.
 - offers a graphical representation of the requirements
 - Basic properties of a requirement: unique identifier, textual description of requirement
 - Further properties of a requirement: priority, source, risk, status, verification method 
-- Containment: A Composite Requirement can contain sub-requirements in terms of a requirements hierarchy, specified using the namespace containment mechanism. A composite requirement may state that the system shall do A and B, which can be decomposed into the child requirements that the system shall do A, and the system shall do B 
+- Containment: split th requirement into single requirements.  A composite requirement may state that the system shall do A and B, which can be decomposed into the child requirements that the system shall do A, and the system shall do B 
 - Refine: consist in adding precision
 - Derivation: connect requirements from different levels. Usually involves some choice of architecture. A simple example would be a vehicle acceleration requirement that is analyzed to derive requirements for engine power, so the engine power is DeriveReq of the acceleration
 - Satisfy: describes how a design or implementation model concept satisfies one or more requirements. It is not a proof
