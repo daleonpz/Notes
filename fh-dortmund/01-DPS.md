@@ -623,18 +623,90 @@ Check slides - not that important
 
 ---
 # Cyber physical systems
+## Introduction 
 - Uses embedded systems
-- Device proliferation
-- Integration 
-    - low-end computing integrates with high-end computing
-- Biological evolution
-    - Humans are too slow to read and process all the date around
+- Computer history:
+    - 1960-1970: mainframe computing
+    - 1980-1990: Desktoy computing and internet
+    - 2000-now: Ubiquitous computing
+    - 2010: cyberphysical systems
+- Computer trends
+    - Device proliferation
+        - According to Moore's law:  the observation that the number of transistors in a dense integrated circuit doubles approximately every two years.
+        - More devices
+        - More sensors
+        - Embedded everywhere (smart phones, health bracelets, factory floor)
+    - Integration at scale
+        - low-end computing integrates with high-end computing
+        - low-end: ubiquitous embedded devices, seamless integration with a physical environment
+        - high-end: complex systems with global integration.
+    - Biological evolution
+        - Humans are too slow to read and process all the data around
+        - The external proliferation of embedded devices is not matched by a corresponding increase of human ability to consume information
+        - Human out of loop: increase the autonomy of the devices
+- Confluence of trends: distributed cyberphysical information distillation and control systems
 
-## Characteristics
-- embedded systems integrated in a physical world (check this statement)
+## Description and Characteristics
+- Are physical and engineered systems whose operations are monitored, coordinated, controlled and integrated by a computing and communication core
+- Integrates computing, communication, storage with monitoring or control entities in the physical world
 - CPS compared to:
-    - put some intelligent to embedded network
+    - embedded systems < network embedded systems < cyberphysical systems < IoT
+    - cyberphysical systems are basically intelligence + embedded network
+- Characteristics:
+    - Cyber-physical coupling by new demands and applications: cyber capability in every physical component, large scale networking
+    - System of systems: New spatial-temporal constrains, complex at multiple temporal and spatial scale, dymanically reconfiguring
+    - interactions between communications, computing and control
+    - Ubiquity drives unprecedent security and private needs: high degrees of automation, control loops at all scales
+    - Operation must be dependable, certified in some cases
 
 ## Operation modes
-- Autonomic: you read the sensor but someone has to decide what to do
+- Passive Mode: physical element is monitoring the cyber element
+- Autonomic Mode: physical element is monitoring the cyber element, but the cyber element has an indirect actuation defined by the physical element.  you read the sensor but someone has to decide what to do
+- Active Mode: physical element is monitoring the cyber element, but the cyber element has a directive actuation in the physical element.
+
+## Application domain
+- Healtcare, agriculture, robotics, transportation, energy, process control. 
+- In general, any "X by wire(less)", where X is anything that is physical in nature
+- CPS will transform how we interact with the physical world just like the internet transformed how we interact with one another
+- CPS everywhere:
+    - Expectation: 24/7 availability, 100% reliability, 100% connectivity, instantanous response, remember everything forever
+    - For all humans: all social, economical, cultural classes
+    - Numbers: from individual persons up to populations
+
+## CPS problems
+- physical things don't respond with respect to a "clock", they happen when they want to.
+- Non-deterministic: measurements could be seen as as probabilities
+- Interaction complexity: unexpected interference, unintended feedback loops
+- Physical processes  may affect the cyber element in unexpected ways
+
+## CPS challenges
+- Need for CPS
+    - allow us to add capabilities to physical systems
+    - by merging computing and communication with physical processes, CPS brings beneficts
+        - safer and more efficient systems
+        - reduce the cost of building operating systems
+        - build complex systems with new capabilities
+    - Technological and economics drivers
+        - decrease of cost of computation, networking and sensing
+        - computers and communications are ubiquitous, enables large scale CPS
+        - social and economic forces require more efficient use of national infrastructure
+- Grand challenges
+    - zero automative traffic fatalities, reduce traffic congestion
+    - blackout-free electricity generation and distribution
+    - energy-aware buildings
+    - perpetual life assistants 
+    - location-independent access to world-class medicine
+    - self-correcting, self-certifying CPS for "one-off" applications
+- Scientific challenges
+    - System composition: safe system of sytems
+    - theory modeling and analysis: high complex mathematical modeling
+    - Programming abstractions: model-based development is needed
+    - Architecture: CPS are society scale systems, new network protocols, and fault tolerance has to be built in
+    - Safety, security and privacy
+    - Computation and energy limitations
+    - Validation and certification: it is essential to certify them based on scientific foundations
+
+## Summary
+![Summary](images/DPS_CPS.png)
+
 
