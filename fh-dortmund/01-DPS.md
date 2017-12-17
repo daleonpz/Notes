@@ -627,7 +627,7 @@ Check slides - not that important
 - Uses embedded systems
 - Computer history:
     - 1960-1970: mainframe computing
-    - 1980-1990: Desktoy computing and internet
+    - 1980-1990: Desktop computing and internet
     - 2000-now: Ubiquitous computing
     - 2010: cyberphysical systems
 - Computer trends
@@ -653,8 +653,8 @@ Check slides - not that important
     - embedded systems < network embedded systems < cyberphysical systems < IoT
     - cyberphysical systems are basically intelligence + embedded network
 - Characteristics:
-    - Cyber-physical coupling by new demands and applications: cyber capability in every physical component, large scale networking
-    - System of systems: New spatial-temporal constrains, complex at multiple temporal and spatial scale, dymanically reconfiguring
+    - Cyber-physical coupling by new demands and applications: Cyber capability in every physical component, large scale networking
+    - System of systems: New spatial-temporal constrains, complex at multiple temporal and spatial scale, dynamically re configuring
     - interactions between communications, computing and control
     - Ubiquity drives unprecedent security and private needs: high degrees of automation, control loops at all scales
     - Operation must be dependable, certified in some cases
@@ -665,11 +665,11 @@ Check slides - not that important
 - Active Mode: physical element is monitoring the cyber element, but the cyber element has a directive actuation in the physical element.
 
 ## Application domain
-- Healtcare, agriculture, robotics, transportation, energy, process control. 
+- Healthcare, agriculture, robotics, transportation, energy, process control. 
 - In general, any "X by wire(less)", where X is anything that is physical in nature
 - CPS will transform how we interact with the physical world just like the internet transformed how we interact with one another
 - CPS everywhere:
-    - Expectation: 24/7 availability, 100% reliability, 100% connectivity, instantanous response, remember everything forever
+    - Expectation: 24/7 availability, 100% reliability, 100% connectivity, instantaneous response, remember everything forever
     - For all humans: all social, economical, cultural classes
     - Numbers: from individual persons up to populations
 
@@ -682,7 +682,7 @@ Check slides - not that important
 ## CPS challenges
 - Need for CPS
     - allow us to add capabilities to physical systems
-    - by merging computing and communication with physical processes, CPS brings beneficts
+    - by merging computing and communication with physical processes, CPS brings benefits
         - safer and more efficient systems
         - reduce the cost of building operating systems
         - build complex systems with new capabilities
@@ -691,14 +691,14 @@ Check slides - not that important
         - computers and communications are ubiquitous, enables large scale CPS
         - social and economic forces require more efficient use of national infrastructure
 - Grand challenges
-    - zero automative traffic fatalities, reduce traffic congestion
+    - zero automotive traffic fatalities, reduce traffic congestion
     - blackout-free electricity generation and distribution
     - energy-aware buildings
     - perpetual life assistants 
     - location-independent access to world-class medicine
     - self-correcting, self-certifying CPS for "one-off" applications
 - Scientific challenges
-    - System composition: safe system of sytems
+    - System composition: safe system of systems
     - theory modeling and analysis: high complex mathematical modeling
     - Programming abstractions: model-based development is needed
     - Architecture: CPS are society scale systems, new network protocols, and fault tolerance has to be built in
