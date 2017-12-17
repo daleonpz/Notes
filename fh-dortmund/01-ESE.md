@@ -505,7 +505,7 @@ allow the reuse of hardware and software components.
     - Parametric constraint diagram: dependencies/ constrains between given elements
     - Activity diagram: scenarios describing required activities
     - Sequence diagram: required/ likely interaction scenarios
-    - State machine diagram: complete state-depended reactive behaviour of given elements
+    - State machine diagram: complete state-depended reactive behavior of given elements
 
 ## SysML for analysis (Read SLIDES)
 - View: conforms to a particular viewpoint. specify purpose
@@ -524,12 +524,12 @@ allow the reuse of hardware and software components.
     - can be used to specify network of constrains that represents mathematical expressions
     - can be used to identify critical performance parameters and their relationship to other parameters
     - can be used to support trade off analysis
-    - usually constrained properties express quantitive, and parametric models express non-quantitive properties
+    - usually constrained properties express quantitative, and parametric models express non-quantities properties
     - time can be modeled as a property that other properties can use
 - Activity diagram:
     - Activities specify sequential and concurrent behaviors that are connected by control flows and object flows.
     - Activities can be nested or atomic (actions)
-    - can be used to specify causal/functional behaviour of a system
+    - can be used to specify causal/functional behavior of a system
     - Object flow: "no buffer" - only one element can be in the buffer, the rest are discarded
 - Sequence diagram:
     - can be used to model communications among block structures arranged in time order
