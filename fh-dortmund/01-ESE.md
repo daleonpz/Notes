@@ -262,7 +262,7 @@ statements about its reliability and its safety are unreliable
 - Non-deterministic and what is refinement in hybrid automatas
 - Difference State properties, sequence properties, stability and controllability 
 
-# The Development life cycle (NO SLIDES)
+# The Development life cycle 
 ## Software Engineering life cycle model
 [link](https://www.tatvasoft.com/blog/top-12-software-development-methodologies-and-its-advantages-disadvantages/#anchor1)
 - Waterfall model:
@@ -465,22 +465,71 @@ allow the reuse of hardware and software components.
 - Verify:  defines how a test case or other model element verifies a requirement
 - Useful [link](https://re-magazine.ireb.org/issues/2015-2-bridging-the-impossible/modeling-requirements-with-sysml/)
 
-# Analysis and design (NO SLIDES)
-- Analysis: what we would like to develop
+# Analysis and design
+## Introduction
+- Analysis: 
+    - what we would like to develop
+    - Analysis phase belongs to the problem domain and it specifies a relevant subset of the real world according to the requirements
+    - input: textual requirements
+    - output: descriptive model
 - Break down the system
-- In the level of design is **how** to implement the elements
-- we need to specify the environmental context (country regulations)
-- what are the system boundaries
-- Design
+- Design: 
+    - Model the solution in the solution domain (computational model)
+    - The process of defining the architecture, components and interfaces, and other characteristics of a system or component
+    - Design description: A document that describes the design of a system or component.Typical contents include system or component architecture, control logic, data structures, input/output formats, interfaces descriptions and algorithms
+    - Importance: 
+        - translate requirements into product
+        - stable for small changes
+        - easy to test
     - Requirements are not stable
     - Change is important during development 
     - A designed system is more stable
     - Focus on the relevant elements of the real world
     - we must specify the constrains that reflects the real world
-    - View: conforms to a particular viewpoint. specify purpose
+    - In the level of design is **how** to implement the elements
+- First law of software evolution: the software models some reality, undergoes continual change or it becomes useless overtime.
+- First law of system engineering: no matter where you are in the life cycle, the need of change will appear and it persists throughout the whole life cycle.
 
-# SysML
-- Port flow: continuous interact with the environment
-- Item flow: precise type across blocks
-- Object flow: "no buffer" - only one element can be in the buffer, the rest are discarded
+## Methods
+- How to describe complex systems
+    - Dynamic model (knowledge about causality)
+    - Entity model (knowledge about relationships)
+    - Functional model (knowledge about functionality)
 
+## Analysis
+- Analysis should model aspects of the real world that are relevant
+- The model should only describe the required or the existing structure and behavior of the application
+- The analysis model is the base for communication between the main stake holders (analysts, experts in the application domain and end-users of the system)
+- Analysis with sysML:
+    - block diagram: given structures and interfaces
+    - Parametric constraint diagram: dependencies/ constrains between given elements
+    - Activity diagram: scenarios describing required activities
+    - Sequence diagram: required/ likely interaction scenarios
+    - State machine diagram: complete state-depended reactive behaviour of given elements
+
+## SysML for analysis (Read SLIDES)
+- View: conforms to a particular viewpoint. specify purpose
+- Block diagram:
+    - Block is a modular unit of system that encapsulates its content. Can be used to create composite structures, or divided in parts (blocks with their own content)
+    - Application: model logical or physical systems (software, hardware, human organizations)
+    - block definition diagram (bdd): represents block definitions (values, parts, references)
+    - internal block diagram (ibd): describes a blocks in terms of parts, ports and connectors
+        - Item flow: precise type across blocks
+        - composition relationship in a bdd can be represented with an ibd. In the example traction detector and break modulator are part of anti-lock controller, but the sensors are a reference
+    - Ports: the motivation is to have modular blocks that can be connected and interact with their context of use
+        - Proxy: expose features of the owning block
+        - full: expose features of the same block
+        - Port flow: continuous interact with the environment
+- Parametric constraint block: 
+    - can be used to specify network of constrains that represents mathematical expressions
+    - can be used to identify critical performance parameters and their relationship to other parameters
+    - can be used to support trade off analysis
+    - usually constrained properties express quantitive, and parametric models express non-quantitive properties
+    - time can be modeled as a property that other properties can use
+- Activity diagram:
+    - Activities specify sequential and concurrent behaviors that are connected by control flows and object flows.
+    - Activities can be nested or atomic (actions)
+    - can be used to specify causal/functional behaviour of a system
+    - Object flow: "no buffer" - only one element can be in the buffer, the rest are discarded
+- Sequence diagram:
+    - can be used to model communications among block structures arranged in time order
