@@ -153,7 +153,7 @@ semester: Winter 2017
 # Parallelization and Optimization 
 ## Parallelization 
 - Challenges in designing:
-    - Partioning of the problem 
+    - Partitioning of the problem 
     - Analysis of the communication between the executables
     - Agglomeration: merge entities that have strong communication dependency to avoid context switch overhead
     - Mapping of software to hardware
@@ -178,7 +178,7 @@ b = funt2(c);
 
 ### OpenMP (check SLIDES)
 - compiler directive `#pragma omp`
-- aditional "keywords" to the compiler directive:
+- additional "keywords" to the compiler directive:
     - `private( var1, var2)`:  have instances in each thread
     - `task shared(var1)`: used in task parallelism in combination with `taskwait`
     - `parallel for`: used in data parallelism and for parallelism 
@@ -197,7 +197,7 @@ b = funt2(c);
 ## Optimization
 - When a parallel software is optimal? fulfills all the optimization requirements 
 - What does optimal means? depends on the application
-- In order to optimize software, we need a specific goal ( lowerst energy consumption, for instance)
+- In order to optimize software, we need a specific goal ( lowest energy consumption, for instance)
 - We refer these goals as "quality attributes" or "optimization goals"
 - How can software be optimized? Degrees of freedom or design space
     - Allocation executable software to cores (pthreads for example)
@@ -207,7 +207,7 @@ b = funt2(c);
     - Hardware/software parameters (optimization flag in gcc)
 - Is the optimized software really optimal? 
     - A high abstraction hides a lot of details
-    - This reduces the solution space, hance making the problem "easier" to solve
+    - This reduces the solution space, hence making the problem "easier" to solve
     - Also make the solution less accurate compared to the real-world scenario
 - Optimization techniques
     - Exact strategies: linear/quadratic programming
