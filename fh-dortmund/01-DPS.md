@@ -132,6 +132,10 @@ semester: Winter 2017
 - MPI:
     - supports direct (with memory addresses) and indirect (messages) communication.
     - blocking and non-blocking communication 
+- Is the optimized software really optimal? 
+- Is the optimized software really optimal? 
+    - Some functions: `MPI_Init()`, `MPI_Finalize()`, `MPI_Comm_rank(MPI_COMM_WORLD, &rank)`, `MPI_Comm_size(MPI_COMM_WORLD, &size)`, `MPI_Send(&data, data_count, MPI_INT, dest, tag, MPI_COMM_WORLD)`, `MPI_Recv(&data, data_count, MPI_INT, src, tag, MPI_COMM_WORLD, MPI_STATUS_IGNORE)`
+    - library need `mpi.h`, compiler `mpicc`, application `mpich`
 - Communications:
     - Generic:
         - Blocking: Sender blocks until message is in transit or delivered
@@ -146,13 +150,17 @@ semester: Winter 2017
         - Blocking: Similar to Generic; indicates that the receiver is ready to receive (optimization)
         - Non-blocking: Similar to Generic; guarantees that the receiver is ready to receive (optimization)
 
-# Parallelization and Optimization (NO SLIDES)
+# Parallelization and Optimization 
 ## Parallelization 
-- Agglomeration: merge entities that have strong communication dependency to avoid context switch overhead
-- Challenges
-    - Instruction set: MMX, SSE4. For example a DPS have the multiplication optimized
-    - Locality/ grouping: usually you try to cluster the information
-    - Size: size of the memory
+- Challenges in designing:
+    - Partioning of the problem 
+    - Analysis of the communication between the executables
+    - Agglomeration: merge entities that have strong communication dependency to avoid context switch overhead
+    - Mapping of software to hardware
+    - Constrains:
+        - Instruction set: MMX, SSE4. For example a DPS have the multiplication optimized
+        - Locality/ grouping: usually you try to cluster the information
+        - Size: size of the memory
 
 ### Levels of parallelism
 - Instruction level: pipelines. Problems: instruction fetch misses
@@ -162,15 +170,48 @@ a = func1();
 b = funt2(c);
 ```
 - Data level: for example data blocks in GPU
-- Loop parallelism: 
+- Loop parallelism: for example loop pipelining
+    - loop pipelining: 
+        - Initiation Interval (II), which is the number of clock cycles between the start times of consecutive loop iterations. 
+        - latency: number of clock needed to complete one loop
+        - loop latency: number of clocks needed to complete all the iterations
 
-### OpenMP
+### OpenMP (check SLIDES)
+- compiler directive `#pragma omp`
+- aditional "keywords" to the compiler directive:
+    - `private( var1, var2)`:  have instances in each thread
+    - `task shared(var1)`: used in task parallelism in combination with `taskwait`
+    - `parallel for`: used in data parallelism and for parallelism 
+    - `reduction( op:var)`: used in loop parallelism , for example
+```c
+#pragma omp parallel for \
+    private(n) reduction(+:scalarProd)
+    for(int n=0; n<size; ++n) {
+        scalarProd += A[n] * B[n];
+}
+```
+- some function `omp_get_num_threads()` ,`omp_get_thread_num()`
+- needed flag for compilation `-fopenpm` 
+- environment variable `OMP_NUM_THREADS=N`, N is the number of threads 
 
 ## Optimization
 - When a parallel software is optimal? fulfills all the optimization requirements 
 - What does optimal means? depends on the application
-- How can software be optimized?
+- In order to optimize software, we need a specific goal ( lowerst energy consumption, for instance)
+- We refer these goals as "quality attributes" or "optimization goals"
+- How can software be optimized? Degrees of freedom or design space
+    - Allocation executable software to cores (pthreads for example)
+    - Mapping data to memories (CUDA)
+    - Distributing data transfers to communication paths (MPI)
+    - Scheduling  (threads)
+    - Hardware/software parameters (optimization flag in gcc)
 - Is the optimized software really optimal? 
+    - A high abstraction hides a lot of details
+    - This reduces the solution space, hance making the problem "easier" to solve
+    - Also make the solution less accurate compared to the real-world scenario
+- Optimization techniques
+    - Exact strategies: linear/quadratic programming
+    - Approximation strategies: evolutionary algorithm
 
 ---
 # General Challenges and Solutions
