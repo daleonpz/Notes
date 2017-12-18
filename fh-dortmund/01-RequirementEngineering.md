@@ -237,31 +237,48 @@ Reasons for project success:
 - The root cause of conflicts in requirements are conflict goals
 - The goals are redundant information, the main focus is on actors and boundaries
 
-
-## Data Requirements (NO SLIDES)
+## Data Requirements (examples in SLIDES)
 - Describes the data that goes in and out
-- Avoid implementation details
-- There is a dependency between data and task
+- Data requirements are varying in their volume depending on the system
+- Data requirements depends on tasks
+- Data model should avoid implementation details
+- Data model specifies the data to be stored in the system and the relationships between data
+- Two data models: Entity/Relationship and Class diagram
 - Data dictionary: helps to express the data rules
 - Basis for functional requirements
 
-## Functional Requirements  (NO SLIDES)
-- Who does what
-- Design decision
+## Functional Requirements (examples in SLIDES)
+### Traditional approach
+- Who does what?
+    - Domain model: humans and computers united
+    - Physical model: what each of them do
+    - Product requirements: divide the work
+    - The decision is given by design
 - Context Diagram:
     - is used to make design decisions
     - comes from structural programming
     - The boundaries can be drawn in different ways
     - surroundings: what it is given
     - System is what we have to design 
-
-### Event list and function list
-- "Use cases" is used to get feature requirements
-- to complement the specification we use screens and prototypes
-- Traditional functional requirements it's not good for COTS 
+    - Define product scope
+- Event and function lists:
+    - "Use cases" is used to get feature requirements
+    - Lists of events and functions: Domain or product level
+    - Good as checklists at verification
+    - Validation at product level?
+- Feature requirements
+    - Textual requirement:  ”the product shall ...”
+    - High expressive power
+    - Acceptable to most stakeholders
+    - Can lead to false sense of security: How to ensure that goal-level covered? 
+- Screens and Prototypes
+    - to complement the specification we use screens and prototypes
+    - Screen pictures + what buttons do
+    - Excellent as design-level requirements if carefully tested
+    - Traditional functional requirements it's not good for COTS-based systems
 
 ### Task description
 - Applicable whet the users have a big role
 - In use case the actors and the system are separated
 - Task: should "tell a story" (task vs feature)
-
+- Feature: It is something that the product "shall ..."  
