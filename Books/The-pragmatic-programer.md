@@ -50,6 +50,23 @@ right. But the  "start-up fatigue" will be there. So try to ask for something re
         - Stay current
         - Try to use what you have learned in your new project
 
+- **Tip 09**: Critically analyze what you read and hear
+    - Critical thinking: you must ensure that your knowlegde is accurate and not influenced by external factors.
 
-    
+- **Tip 10**: It's both what you say and the way you say it
+    - Communicate:
+        - Know what you want to say: iterate until your ideas are clear and understandable
+        - Know your audience: (WISDOM acrostic)
+            - What they Want?
+            - What is their Interest?
+            - How Sophisticated are they?
+            - How much Detail they want?
+            - Who do you want to Own the information?
+            - How can you Motivate them to listen?
+        - Choose your moment: the right move at the wrong time is a bad move
+        - Choose your style: not all the people like the same flavor
+        - Make it look good or sexy
+        - Involve your audience: create relationships
+        - Be a listener
+        - Get back to people: make them to people, they gave you a part of your time
 
