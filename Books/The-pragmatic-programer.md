@@ -5,12 +5,12 @@ author: Androw Hund / David Thomas
 
 # Ch01: Preface
 - **Tip 01**: Care About your craft: do it well
-    - It's a continous process: continously small improvements
+    - It's a continuous process: continuously small improvements
 - **Tip 02**: Think! about your work: never run on auto-pilot. Think on what you are doing
-    - Take responsability: When you do accept the responsibility for an outcome, you should expect to be held accountable for it. When you make a mistake (as we all do) or an error in judgment, admit it honestly and try to offer options.  Don't blame someone or something else, or make up an excuse. Don't blame all the problems on a vendor, a programming language, management, or your coworkers. Any and all of these may play a role, but it is up to you to provide solutions, not excuses. 
+    - Take responsibility: When you do accept the responsibility for an outcome, you should expect to be held accountable for it. When you make a mistake (as we all do) or an error in judgment, admit it honestly and try to offer options.  Don't blame someone or something else, or make up an excuse. Don't blame all the problems on a vendor, a programming language, management, or your coworkers. Any and all of these may play a role, but it is up to you to provide solutions, not excuses. 
 - **Tip 03**: Provide Options, don't make lame excuses
-    - Software entrophy:
-        - Entrophy hits software hard
+    - Software entropy:
+        - Entropy hits software hard
         - When disorder increases in software, programmers call it "software rot."
         - The most important factor for software rot is psychology or culture at work on a project
 
@@ -35,8 +35,8 @@ right. But the  "start-up fatigue" will be there. So try to ask for something re
     - Know when to stop: artists will tell you that all the hard work is ruined if you don't know when to stop. If you add layer upon layer, detail over detail, the painting becomes lost in the paint. 
     - Sometimes it's better to ship good code sooner than perfect code in the future. Users can give you feedback and make your code better in the future.
 
-- **Tip 08**: Invest regulary in your knowdlegde portafolio
-    - Your knowledge portafolio:
+- **Tip 08**: Invest regularly in your knowledge portfolio
+    - Your knowledge portfolio:
         - Serious investors invest regularly—as a habit. 
         - Diversification is the key to long-term success. 
         - Smart investors balance their portfolios between conservative and high-risk, high-reward investments. 
@@ -51,7 +51,7 @@ right. But the  "start-up fatigue" will be there. So try to ask for something re
         - Try to use what you have learned in your new project
 
 - **Tip 09**: Critically analyze what you read and hear
-    - Critical thinking: you must ensure that your knowlegde is accurate and not influenced by external factors.
+    - Critical thinking: you must ensure that your knowledge is accurate and not influenced by external factors.
 
 - **Tip 10**: It's both what you say and the way you say it
     - Communicate:
@@ -70,3 +70,22 @@ right. But the  "start-up fatigue" will be there. So try to ask for something re
         - Be a listener
         - Get back to people: make them to people, they gave you a part of your time
 
+# Ch02: A pragmatic approach
+- **Tip 11**: DRY - Don't Repeat Yourself
+    - The evils of duplication:
+        - The knowledge and the environment changes day by day. Programmers are constantly maintaining the code. 
+        - Imposed duplication: the environment seems to require duplication
+            - Try to use templates
+            - Code and comments shouldn't deliver the same information
+            - Documentation and code are representations of the same knowledge, if one changes the other should change automatically
+        - Inadvertent duplication: don't realize that you are duplicating information
+            - Bad design, classes that duplicates information. Set as attribute data that depends on other attributes, instead of using a method
+            - Balance between performance and information duplication
+        - Impatient duplication: duplicate seems easier
+            - Shortcuts make for long delays
+        - Interdeveloper duplication: multiple people duplicate a piece of information 
+            - Active and frequent communication between developers
+
+- **Tip 12**: Make it easy to reuse
+    - If it is not easy, people won't do it
+    
