@@ -533,3 +533,149 @@ allow the reuse of hardware and software components.
     - Object flow: "no buffer" - only one element can be in the buffer, the rest are discarded
 - Sequence diagram:
     - can be used to model communications among block structures arranged in time order
+
+## Design 
+- Analysis overview:
+    - Block diagrams:
+        - definition: Block is a definition/type, captures properties and can be used in multiple contexts
+        - Use ports with flow properties to model the bus architecture
+        - Port types with flow properties can be the CAN bus
+- The designer focuses on the solution of the problem (solution domain) which involves many tasks (subsystem decomposition, selection of the hardware, etc)
+- The design model should describe the solution but may also include required or existing structure and behavior of the application identified during analysis
+- Main stakeholders: designer, implementer
+- Analysis vs design:
+    - There is no clear boundary between analysis and design
+    - Analysis concerns the description of the problem and the user requirements
+    - Design concerns the construction of a solution which satisfies the previously recorded requirements
+    - transition to design must transform analysis objects into design objects
+
+## Design with SysML
+- State Machine diagrams:
+    - can be used to model discrete behavior through finite state transition systems in terms of its transitions and states
+    - the activities  that are invoked during the transition, entry and exit of the states are specified along  with the associated event and guard conditions
+    - Activities that are invoked while being in a state are specified as "do activities", and can be either continous or discrete
+    - A composite state has nested states that can be sequential or concurrent
+- Allocation diagram:
+    - Enables traceability
+    - denote the  organized cross-association (mapping) of elements within the various structures or hierarchies of a user model
+    - Describes a design decision that assigns responsability for meeting a requirement (requirement allocation) or implementing a behavior (functional allocation) to structural elements of the system
+    - The allocation relationship can provide an effective means for navigating the model by establishing cross relationships, and ensuring that the various parts of the model are properly integrated
+- Activity is used usually for algorithm behaviors
+
+## Analysis and design summary
+- There exists different decomposition principles such as functional structuring, data-flow structuring and object-oriented structuring which may occur in combination when analyzing or designing a complex system.
+- SysML (UML) provides a rich set of modeling concepts for the analysis and design of software intensive systems.
+- While analysis focuses on the requirements and problem domain, the design describes the proposed solution (which might include some elements of the problem 
+
+## Implementation
+- Desirable features of real-time systems
+    - Timeless: OS has to provide the kernel mechanisms for time management and handling tasks with explicit time constrains
+    - Design for peak load
+    - Predictability
+    - Fault tolerance
+    - Maintainability
+- Types of constrains - Scheduler
+    - Timing constrains: meet your deadlines
+    - Precedence constrains: respect pre-requisites
+    - Resource constrains: access only available resources 
+- Timing constrains:
+    - Real-time systems are characterized mostly by timing constrains
+    - Typical constrain: deadline
+    - worst case execution time: is the maximum length of time that a task could take to execute on a specific hardware platform
+    - the real worst case execution time is hard to find, there's a probability that the "worst case" hasn't been taken into account. 
+- Hard RTS: missing the deadline can cause catastrophic consequences
+    - Soft RTS: missing the deadline decreases the performance of the system
+- Precendece Relation: check DPS slides
+- Resource constrain:
+    - Process view: resource is any SW structure to be used by process (memory data file, set of variables)
+    - private resource: dedicated to a particular process
+    - shared resource: to be used by more than one process
+    - exclusive resource: shared resource where simultaneous access from different processes is not allowed
+    - critical section: piece of code that is executed under mutual exclusion constrains
+- Scheduling:
+    - Precedences may be given using precedenc graph and timing constrains may be associated to each task
+    - Scheduling means to assign processors and resources to tasks in order to complete all tasks under the imposed constrains
+    - NP-complete: nondeterministic polynomial time
+    - In the ideal case we know the worst case execution time and the scheduler works always
+    - Classification of scheduling algorithms: 
+        - Preemptive: if a low priority task is executing and it's preempted by a higher execution task
+        - non-preemptive: a task, once started is executed until completion
+        - Static: scheduling decisions are based on fixed parameters (off-line)
+        - Dynamic: try to optimize the scheduling algorithm and then decide which task is executing next
+        - off-line: is performed on the entire task set before start of system. Calculated schedule is executed by dispatcher
+        - on-line: scheduling decisions are taken at run-time every time a task enters or leaves the system
+        - optimal: the algorithm minimizes some given cost function, alternatively: it may fail to meet a deadline only if no other algorithm of the same class can meet it
+        - heuristic: algorithm that tends to find the optimal schedule but does not guarantee to find it
+- Guarantee-based Algorithms:
+    - hard real-time systems: highly predictable behavior, systems has to plan actions by looking ahead into the future assuming the worst-case scenario.
+    - static real-time systems:
+        - all task activations can be pre-calcutaled off-line
+        - entire schedule can be store in a table
+        - runtime simple dispatching due to tables takes place
+    - off-line: very sophisticated algorithms possible. however, system is inflexible to environmental changes
+    - Dynamic real-time system: guarantee must be done on-line each time a new task enters the system
+- Real-time scheduling:
+    - Aperiodic scheduling: 
+        - Earliest deadline first (EDF): Optimal dynamic priority scheduling, a task with a shorter deadline has a higher priority, executes a job with the earliest deadline
+   - Periodic scheduling: Rate Monotonic Priority Assignment (RM),  Earliest Deadline First (EDF)
+    - Server: Fixed Priority, Dynamic Priority
+16
+- Support for extra hardware: support is required for Real-time clocks, Interrupts, Hardware timers, Watchdog timer, A/D and D/A converter, Serial communication controller, and  Bus controller
+    - Typically supported by special RTOS, drivers or APIs
+- Dependable systems: 
+    - reliability, availability, safety, security should be addressed (included in the requirements, appropiate architecture/design, validation and verification helps to remove faults)
+- Distributed system:
+    - Synchronization of independent programs, run-time configuration (hetereogeneity, resource sharing, openness, concurrency)
+    - block should be loose decoupled (lack of global clock, scalability, failure handling)
+
+## Implementation - Manual coding
+- Assembly language: avoid whenever possible (hardware depended, insecure - you can access to every part), possible reasons to use it (speed, hardware testing, interrupt handling)
+- Programmming language:
+    - Essential features which are required to realize the system (really needed)
+    - Primary features for correct, reliable and safe programs (needed to produce high-quality software)
+    - Secondary features which make a significant contribution to productivity, portability, maintainability, flexibility and efficiency (features useful from an economic perspective)
+- Coding patterns:
+    - Reactivity: how to implement a state machine (state pattern, state table pattern, state walker pattern, fuzzy state pattern)
+    - State pattern:
+        - Intent: Allow an object to alter its behavior when its internal state changes
+        - Also Known as: Objects for States
+        - Applicability:  The object behaviour depends on the state,  Operations have large multipart conditionals statements that depend on object state
+        - Participants: 
+            - Context: defines interface of interest and handles current state
+            - State: defines an interface encapsulating the behaviour associated with each particular state
+            - ConcreteState: specific implementation of state 
+        - Implementation: switch/if statements for simple cases
+        - Pros: Encapsulates state dependent behaviour, avoid that each operation distinguish the different states using additional conditional statements, relevant states are better supported 
+        - Cons:  Run-time overhead due to additional reference
+- (NO SLIDES - from here)
+    - Memory management: 
+        - fixed size allocations: all the objects will have the same memory size
+        - smart pointer: `<unique_ptr>` in c++
+
+## Verification and Validation
+- static analysis technique: no execution
+- input-output pattern
+- kripke structure:
+    - state based
+    - with statisticts, predicators and transitions
+    - the state machine includes temporal logic
+- Why model checking is difficult?
+    - need model construction
+    - In automative domain the requirements are text descriptions
+    - Property specification are not clear
+    - Output interpretation: it's hard to find the exact error or trace the error
+- Model construction:
+    - Semantic gap:
+        - are the abstractions right?
+        - no direct mapping
+        - the implementation level is more detailed
+        - the requirement must be fulfill also in the implementation
+- States explosion possible
+    - the more components there are, the less feasible is checking  all of them
+    - the only thing that helps is the compound component checking approach
+- Function testing
+- White box testing approach
+- Testing software intensive system
+- What is the correct behavior?
+
+        
