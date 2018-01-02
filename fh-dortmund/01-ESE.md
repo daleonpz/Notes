@@ -683,21 +683,33 @@ allow the reuse of hardware and software components.
         - Semantics: transition systems (Kripke structure)
         - Specifications: temporal logic
         - Method: model checking
-        - kripke structure:
-            - state based
-            - with statistics, predicators and transitions
-            - the state machine includes temporal logic that must be checked
-            - Software model checking: Reality check
-            - Why model checking is difficult? need model construction, specification are partial or not clear, and the output interpretation (it's hard to find the exact error or trace the error)
-- Model construction:
-    - Semantic gap:
-        - are the abstractions right?
-        - no direct mapping
-        - the implementation level is more detailed
-        - the requirement must be fulfill also in the implementation
-- States explosion possible
-    - the more components there are, the less feasible is checking  all of them
-    - the only thing that helps is the compound component checking approach
+    - kripke structure:
+        - state based
+        - with statistics, predicators and transitions
+    - the state machine includes temporal logic that must be checked
+    - Software model checking: Reality check
+    - Why model checking is difficult?
+        - Model construction problem:
+            - Semantic gap: are the abstractions right?, no direct mapping, the implementation level is more detailed, the requirement must be fulfill also in the implementation
+        - Model specification problem: difficult to formalize a requirement in temporal logic, because specification are partial or not clear.
+        - States explosion problem
+            - the more components there are, the less feasible is checking  all of them
+            - the only thing that helps is the compound component checking approach 
+        - Output interpretation problem: it's hard to find the exact error or trace the error
+    - Input languages for model checking: synchronous languages, finite automata, timed and hybrid automata 
+    - Model checking - Summary:
+        - Instead of a "complete" specification use only one that consists of relevant properties (e.g., for safety)
+        - Usually only restricted notions for formal models:  Finite automata (or similar restricted models)
+        - Often restricted notions for formal properties:  Prepositional logic, Temporal logic (Model-Checking)
+        - Benefits: Counterexample when a property is not fulfilled
+        - Limitations: Not feasible for too large models (state explosion), Not feasible for too complex formal properties
+
+- Dynamic analysis:
+    - Testing is a process of executing a program with the intent of finding an error.
+    - A good test case is one that has high probabilities of finding an error
+    - A succesful test is one that uncovers an as-yet undiscoverd error
+    - Test:  An activity in which a system or component is executed under specified conditions, the results are observed or recorded, and an evaluation is made of some aspect of the system or component.
+    - Objetives: (NO SLIDES)
 - Function testing
 - White box testing approach
 - Testing software intensive system
