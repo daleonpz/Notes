@@ -553,12 +553,12 @@ allow the reuse of hardware and software components.
 - State Machine diagrams:
     - can be used to model discrete behavior through finite state transition systems in terms of its transitions and states
     - the activities  that are invoked during the transition, entry and exit of the states are specified along  with the associated event and guard conditions
-    - Activities that are invoked while being in a state are specified as "do activities", and can be either continous or discrete
+    - Activities that are invoked while being in a state are specified as "do activities", and can be either continuous or discrete
     - A composite state has nested states that can be sequential or concurrent
 - Allocation diagram:
     - Enables traceability
     - denote the  organized cross-association (mapping) of elements within the various structures or hierarchies of a user model
-    - Describes a design decision that assigns responsability for meeting a requirement (requirement allocation) or implementing a behavior (functional allocation) to structural elements of the system
+    - Describes a design decision that assigns responsibility for meeting a requirement (requirement allocation) or implementing a behavior (functional allocation) to structural elements of the system
     - The allocation relationship can provide an effective means for navigating the model by establishing cross relationships, and ensuring that the various parts of the model are properly integrated
 - Activity is used usually for algorithm behaviors
 
@@ -585,7 +585,7 @@ allow the reuse of hardware and software components.
     - the real worst case execution time is hard to find, there's a probability that the "worst case" hasn't been taken into account. 
 - Hard RTS: missing the deadline can cause catastrophic consequences
     - Soft RTS: missing the deadline decreases the performance of the system
-- Precendece Relation: check DPS slides
+- Precedence Relation: check DPS slides
 - Resource constrain:
     - Process view: resource is any SW structure to be used by process (memory data file, set of variables)
     - private resource: dedicated to a particular process
@@ -593,9 +593,9 @@ allow the reuse of hardware and software components.
     - exclusive resource: shared resource where simultaneous access from different processes is not allowed
     - critical section: piece of code that is executed under mutual exclusion constrains
 - Scheduling:
-    - Precedences may be given using precedenc graph and timing constrains may be associated to each task
+    - Precedence's may be given using precedence graph and timing constrains may be associated to each task
     - Scheduling means to assign processors and resources to tasks in order to complete all tasks under the imposed constrains
-    - NP-complete: nondeterministic polynomial time
+    - NP-complete: non-deterministic polynomial time
     - In the ideal case we know the worst case execution time and the scheduler works always
     - Classification of scheduling algorithms: 
         - Preemptive: if a low priority task is executing and it's preempted by a higher execution task
@@ -609,9 +609,9 @@ allow the reuse of hardware and software components.
 - Guarantee-based Algorithms:
     - hard real-time systems: highly predictable behavior, systems has to plan actions by looking ahead into the future assuming the worst-case scenario.
     - static real-time systems:
-        - all task activations can be pre-calcutaled off-line
+        - all task activation can be pre-calculated off-line
         - entire schedule can be store in a table
-        - runtime simple dispatching due to tables takes place
+        - run-time simple dispatching due to tables takes place
     - off-line: very sophisticated algorithms possible. however, system is inflexible to environmental changes
     - Dynamic real-time system: guarantee must be done on-line each time a new task enters the system
 - Real-time scheduling:
@@ -623,14 +623,14 @@ allow the reuse of hardware and software components.
 - Support for extra hardware: support is required for Real-time clocks, Interrupts, Hardware timers, Watchdog timer, A/D and D/A converter, Serial communication controller, and  Bus controller
     - Typically supported by special RTOS, drivers or APIs
 - Dependable systems: 
-    - reliability, availability, safety, security should be addressed (included in the requirements, appropiate architecture/design, validation and verification helps to remove faults)
+    - reliability, availability, safety, security should be addressed (included in the requirements, appropriate architecture/design, validation and verification helps to remove faults)
 - Distributed system:
-    - Synchronization of independent programs, run-time configuration (hetereogeneity, resource sharing, openness, concurrency)
+    - Synchronization of independent programs, run-time configuration (heterogeneity, resource sharing, openness, concurrency)
     - block should be loose decoupled (lack of global clock, scalability, failure handling)
 
 ## Implementation - Manual coding
 - Assembly language: avoid whenever possible (hardware depended, insecure - you can access to every part), possible reasons to use it (speed, hardware testing, interrupt handling)
-- Programmming language:
+- Programming language:
     - Essential features which are required to realize the system (really needed)
     - Primary features for correct, reliable and safe programs (needed to produce high-quality software)
     - Secondary features which make a significant contribution to productivity, portability, maintainability, flexibility and efficiency (features useful from an economic perspective)
@@ -639,33 +639,33 @@ allow the reuse of hardware and software components.
     - State pattern:
         - Intent: Allow an object to alter its behavior when its internal state changes
         - Also Known as: Objects for States
-        - Applicability:  The object behaviour depends on the state,  Operations have large multipart conditionals statements that depend on object state
+        - Applicability:  The object behavior depends on the state,  Operations have large multipart conditionals statements that depend on object state
         - Participants: 
             - Context: defines interface of interest and handles current state
-            - State: defines an interface encapsulating the behaviour associated with each particular state
-            - ConcreteState: specific implementation of state 
+            - State: defines an interface encapsulating the behavior associated with each particular state
+            - Concrete State: specific implementation of state 
         - Implementation: switch/if statements for simple cases
-        - Pros: Encapsulates state dependent behaviour, avoid that each operation distinguish the different states using additional conditional statements, relevant states are better supported 
+        - Pros: Encapsulates state dependent behavior, avoid that each operation distinguish the different states using additional conditional statements, relevant states are better supported 
         - Cons:  Run-time overhead due to additional reference
     - State table pattern:
         - Shortcomings: The State pattern is rather inefficient for a large number of states due too the dynamic creation of states.
         - Solution: Use a state table as a simple mechanism for managing state machines which handle a transition in constant time 
         - Remark: Only implementation alternative for the State Patter
         - Pros: Low constant basic execution costs after it is set up, Direct mapping to tabular state specifications often used for safety-critical systems, Decouple transition and states and permit many transitions to be realized using a single transition object
-        - Cons: Relatively high initialisation cost, High complexity of the pattern
+        - Cons: Relatively high initialization cost, High complexity of the pattern
     - Synchronization: The synchronization between the different tasks is of crucial importance concerning scheduling and reusability (priority inversion, priority ceiling, ect)
         - Priority ceiling: The idea is that if an important task is blocked by an unimportant one, so the unimportant one is elevated and executed quickly to release the lock
             - Pros:  Prevents the unbounded priority inversion problem, Pre-computation of resource priority ceiling possible  
             - Cons: Complexity, Resulting run-time overhead, less demanding alternatives, Basic Priority Inheritance Protocol, Highest Locker Protocol
         - Rendezvous: 
             - Problem: how to synchronize tasks in such a manner that they are still somehow independent reusable
-            - solution: it reifies the synchronization of two threads as an object itself. The Rendezvous object may contain data to be shared as the threads synchronize, or it may simply provide a means for synchronizing an arbitrary number of threads 
+            - solution: it refines the synchronization of two threads as an object itself. The Rendezvous object may contain data to be shared as the threads synchronize, or it may simply provide a means for synchronizing an arbitrary number of threads 
             - Pros: Synchronizer partially decouples related tasks, Synchronizer encapsulated required pre-conditions
             - Cons: The solution with a synchronizer might restrict the parallel processing and hence blocks the performance of the system more than required
     - Memory management and safety:
-        - Problem: heap fragmentation, explicit dynamic memory management is notoriusly error prone 
+        - Problem: heap fragmentation, explicit dynamic memory management is notoriously error prone 
         - Solution:
-            - Static allocation: avoid heap fragmentation, but it may not scale up well to large problems, not possible to allocate all the block (memory limit), unefficient memory management
+            - Static allocation: avoid heap fragmentation, but it may not scale up well to large problems, not possible to allocate all the block (memory limit), inefficient memory management
             - fixed size allocations: all the objects will have the same memory size. Eliminates fragmentation, but wasteful of memory (there will be unused memory)
             - smart pointer: `<unique_ptr>` in c++. It will avoid raw references, but complex run-time behavior, run-time overhead
 
@@ -674,11 +674,11 @@ allow the reuse of hardware and software components.
 - input-output pattern
 - kripke structure:
     - state based
-    - with statisticts, predicators and transitions
+    - with statistics, predicators and transitions
     - the state machine includes temporal logic
 - Why model checking is difficult?
     - need model construction
-    - In automative domain the requirements are text descriptions
+    - In automotive domain the requirements are text descriptions
     - Property specification are not clear
     - Output interpretation: it's hard to find the exact error or trace the error
 - Model construction:
