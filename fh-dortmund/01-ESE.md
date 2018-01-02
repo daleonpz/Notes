@@ -647,10 +647,27 @@ allow the reuse of hardware and software components.
         - Implementation: switch/if statements for simple cases
         - Pros: Encapsulates state dependent behaviour, avoid that each operation distinguish the different states using additional conditional statements, relevant states are better supported 
         - Cons:  Run-time overhead due to additional reference
-- (NO SLIDES - from here)
-    - Memory management: 
-        - fixed size allocations: all the objects will have the same memory size
-        - smart pointer: `<unique_ptr>` in c++
+    - State table pattern:
+        - Shortcomings: The State pattern is rather inefficient for a large number of states due too the dynamic creation of states.
+        - Solution: Use a state table as a simple mechanism for managing state machines which handle a transition in constant time 
+        - Remark: Only implementation alternative for the State Patter
+        - Pros: Low constant basic execution costs after it is set up, Direct mapping to tabular state specifications often used for safety-critical systems, Decouple transition and states and permit many transitions to be realized using a single transition object
+        - Cons: Relatively high initialisation cost, High complexity of the pattern
+    - Synchronization: The synchronization between the different tasks is of crucial importance concerning scheduling and reusability (priority inversion, priority ceiling, ect)
+        - Priority ceiling: The idea is that if an important task is blocked by an unimportant one, so the unimportant one is elevated and executed quickly to release the lock
+            - Pros:  Prevents the unbounded priority inversion problem, Pre-computation of resource priority ceiling possible  
+            - Cons: Complexity, Resulting run-time overhead, less demanding alternatives, Basic Priority Inheritance Protocol, Highest Locker Protocol
+        - Rendezvous: 
+            - Problem: how to synchronize tasks in such a manner that they are still somehow independent reusable
+            - solution: it reifies the synchronization of two threads as an object itself. The Rendezvous object may contain data to be shared as the threads synchronize, or it may simply provide a means for synchronizing an arbitrary number of threads 
+            - Pros: Synchronizer partially decouples related tasks, Synchronizer encapsulated required pre-conditions
+            - Cons: The solution with a synchronizer might restrict the parallel processing and hence blocks the performance of the system more than required
+    - Memory management and safety:
+        - Problem: heap fragmentation, explicit dynamic memory management is notoriusly error prone 
+        - Solution:
+            - Static allocation: avoid heap fragmentation, but it may not scale up well to large problems, not possible to allocate all the block (memory limit), unefficient memory management
+            - fixed size allocations: all the objects will have the same memory size. Eliminates fragmentation, but wasteful of memory (there will be unused memory)
+            - smart pointer: `<unique_ptr>` in c++. It will avoid raw references, but complex run-time behavior, run-time overhead
 
 ## Verification and Validation
 - static analysis technique: no execution
