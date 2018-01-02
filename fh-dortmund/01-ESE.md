@@ -273,8 +273,6 @@ statements about its reliability and its safety are unreliable
     - sometimes it's used to see if it will be possible to develop the final product (internal process)
     - no focusing in the verification system
 - V development process:
-    - Validation: process of finding out if the system is well develop
-    - Verification: process of finding out if the requirements are fulfill
     - quality management
     - problem: no iterations that consider the update of the requirements
 - Spiral model
@@ -670,17 +668,27 @@ allow the reuse of hardware and software components.
             - smart pointer: `<unique_ptr>` in c++. It will avoid raw references, but complex run-time behavior, run-time overhead
 
 ## Verification and Validation
-- static analysis technique: no execution
-- input-output pattern
-- kripke structure:
-    - state based
-    - with statistics, predicators and transitions
-    - the state machine includes temporal logic
-- Why model checking is difficult?
-    - need model construction
-    - In automotive domain the requirements are text descriptions
-    - Property specification are not clear
-    - Output interpretation: it's hard to find the exact error or trace the error
+- Foundations:
+    - Verification: refers to the set of activities that ensure that the software correctly implements a specific function
+    - Validation: refers to a different set of activities that ensure that the software  that has been built is traceable to customer requirements
+    - static analysis: the process of evaluating a system or component based on its form, structure, content, or documentation. No execution of the program. Modeling (mathematical representation)
+    - Dynamic analysis: The process of evaluating a system or component based on its behavior during execution. Execution of system components. Running the software
+- Static analysis tecniques:
+    - Technical reviews: personal review, walkthroughs, inspections, formal review
+    - Static code analysis: 
+    - Formal methods: discrete mathematics, logics
+    - Model checking: an automated proof method and a precise system analysis tool
+    - Input-output pattern
+        - Reactive programs: carry out an ongoing interaction with their environment
+        - Semantics: transition systems (Kripke structure)
+        - Specifications: temporal logic
+        - Method: model checking
+        - kripke structure:
+            - state based
+            - with statistics, predicators and transitions
+            - the state machine includes temporal logic that must be checked
+            - Software model checking: Reality check
+            - Why model checking is difficult? need model construction, specification are partial or not clear, and the output interpretation (it's hard to find the exact error or trace the error)
 - Model construction:
     - Semantic gap:
         - are the abstractions right?
