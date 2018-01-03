@@ -709,10 +709,89 @@ allow the reuse of hardware and software components.
     - A good test case is one that has high probabilities of finding an error
     - A succesful test is one that uncovers an as-yet undiscoverd error
     - Test:  An activity in which a system or component is executed under specified conditions, the results are observed or recorded, and an evaluation is made of some aspect of the system or component.
-    - Objetives: (NO SLIDES)
-- Function testing
-- White box testing approach
-- Testing software intensive system
-- What is the correct behavior?
+    - Objetives: 
+        - Design tests that systematically uncover defects 
+        - Help managers make ship or no-ship decisions
+        - Minimize risks
+        - Find safe scenarios for use
+    - Indirect objectives: to compile a record of software defects for use in error prevention 
+    - Testing approaches:
+        - black box: ignores the internal mechanism of the system or component and focuses on the output in response to some inputs. Also to evaluate the compliance of a system or component with specified functional requirements. Function testing
+        - White box: takes into account the internal mechanism of a system or component
+    - Black box testing:
+        - Function testing: 
+            - Test each function / feature / variable in isolation.
+            - Usually start with fairly simple function testing
+            - Later switch to a different style which often involves the interaction of several functions
+            - These tests are highly credible and easy to evaluate but not particular powerful
+        - Regresion testing
+            - Process: (1) design tests with the intent of regularly reusing them (2)repeat the tests after making changes to the program.
+            - A good regression test is designed for reuse.
+            - Discussion: at first run usually detect several defects, but it decrease its power in each run. However, automation can make regression testing very cheap
+        - Regresion testing strategies
+            - Random: The test cases are randomly selected from the existing test suite.
+            - Retest-all: Run all the tests in the existing suite.
+            - Safe: The test selection algorithm excludes no test from the original test suite that if executed would reveal faults in the modified program.
+            - Based on modifications: Place an emphasis on selecting existing test cases to cover modified program components and those that may be affected by the modifications.
+            - Dataflow/coverage based: Select tests that exercise data interactions that have been affected by modifications.
+    - White box testing:
+        - Control flow testing:
+            - Statement coverage: The test cases are generated so that all the program statements are executed at least once.
+            - Decision coverage (branch coverage): The test cases are generated so that the program decisions take the value true or false.
+            - Condition coverage: The test cases are generated so that all the program conditions (predicates) that form the logical expression of the decision take the value true or false.
+            - Path coverage: Test cases are generated to execute all/some program paths
+        - Data flow testing:
+            - based on selecting paths through the program's control flow in order to explore sequences of events related to the status of variables or data objects
+    - Comparison between black box and white box
+        - Black box:
+            - no access to information about the system implementation  
+            - Characteristics: good for independence of tester, hard to test individual modules
+        - White box:
+            - tester can access to information about the system implementation
+            - Characteristics: simplifies diagnosis of results, can compromise independence, how much do they need to know?
 
-        
+    - Testing process and activities
+        - Beforehand: requirements analysis and design analysis
+        - Process and activities
+            - 1.Unit test: inputs for integration test
+            - 2.Integration test: test design specifications, integrated modules (output)
+            - 3.Function test: test system functional requirements, functional system (output)
+            - 4.Performance test: test other software requirements, verified-validated software (output)
+            - 5.Acceptance test: test costumer requirements specifications, accepted system (output)
+            - 6.Installation test: test user environment, system in use (output)
+    - Testing software intensive system:
+        - Software Intensive Systems include:
+            - Large scale heterogenous systems
+            - Embedded systems for automotive applications
+            - Telecommunications
+            - Wireless ad-hoc systems
+            - Business aplications with an emphasis on web services
+        - Testing embedded systems
+            - What is an embedded system?
+            - What is the correct behavior? range tolerance in value and time 
+            - Development Stages: Simulation, Prototyping, Pre-Production, Productio
+        - Simulation:
+            - Model test (MT): one way test
+            - Model-in-the-loop (MIL): feedback simulation 
+            - Rapid prototyping (RP)
+        - Prototyping:
+            - Software-in-the-loop (SIL)
+            - Hardware-in-the-loop (HIL)
+            - Read SLIDES 
+        - Pre-Production: 
+            - System test (ST): test a pre-production unit
+            - Goals: validation, Demonstrate that production effort and schedule can be met,  Demonstrate maintainability and meantime-to-repair requirements,  Demonstrate product to potencial customers.
+            - Typical tests: real-life testing, random testing, fault injection
+        - Production:
+            - development and test of the production facilities (often equally important for quality)
+            - Often a first article inspection of similar style as the pre-production test is required
+            - Production and maintenance tests on production units may required for quality control
+        - Comparison of test levels: Check SLIDES (upper yellow -model, below red - production, in between - prototyping
+
+- Summary:
+    - Two main approaches to testing (dynamic analysis) are black box testing, which ignores the internal mechanism of the system or component (sometimes named functional testing), or white box testing, which takes into account the internal mechanism of a system or component (sometimes named structural testing).
+    - The testing activities during development should include, unit tests, integration tests, and system tests. System tests may be divided into function tests, performance tests, acceptance tests, and installation tests.  
+    - Testing embedded systems for automotive application (SIS) includes testing processes like Model-/Software-/Hardware-in-the-loop at different development stages.
+    - Besides dynamic analysis (testing), which includes the execution of the software, also are available effective static analysis techniques such as reviews or inspections and formal methods.
+    - The complexity and properties (e.g. safety) of software intensive systems require exhaustive verification and validation activities.
+    - Due to the lack of one technique (e.g. Model Checking, Testing) an appropriate combination of the verification and validation
