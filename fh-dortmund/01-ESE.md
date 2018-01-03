@@ -709,7 +709,7 @@ allow the reuse of hardware and software components.
     - A good test case is one that has high probabilities of finding an error
     - A succesful test is one that uncovers an as-yet undiscoverd error
     - Test:  An activity in which a system or component is executed under specified conditions, the results are observed or recorded, and an evaluation is made of some aspect of the system or component.
-    - Objetives: 
+    - Objectives: 
         - Design tests that systematically uncover defects 
         - Help managers make ship or no-ship decisions
         - Minimize risks
@@ -724,16 +724,16 @@ allow the reuse of hardware and software components.
             - Usually start with fairly simple function testing
             - Later switch to a different style which often involves the interaction of several functions
             - These tests are highly credible and easy to evaluate but not particular powerful
-        - Regresion testing
+        - Regression testing
             - Process: (1) design tests with the intent of regularly reusing them (2)repeat the tests after making changes to the program.
             - A good regression test is designed for reuse.
             - Discussion: at first run usually detect several defects, but it decrease its power in each run. However, automation can make regression testing very cheap
-        - Regresion testing strategies
+        - Regression testing strategies
             - Random: The test cases are randomly selected from the existing test suite.
             - Retest-all: Run all the tests in the existing suite.
             - Safe: The test selection algorithm excludes no test from the original test suite that if executed would reveal faults in the modified program.
             - Based on modifications: Place an emphasis on selecting existing test cases to cover modified program components and those that may be affected by the modifications.
-            - Dataflow/coverage based: Select tests that exercise data interactions that have been affected by modifications.
+            - Data flow/coverage based: Select tests that exercise data interactions that have been affected by modifications.
     - White box testing:
         - Control flow testing:
             - Statement coverage: The test cases are generated so that all the program statements are executed at least once.
@@ -761,15 +761,15 @@ allow the reuse of hardware and software components.
             - 6.Installation test: test user environment, system in use (output)
     - Testing software intensive system:
         - Software Intensive Systems include:
-            - Large scale heterogenous systems
+            - Large scale heterogeneous systems
             - Embedded systems for automotive applications
             - Telecommunications
             - Wireless ad-hoc systems
-            - Business aplications with an emphasis on web services
+            - Business applications with an emphasis on web services
         - Testing embedded systems
             - What is an embedded system?
             - What is the correct behavior? range tolerance in value and time 
-            - Development Stages: Simulation, Prototyping, Pre-Production, Productio
+            - Development Stages: Simulation, Prototyping, Pre-Production, Production
         - Simulation:
             - Model test (MT): one way test
             - Model-in-the-loop (MIL): feedback simulation 
@@ -780,7 +780,7 @@ allow the reuse of hardware and software components.
             - Read SLIDES 
         - Pre-Production: 
             - System test (ST): test a pre-production unit
-            - Goals: validation, Demonstrate that production effort and schedule can be met,  Demonstrate maintainability and meantime-to-repair requirements,  Demonstrate product to potencial customers.
+            - Goals: validation, Demonstrate that production effort and schedule can be met,  Demonstrate maintainability and meantime-to-repair requirements,  Demonstrate product to potential customers.
             - Typical tests: real-life testing, random testing, fault injection
         - Production:
             - development and test of the production facilities (often equally important for quality)
