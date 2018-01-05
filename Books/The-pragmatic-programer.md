@@ -88,4 +88,21 @@ right. But the  "start-up fatigue" will be there. So try to ask for something re
 
 - **Tip 12**: Make it easy to reuse
     - If it is not easy, people won't do it
+- **Tip 13**: Elimitate effects between unrelated things
+    - Orthogonally: "two lines are independent" . decoupling.
+    - Orthogonally promotes reuse
+    - More stable system
+    - If one module fails doesn't affect others
+    - Modularity
+    - Design in layers like OSI model
+    - Coding: keep your code decoupled, avoid global data, avoid similar functions
+    - Easier to test
+- **Tip 14**: There are no final decisions
+    - Reversibitily: Nothing is more dangerous than an idea, if it's the only one 
+    - Technology changes overtime
+    - World is always changing
+    - Flexible architecture
+- **Tip 15**: Use tracer bullets to find the target
+    - If the tracer bullet hits the target, then so are the regular bullets
+
     
