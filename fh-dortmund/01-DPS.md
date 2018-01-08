@@ -709,4 +709,36 @@ Check slides - not that important
 ## Summary
 ![Summary](images/DPS_CPS.png)
 
+---
+# Model Based development with state diagrams
+## Why should you use model-based development
+- is faster, more cost-effective
+- leads to increase quality, is less error-prone
+- leads to meaningful validation
+- results in software being less sensitive to changes in personel
+- empowers domain experts, lets advanced programmers focus on the hard stuff
+- bridges the gap between businnes and IT, results in software being less sensitive to changes in business requirements and technology
+- really enforces architecture
+- provides up-to-date documentation
+- enables to focus on business problems instead of technology
+- in DPS:
+    - DPS are mostly complex systems
+    - Parallel source-code is not easy to understand
+    - The documentation of your system using model based principles is much easier to understand
+    - Model based principles can be used to generate code for different targets, and maybe in different programming languages
+
+## State machine
+- Consist of states, inputs and outputs
+- The number of states is fixed, when an event input is triggered, the state is changed and an output can be produced
+- A finite state machine expressed visually is a state transition diagram
+- Mealy machine: output depends on the present state as well as the present input.
+- Moore machine: outputs depend on only the present state
+- Harel charts: Combines Mealy and Moore and added new functionality like:
+    - Hierarchy
+    - Parallelism 
+    - Broadcasting
+    - History
+    - Entry, exit
+
+## Why should you use state flow?
 
