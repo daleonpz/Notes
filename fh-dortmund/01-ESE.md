@@ -228,7 +228,9 @@ statements about its reliability and its safety are unreliable
     - M, s |- EGg
 
 - Safety: avoid that something bad happens 
+    - G ~(ack1 ^ ack2), mutual exclusion
 - Liveness: avoid starvation and deadlocks
+    - G(req => F ack), if req eventually ack
 
 ### State and sequence properties
 - State property: a property _p_ is a state property if and only if _p_ belongs to some state given a specific state variable 
