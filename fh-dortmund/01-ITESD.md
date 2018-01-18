@@ -68,6 +68,9 @@ semester: Winter 2017
     - Coarse design: description of software architecture (decompose into subsystems, identify components, relations and cooperation between components).
     - Detailed Design: Component design (determine interfaces)
     - Implementation
+- When to use it?
+    - small - medium size projects
+    - same as waterfall
 
 ### Spiral Model
 
@@ -83,6 +86,11 @@ semester: Winter 2017
 
 
 Each loop in the spiral represents a phase of the software process. Thus, the innermost loop might be concerned with system feasibility, the next loop with requirements definition, the next loop with system design, and so on. The spiral model combines change avoidance with change tolerance. It assumes that changes are a result of project risks and includes explicit risk management activities to reduce these risks.
+- When to use it?
+    - risk analysis is important
+    - requirements are complex
+    - users are unsure of their needs
+    - changes are expected
 
 ### RUP Model (check slides)
 
