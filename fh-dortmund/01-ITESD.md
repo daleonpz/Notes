@@ -220,7 +220,7 @@ Versus:
 ### Software components
 A software component is a unit of composition with contractually-specified interfaces and explicit context dependencies only. A software component can be deployed independently and is subject to composition by third parties. 
 
-# Introduction to UML (NEED TO STUDY FROM HERE)
+# Introduction to UML 
 - It is a visual language
 - Neutral: independent form language programming
 - **Model**: abstract representation of a systems
@@ -371,7 +371,7 @@ Some good [tutorial](https://www.youtube.com/watch?v=UI6lqHOVHic)
 - not for embedded systems (event driven applications)
 - control and data/object flow do not have separate semantics
 
-## Interaction Diagram (DRAFT VERSION AFTER SLIDES - need to check with our homework)
+## Interaction Diagram 
 - Form of activity diagram 
 - Try to model how different diagrams work together
 
