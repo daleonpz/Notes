@@ -740,5 +740,32 @@ Check slides - not that important
     - History
     - Entry, exit
 
-## Why should you use state flow?
+## Stateflow
+- Why should you use state flow?
+    - Complex design flow
+    - State machines
+    - Truth tables
 
+- What is Control logic
+    - Is the part of the software program that controls the execution
+    - Control logic models _sequence_ or _modes_ of operations
+    - Control contains _time-based conditions_, _boolean logic_ and reacts to external _events_
+    - It is found in: supervisory logic, task scheduling, fault management
+
+- State and flow charts in stateflow
+    - State machines are regulary used to represent mode logic
+    - Flow charts are used to model processes that contain conditions
+    - In Stateflow you can visualize the behavior of logic by animating it during simulation.
+
+- Stateflow are used in:
+    - Reactive control systems
+    - Control system logic
+    - Finite state machine
+    - Scheduling
+    - Fault detection
+    - Event-driven systems
+- Stateflow and simulink
+    - Simulink is used to respond to continous changes in dynamic systems
+    - Stateflow is used to respond to instantaneous changes in dynamic systems
+    - Real-world systems have to respond both continous and instantaneous changes
+    - Use both so that you can use the right tool for the right job
