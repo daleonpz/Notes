@@ -622,6 +622,74 @@ Check slides - not that important
 - Matrix clock: keep track of other process’ view (which events occurred)
 
 ---
+# Scheduling 
+## APP4MC
+- Application Platform Project for Multi- and ManyCore
+- Model Based Open Source Development Environment for Automotive Multi Core Systems
+- Applies V-model 
+- Affinity & Allocation (pairing or separation of tasks or runnables to cores or scheduler)
+- Mapping (labels, tasks, runnables to memory)
+- Runnable sequencing (dependencies)
+- Event chain (reactive causes and effects)
+- Data coherency group (labels and directions 
+- Data age (label, runnable à cycles or time)
+- Timing relative to events and event chains
+ 
+## Scheduling
+- Target a systems' goal: Quality of service
+    - even _load balance_
+    - share resources efficiently 
+    - maximize throughput(completed processes per time unit)  and processor utilization     - minimize response time, latency
+    - maximize fairness (request orders are kept)
+    - avoid starvation (every process is eventually granted CPU time)
+
+- Time definitions:
+![Time definitions](images/DPS_scheduling01.png)
+
+- Offline: 
+    - time triggered (periodic world)
+    - pre-known understanding of the system and environment
+    - scheduling table with tasks and activations
+    - offline algorithm calculates table (feasible solution) according to anticipated environmental situations and requirements 
+    - e.g. precedence constraints, distribution and communication over networks, task allocation, 
+- Online:
+    - event triggered
+    - creates rules and priorities
+    - rate monotonic or dynamic priorities
+    - schedulability must be guaranteed in all situations
+    - flexible (aperiodic)
+- fixed priority:
+    - periodic interrupt ensures that highest priority tasks are executed only to specific amount of time slices
+    - problem of task lockout (cpu time is not granted to low priority tasks) can be solved by aging (priority increase wrt to wait times)
+    - preemptive: immediate switch to high priority task
+    - not preemptive: low priority task will be allowed to finish
+- cooperative scheduling (no preemption, deprecated)
+    - task’s responsibility to give CPU time to other task
+    - poor designed task could cause the complete system to freeze
+- Examples:
+    - Round Robin (not real time): no priority, each process receives equal time slices
+    - Deadline monotonic( fixed priorities, DMS): he smaller a task’s deadline the greater its priority (e.g. 1 to 10, 10 = most important)
+    - Rate Monotonic (RMS): the shorter a task’s period, the higher the priority
+    - Dynamic priorities:
+        - Earliest Deadline First (EDF)
+        - Least Slack Time First (LSF): often used for sporadic jobs (greedy, no look ahead)
+    - RMS vs EDF example in SLIDES
+- From here Check SLIDES
+
+## Graph Theory
+- Check SLIDES 
+
+## Partitioning/ Scheduling algorithms 
+- Check SLIDES 
+
+## Golden rules
+- code and data should be statically allocated to cores in order to ease analyzing and optimizing the system
+- data and its accessing code should be assigned to one core to minimize cross-core accesses
+- code can be de-coupled e.g. with atomicity to allow multiple readers with no synchronization
+- conflicts can be reduced by synchronizing schedules across cores, offsets can be used to access shared data mutually exclusive
+- synchronization should be only used if required e.g. to avoid spinlocks
+
+---
 # Cyber physical systems
 ## Introduction 
 - Uses embedded systems
