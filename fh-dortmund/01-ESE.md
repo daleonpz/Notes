@@ -287,13 +287,22 @@ IMPORTANT: when we could apply the different models?
 - Spiral: When costs and risk evaluation is important, New product line, Significant changes are expected  
 - RUP: development of  large, complex, engineered systems,
 
-## System engineering life cycle model (check slides)
+## System engineering life cycle model 
 - Basically waterfall model
 - Phases: Definition, development and deployment 
 - Deployment phase:
     - We have an idea of the overall system before deploy it into subsystems
     - We distribute the system into subsystems 
 - Focus on the complete system
+- Definition Phase:
+    - Planning project
+- Development Phase
+    - System development
+    - Production
+- Deployment Phase
+    - Distribution
+    - Operation
+    - Retirement
 
 ## Embedded engineering life cycle model
 - 3V Model:
