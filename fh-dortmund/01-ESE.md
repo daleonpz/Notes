@@ -448,9 +448,9 @@ allow the reuse of hardware and software components.
 
 ## Requirement for complex systems
 - A system of any but the smallest size will be decomposed into a hierarchy of elements (partitioning):
-- Allocation: assigning requirements to elements
-- Flowdown: requirements which respond to the allocated high level requirements
-- Traceability: keep track of the dependencies
+    - Allocation: assigning requirements to elements
+    - Flowdown: requirements which respond to the allocated high level requirements
+    - Traceability: keep track of the dependencies
 - Requirement engineering continues during design
 - Design solution: HOW to achieve something
 - Requirements: WHAT to achieve
