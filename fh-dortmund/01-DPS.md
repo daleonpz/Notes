@@ -500,7 +500,7 @@ while(1){
 
 ## Protocols
 - Non Preemption Protocol - NPP: any task that locks a resource receive the highest priority of among all the task
-- Highest Lower Protocol - HLP: any task that locks a resource receive the highest priority of among all the running tasks
+- Highest Locker's Protocol - HLP: any task that locks a resource receive the highest priority of among all the running tasks
 - Priority Inheritance Protocol - PIP: assign the highest priority only another task wants to use the resource 
 - Priority Ceiling Protocol - PCP: Enter to CS only if it is free and there is no chained block risk ( a HP task is waiting for a resource locked by a lower priority task that is waiting for a resource locked by even a lower priority task)
 
