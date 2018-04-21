@@ -33,31 +33,31 @@ semester: Summer 2018
     - Hard real-time system: if the deadline is not met, it will have catastrophic consequences
 
 ## Embedded Systems Hardware
-    - Input
-        - Embedded systems hardware is frequently used in a loop (hardware in a loop)
-        - Sensors: 
-            - can be designed for virtually every physical and chemical quantity
-            - Measure signals; **signal** is a mapping from time domain to value domain, can be continuous or discrete
-            - Discretization of time: Sample and Hold (transistor + capacitor) and A/D converters (Flash ADC - comparator + Encoding)
-            - Types: 
-                - Basic sensor (chemical/ physical quantity but not electrical)
-                - Integrated sensor: basic sensor + signal processing (filtering usually)
-                - Intelligent sensor: integrated sensor + preprocessing (fusion, pattern recognition)
-    - Processing
-        - Microcontroller: CPU + Memories + Peripherals, also could have Interrupt system, watchdog, debugging interface, and oscillator
-        - Examples of ARM processors (CHECK SLIDES)
-        - Trend: multiprocessor system-on-chips (MPSoC)
-    - Memories
-        - Efficiency is a concern (capacity, speed, energy, predictable timing, size, cost, etc)
-        - Types:
-            - SRAM/ DRAM: Data is lost as soon as power is switched off, for run time data
-            - Flash: Typically 10K write cycles, write only block-wise, not always is possible to read, for program code
-            - EEPROM: Typically 100K write cycles, access is always indirect, byte-wise access, for configuration
-        - Trends: Speed gap between processor and main DRAM decreases, Memory access time is much lower than processor access time. Hierarchical memories using scratch pad memories (SPM) which are small but physically separate memory mapped into the address space. They are mostly suited for storing temporary results. More info [here]([https://en.wikipedia.org/wiki/Scratchpad_memory).
-    - Output:
-        - OPAMPs (amplify voltage, impedance)
-        - DAC
-        - Actuators: influence physical processes based on electrical signals
+ - Input
+    - Embedded systems hardware is frequently used in a loop (hardware in a loop)
+    - Sensors: 
+        - can be designed for virtually every physical and chemical quantity
+        - Measure signals; **signal** is a mapping from time domain to value domain, can be continuous or discrete
+        - Discretization of time: Sample and Hold (transistor + capacitor) and A/D converters (Flash ADC - comparator + Encoding)
+        - Types: 
+            - Basic sensor (chemical/ physical quantity but not electrical)
+            - Integrated sensor: basic sensor + signal processing (filtering usually)
+            - Intelligent sensor: integrated sensor + preprocessing (fusion, pattern recognition)
+- Processing
+    - Microcontroller: CPU + Memories + Peripherals, also could have Interrupt system, watchdog, debugging interface, and oscillator
+    - Examples of ARM processors (CHECK SLIDES)
+    - Trend: multiprocessor system-on-chips (MPSoC)
+- Memories
+    - Efficiency is a concern (capacity, speed, energy, predictable timing, size, cost, etc)
+    - Types:
+        - SRAM/ DRAM: Data is lost as soon as power is switched off, for run time data
+        - Flash: Typically 10K write cycles, write only block-wise, not always is possible to read, for program code
+        - EEPROM: Typically 100K write cycles, access is always indirect, byte-wise access, for configuration
+    - Trends: Speed gap between processor and main DRAM decreases, Memory access time is much lower than processor access time. Hierarchical memories using scratch pad memories (SPM) which are small but physically separate memory mapped into the address space. They are mostly suited for storing temporary results. More info [here]([https://en.wikipedia.org/wiki/Scratchpad_memory).
+- Output:
+    - OPAMPs (amplify voltage, impedance)
+    - DAC
+    - Actuators: influence physical processes based on electrical signals
 
 ## Embedded Systems Software
     - Real-time Operating Systems
