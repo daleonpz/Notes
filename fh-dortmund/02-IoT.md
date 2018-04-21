@@ -53,7 +53,7 @@ semester: Summer 2018
         - SRAM/ DRAM: Data is lost as soon as power is switched off, for run time data
         - Flash: Typically 10K write cycles, write only block-wise, not always is possible to read, for program code
         - EEPROM: Typically 100K write cycles, access is always indirect, byte-wise access, for configuration
-    - Trends: Speed gap between processor and main DRAM decreases, Memory access time is much lower than processor access time. Hierarchical memories using scratch pad memories (SPM) which are small but physically separate memory mapped into the address space. They are mostly suited for storing temporary results. More info [here]([https://en.wikipedia.org/wiki/Scratchpad_memory).
+    - Trends: Speed gap between processor and main DRAM decreases, Memory access time is much lower than processor access time. Hierarchical memories using scratch pad memories (SPM) which are small but physically separate memory mapped into the address space. They are mostly suited for storing temporary results. More info [here](https://en.wikipedia.org/wiki/Scratchpad_memory).
 - Output:
     - OPAMPs (amplify voltage, impedance)
     - DAC
