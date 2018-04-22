@@ -92,7 +92,126 @@ semester: Summer 2018
     - Rolling wave planning: A planning technique that does not seek the answer all questions or plan all project activities at the beginning, Instead, only immanent project activities are planned in detail, while activities further are planned at a higher level.
 - Lessons learned: Documents focused on variances / deviations that are created at the end of each phase. Lessons learned from past projects are another organizational asset
 
+# Project Management Processes
+- 9 Knowledge Areas (PMI)
+    - Integration
+    -Scope
+    - Time
+    - Cost
+    - Quality
+    - Human Resource
+    - Communication
+    - Risk
+    - Procurement 
 
+- 5 Process Group:
+    - Monitoring and controlling (is present in all the phases)
+    - Initiating > Planing > Execution > Closing
+    - Project phase contains all the 5 process groups
+    - Project consists in several project phases
+
+- 42 Processes (CHECK SLIDES) 
+
+##  Integration management: 
+- Focuses on larger things, it's a high-level view,  has no single/detail work,  is more substantial.
+- Making certain that every part is coordinated     
+- Project Manager is prioritizing
+- Integration = Changes in one area must be integrated into all other
+- Initiating: 
+    - Develop Project Charter.
+    - Key Output: Project Charter
+- Planning: 
+    - Develop Project Management Plan
+    - Key Output: Project Management Plan
+- Execution: 
+    - Direct and Manage Project Execution
+    - Key Output: Deliverables, Work performance information, Change requests 
+- Monitoring and Controlling:
+    - Monitor and Control Project Work
+    - Key Output: Change requests
+    - Perform Integrated Change control
+    - Key Output: Change requests status updates 
+- Closing: 
+    - Close Project or phase
+    - Key Output: Final product, service, result transition
+
+- Develop Project Charter:
+    - Document that officially starts the project and it's one of the most important documents on a project and also one of the processes in the project.
+    - Lack of a charter causes problems!
+    - Inputs: 
+        - Project Statement of Work: Includes WHAT is to be done
+        - Business Case: Explains WHY the project is being undertaken
+        - Contract
+        - Enterprise Environmental Factors
+        - Organizational Process Assets
+    - Tools: Expert judgement
+    - Outpus: project charter
+
+- Develop Project Management Plan:
+    - Project (Management) Plan is **not** the Schedule (Gantt Chart), and it's progressively elaborated
+    - Specifies Who, What, When, Where, How
+    - Inputs:
+        - Project Charter
+        - Enterprise Environmental Factors
+        - Organizational Process Assets
+    - Tools: Expert judgement
+    - Outputs: Project Management Plan
+
+- Direct and Manage Project Execution
+    - This is where things are done, and most of a project’s time, cost, and resources are expended here.
+    - Team is executing the workpackages and creating the deliverables 
+    - Inputs:
+        - Project Management Plan
+        - Approved Change Requests
+        - Enterprise Environmental Factors
+    - Tools: Execution judgement and project management information system
+    - Outputs: 
+        - Deliverables
+        - Work Performance Information
+        - Change Requests
+        - Project Management Plan Update
+        - Project Document Updates
+
+- Monitor and Control Project Work: 
+    - Takes a look at all of the work that is being performed and makes sure that deliverables are in line with the plan comparing work results with the plan
+    - Inputs:
+        - Project Management Plan
+        - Performance Reports
+        - Enterprise Environmental Factors
+        - Organizational Assets
+    - Tools: Expert judgement 
+    - Outputs: 
+        - Change Requests
+        - Project Management Plan Updates and Project Document Updatesi
+
+- Perform Integrated Change Control
+    - One of the most important processes whick means that every change has an impact and has to be handled.
+    - A change in one area influences all other areas 
+    - Inputs:
+        - Project Management Plan
+        - Work Performance Information
+        - Change Requests
+        - Enterprise Environmental factors
+        - Organizational Assets
+    - Tools: Expert judgement and change control meetings
+    - Outputs:
+        - Change Request Status Updates
+        - Project Management Plan Updates
+        - Project Document Updates
+
+- Close Project or Phase
+    - Projects are temporary and them should be shut down properly (Documents, Lessons Learned, Plans)
+    - Records become Organizational Process Assets for future projects
+    - Inputs:   
+        - Project Management Plan
+        - Enterprise Environmental Factors
+        - Organizational Process Assets
+    - Tools: Expert judgement  
+    - Outputs:
+        - Final Product, Service, or Result
+        - Organizational Process Assets Updates
+
+## Scope Management (CHECKPOINT)
 - Quality in terms of PM is related to how many requirements are meet
 
 
