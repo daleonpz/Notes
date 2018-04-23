@@ -135,6 +135,7 @@ semester: Summer 2018
     - Close Project or phase
     - Key Output: Final product, service, result transition
 
+----
 - Develop Project Charter:
     - Document that officially starts the project and it's one of the most important documents on a project and also one of the processes in the project.
     - Lack of a charter causes problems!
@@ -211,14 +212,64 @@ semester: Summer 2018
         - Final Product, Service, or Result
         - Organizational Process Assets Updates
 
-## Scope Management (CHECKPOINT)
-- Quality in terms of PM is related to how many requirements are meet
+## Scope Management 
+- Understand Requirements, define, break down and control the scope
+- Always be in control of the scope to avoid things such as _Gold Plating_ increases risk and uncertainly
+- Gold plating: expand time in  extra but "cool" features that the costumer is not paying for
+- Iniating: No initiation
+- Plannig: 
+    - Collect Requirements
+    - Key Outputs: Requirements documentation, -management plan, -traceability matrix
+    - Define Scope
+    - Key Outputs: project scope statement 
+    - Create WBS
+    - Key Outputs: Work breakdown structure, WBS dictionary
+- Execution: No execution 
+- Monitoring and Control:
+    - Verify scope
+    - Key Outputs: Accepted deliverables 
+    - Control scope
+    - Key Outputs: change request in the scope
+- Closing: No closing
 
-
-- Project manager plan: 
-    - Project related (no details)
-- Scope management:
-    - Gold planing: expand time in  extra but "cool" features that the costumer is not paying for
+---
+- Collect Requirements:
+    - Understanding what is needed to satisfy the stakeholders and create a document that reflects the understanding for project and product
+    - Inputs: Project charter, stakeholders register
+    - Tools: Interviews, focus group, surveys, observation, prototypes
+    - Outputs: Requirements document, -management plan, -traceability matrix
 
 - Define scope:
-    - the better the requirements the less effort is done here
+    - The better the requirements the less effort is done here
+    - Drives the execution of the project and depends on the requirements 
+    - Inputs: Project Charter, Requirements Documentation, Organizational Process Assets
+    - Tools: Expert Judgment, Product Analysis, Alternatives Identification, Facilitated Workshops
+    - Product Analysis: Product breakdown, Systems analysis, Systems engineering, Requirement analysis, value engineering and analysis
+    - Alternatives identification: Brainstorming, pairwise comparison, lateral thinking
+    - Outputs: Project Scope Statement, Project Document Updates
+
+- Create WBS:
+    - Hub of information for the project, most important component of the project plan which implies that everything else ties back to WBS.
+    - Primary Tool for verifying and controlling the project’s scope
+    - Examples (CHECK SLIDES)
+    - Based on deliverables, shows the hierarchical structure of the work (Phases, deliverables, sub-projects), 100% rule (everything should be there)
+    - Control accounts, shows unique identifiers, and the block should be small enough to be able to estimate effort and cost.
+    - Inputs: Project Scope Statement, Requirement Documentation, Organizational Process Assets
+    - Tools: Decomposition
+    - Outputs: Work Breakdown Structure, WBS Dictionary, Scope Baseline, Project Document Updates
+    - Examples (CHECK SLIDES)
+ 
+- Verify the scope:
+    - Verifying that the product, service, or result of a project matches to the documented scope
+    - Checks the completeness (whereas Perform Quality Control checks correctness) and the necessary for product acceptance
+    - Quality in terms of PM is related to how many requirements are meet
+    - Inputs: Project Management Plan, Requirements Documentation, Requirements Traceability Matrix, Validated Deliverables
+    - Tools: inspection
+    - Outputs: Accepted Deliverables, Change Requests, Project Document Updates
+ 
+- Control the scope: 
+    - Preventing scope change requests from overwhelming the project and making certain that scope change requests are properly handled
+    - Inputs: Project Management Plan, Work Performance Information, Requirements Documentation, Requirements Traceability Matrix
+    - Tools: Variance Analysis
+    - Outputs:  Work Performance Measurements, Organizational Process Assets Updates, Change Requests, Project Management Plan Updates
+
