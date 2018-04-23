@@ -216,8 +216,8 @@ semester: Summer 2018
 - Understand Requirements, define, break down and control the scope
 - Always be in control of the scope to avoid things such as _Gold Plating_ increases risk and uncertainly
 - Gold plating: expand time in  extra but "cool" features that the costumer is not paying for
-- Iniating: No initiation
-- Plannig: 
+- Initiating: No initiation
+- Planing: 
     - Collect Requirements
     - Key Outputs: Requirements documentation, -management plan, -traceability matrix
     - Define Scope
