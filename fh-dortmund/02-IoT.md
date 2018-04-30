@@ -99,7 +99,7 @@ semester: Summer 2018
         - Remarks on priority inheritance protocol
             - Priority inheritance protocol solves the problem of priority inversion
             - Limitations: Possible deadlocks,  Possibly large number of tasks with high priority
-            - Protocol with further improvements: priority ceiling protocol (for fixed set of proceses)
+            - Protocol with further improvements: priority ceiling protocol (for fixed set of processes)
 
 - Scheduling in real-time Systems: READ SLIDES 
 
