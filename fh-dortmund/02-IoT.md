@@ -32,6 +32,14 @@ semester: Summer 2018
     - A real-time system must response to an stimuli from the controlled object within an interval given by the environment
     - Hard real-time system: if the deadline is not met, it will have catastrophic consequences
 
+## CHECKPOINT
+- What is Internet of Things? 
+- What is Edge Computing?
+- What are key drivers of Edge Computing?
+- What are common characteristics of embedded systems?
+- Describe the two types of discretization?  How can they be implemented?
+- What are the elements of the embedded systems control loop?
+
 ## Embedded Systems Hardware
  - Input
     - Embedded systems hardware is frequently used in a loop (hardware in a loop)
@@ -102,5 +110,16 @@ semester: Summer 2018
             - Protocol with further improvements: priority ceiling protocol (for fixed set of processes)
 
 - Scheduling in real-time Systems: READ SLIDES 
+
+## CHECKPOINT 
+- Processing energy efficiency: ranking per type of processor? 
+- What is a Microcontroller? 
+- What is a System on Chip?
+- Characterize the memory types (RAM, Flash EEPROM)!
+- What is the memory wall problem?
+- Give an example of a D/A Converter!
+- What are essential features of embedded operating systems?
+- What are key requirements of RT operating systems?
+
 
 ## Real-Time Embedded Systems and Edge Computing
