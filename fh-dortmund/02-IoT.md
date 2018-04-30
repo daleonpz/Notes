@@ -60,36 +60,36 @@ semester: Summer 2018
     - Actuators: influence physical processes based on electrical signals
 
 ## Embedded Systems Software
-    - Real-time Operating Systems
-        - Embedded operating systems: Configurable, devices are handle by tasks, protection is optional, real-time capability
-        - Configurability:
-            - Avoid overhead of unused functions
-            - Conditional compilation 
-            - Linker time optimization (removal of unused functions)
-            - Dynamic data might be replaced by static data
-        - Devices are handle by tasks
-            - Effectively no device needs to be supported by all variants of the OS
-            - Disk and network handle by tasks instead of integrated drivers
-        - Protection is optional
-            - Sometimes it's not required
-            - However, protection mechanisms may be needed for safety and security reasons
-        - Interrupts not restricted to OS
-            - Interrupts can be employed by any process
-            - More efficient than going through OS services
-            - Reduce composability, if there is direct mapping of a SW to an interrupts, it means that another SW cannot use it.
-        - Real-time capability: Many embedded systems are real-time systems, hence, the OS should have that capability as well
-            - **Def** real-time operating system is an operating system that supports the construction of real-time systems
-            - The time behavior of the OS must be **PREDICTABLE**
-            - OS should manage the timing and scheduling (aware of task deadlines, precise time services with high resolution)
-            - Time synchronization (universal clocks)
-            - Synchronization with one master clock or Distributed synchronization (christian's algorithm, Berkeley algorithm)
-            - Problems with external synchronization: erroneous values are copied to all stations, many time formats are too restricted
-            - The OS must be fast
-            - RTOS-Kernels: include resource management (processor, memory, timer), task management and synchronization.
-                -  Fast RTOS: are fast but not predictable (QNX, VxWORKS, VCOS)
-                - RT extensions to standard OSs: RT-task cannot use standard OS services but if the OS crash the RT-task still working (RT linux, RTAI, FreeRTOS)
-                - Research trying to avoid limitations
-    - Resource Access Protocols
-    - Scheduling in real-time Systems
+- Real-time Operating Systems
+    - Embedded operating systems: Configurable, devices are handle by tasks, protection is optional, real-time capability
+    - Configurability:
+        - Avoid overhead of unused functions
+        - Conditional compilation 
+        - Linker time optimization (removal of unused functions)
+        - Dynamic data might be replaced by static data
+    - Devices are handle by tasks
+        - Effectively no device needs to be supported by all variants of the OS
+        - Disk and network handle by tasks instead of integrated drivers
+    - Protection is optional
+        - Sometimes it's not required
+        - However, protection mechanisms may be needed for safety and security reasons
+    - Interrupts not restricted to OS
+        - Interrupts can be employed by any process
+        - More efficient than going through OS services
+        - Reduce composability, if there is direct mapping of a SW to an interrupts, it means that another SW cannot use it.
+    - Real-time capability: Many embedded systems are real-time systems, hence, the OS should have that capability as well
+        - **Def** real-time operating system is an operating system that supports the construction of real-time systems
+        - The time behavior of the OS must be **PREDICTABLE**
+        - OS should manage the timing and scheduling (aware of task deadlines, precise time services with high resolution)
+        - Time synchronization (universal clocks)
+        - Synchronization with one master clock or Distributed synchronization (christian's algorithm, Berkeley algorithm)
+        - Problems with external synchronization: erroneous values are copied to all stations, many time formats are too restricted
+        - The OS must be fast
+        - RTOS-Kernels: include resource management (processor, memory, timer), task management and synchronization.
+            -  Fast RTOS: are fast but not predictable (QNX, VxWORKS, VCOS)
+            - RT extensions to standard OSs: RT-task cannot use standard OS services but if the OS crash the RT-task still working (RT linux, RTAI, FreeRTOS)
+            - Research trying to avoid limitations
+- Resource Access Protocols
+- Scheduling in real-time Systems
 
 ## Real-Time Embedded Systems and Edge Computing
