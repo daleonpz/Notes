@@ -80,16 +80,27 @@ semester: Summer 2018
     - Real-time capability: Many embedded systems are real-time systems, hence, the OS should have that capability as well
         - **Def** real-time operating system is an operating system that supports the construction of real-time systems
         - The time behavior of the OS must be **PREDICTABLE**
-        - OS should manage the timing and scheduling (aware of task deadlines, precise time services with high resolution)
-        - Time synchronization (universal clocks)
-        - Synchronization with one master clock or Distributed synchronization (christian's algorithm, Berkeley algorithm)
-        - Problems with external synchronization: erroneous values are copied to all stations, many time formats are too restricted
+            - OS should manage the timing and scheduling (aware of task deadlines, precise time services with high resolution)
+            - Time synchronization (universal clocks)
+            - Synchronization with one master clock or Distributed synchronization (christian's algorithm, Berkeley algorithm)
+            - Problems with external synchronization: erroneous values are copied to all stations, many time formats are too restricted
         - The OS must be fast
-        - RTOS-Kernels: include resource management (processor, memory, timer), task management and synchronization.
-            -  Fast RTOS: are fast but not predictable (QNX, VxWORKS, VCOS)
-            - RT extensions to standard OSs: RT-task cannot use standard OS services but if the OS crash the RT-task still working (RT linux, RTAI, FreeRTOS)
-            - Research trying to avoid limitations
+            - RTOS-Kernels: include resource management (processor, memory, timer), task management and synchronization.
+                - Fast RTOS: are fast but not predictable (QNX, VxWORKS, VCOS)
+                - RT extensions to standard OSs: RT-task cannot use standard OS services but if the OS crash the RT-task still working (RT linux, RTAI, FreeRTOS)
+                - Research trying to avoid limitations
+
 - Resource Access Protocols
-- Scheduling in real-time Systems
+    - **Critical sections**: sections of code at which exclusive access to some resource must be guaranteed.  Can be guaranteed with semaphores S or “mutexes”. Example SLIDES
+        - P(S) checks semaphore to see if resource is available and if yes, sets S to “used“ and perform _uninterruptible operations_. If no, calling task has to wait.  V(S): sets S to “unused“ and starts sleeping task (if any).
+        - Blocking due to mutual exclusion: Priority T1 assumed to be greater than priority of T2.  If T2 requests exclusive access first (at t0), T1 has to wait until T2 releases the resource (at time t3):
+        - PATH FINDER EXAMPLE (SLIDES)
+        - the priority inheritance protocol: (CHECK [DPS](https://github.com/daleonpz/Notes/blob/master/fh-dortmund/01-DPS.md) ). Problem: deadlock due to circular or nested blocking
+        - Remarks on priority inheritance protocol
+            - Priority inheritance protocol solves the problem of priority inversion
+            - Limitations: Possible deadlocks,  Possibly large number of tasks with high priority
+            - Protocol with further improvements: priority ceiling protocol (for fixed set of proceses)
+
+- Scheduling in real-time Systems: READ SLIDES 
 
 ## Real-Time Embedded Systems and Edge Computing
