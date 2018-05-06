@@ -120,6 +120,54 @@ semester: Summer 2018
 - Give an example of a D/A Converter!
 - What are essential features of embedded operating systems?
 - What are key requirements of RT operating systems?
-
+- What is the problem with exclusive access to resources in embedded systems?
+- What is the priority inversion problem? How can it be solved?
+- What is the problem of deadlocks?
+- What is a schedule?
+- Provide a classification of scheduling algorithms! What is the difference between static and dynamic scheduling?
+- What is schedulablity? What is a cost function?
+- How do the scheduling algorithms work: EDD, EDF, LL?
 
 ## Real-Time Embedded Systems and Edge Computing
+- **Def** Edge Computing: small data centers at the network edge that offer connected compute and storage resources right next to the user
+- Example Use Cases: Virtual reality application connected with head mounted display,  Analyzing large volumes of data right at the edge (Edge Analytics)
+- Reduced latency through Edge Computing
+
+[Edge Computing](images/IOT_edgeComputing_01.png)
+
+- Input Embedded Systems - Sources of Latency:
+    - Input sensor latencies:  
+        - Analog / digital sensors: measurement time
+        - Integrated Sensors: all embedded systems latencies
+        - Sensor data transfer: all communication latencies
+    - Input data processing latencies:
+        - Analog to digital conversion and Discretization
+        - Decoding / data conversion latencies
+    - HW-related latencies
+        - Clock sync time
+        - CPU processing speed
+        - Memory access time
+        - Internal bus communication
+    - Software-related latencies
+        - Processing time in kernel, drivers, middleware, applications
+        - Access to resources (mutexes etc.), blocking etc.
+    - Scheduling-related latencies
+        - CPU idle time, lateness, task switching, scheduling overhead etc.
+    - Communication-related latencies 
+
+- Output Embedded System - Sources of Latency
+    - Output data processing latencies:
+        - Decoding / data conversion latencies
+        - Digital to analog conversion and signal shaping
+    - Output actuator latencies
+        - Output data transfer: all communication latencies
+        - Output system latencies
+
+- Real-time Embedded Systems - Sources of Latency
+    - Start-up latencies
+        - Sensors & sensor communication
+        - Clock start-up and sync Software boot time (kernel, drivers, middleware, applications)
+    - Wake-up latencies
+        - Clock-speed increase after power-safe mode
+        - Re-activate CPU / DSP´s systems after power-safe mode
+
