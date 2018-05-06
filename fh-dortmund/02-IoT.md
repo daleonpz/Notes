@@ -133,7 +133,7 @@ semester: Summer 2018
 - Example Use Cases: Virtual reality application connected with head mounted display,  Analyzing large volumes of data right at the edge (Edge Analytics)
 - Reduced latency through Edge Computing
 
-[Edge Computing](images/IOT_edgeComputing_01.png)
+![Edge Computing](images/IOT_edgeComputing_01.png)
 
 - Input Embedded Systems - Sources of Latency:
     - Input sensor latencies:  
