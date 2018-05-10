@@ -313,8 +313,7 @@ semester: Summer 2018
         - Milestone List
         - Project Scope Statement
         - Organizational Process Assets
-    - Tools: Precedence Diagramming Method (PDM), Dependency Determination, Apply Leads and Lags, Schedule Network Templates
-        - PDM: Scheduling activities, Type of project schedule network diagram, Nodes represent activities (“Activity on Node”), Arrows show dependencies. Examples SLIDES 
+    - Tools: Precedence Diagramming Method (PDM)(Example SLIDES), Dependency Determination, Apply Leads and Lags, Schedule Network Templates
     - Outputs: Project Schedule Network Diagrams, Project Document Updates 
 - Estimate Activity resources 
     - How long will an activity take?
