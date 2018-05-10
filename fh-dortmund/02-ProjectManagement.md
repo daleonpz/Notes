@@ -273,3 +273,115 @@ semester: Summer 2018
     - Tools: Variance Analysis
     - Outputs:  Work Performance Measurements, Organizational Process Assets Updates, Change Requests, Project Management Plan Updates
 
+## Time Management 
+- Resources, Activities, Scheduling.  Be in Control of the Schedule.
+- **def**: Schedule is built from ground up, derived from the scope baseline and rigorously managed
+- if you dont know what to do, then it's impossible to plan
+- time management takes a huge  part in the planning phase 
+- Initiating: No initiation 
+- Planing: 
+    - Define Activities
+    - Key Outputs: Activity List 
+    - Sequence Activities
+    - Key Outputs: Project schedule Network diagram
+    - Estimate Activity resources 
+    - Key Outputs: Activity resource requirements, resource breakdown structure 
+    - Estimate Activity Duration
+    - Key Outputs: Activity duration estimates
+    - Develop schedule 
+    - Key Outputs: Work performance measurements, change requests
+- Execution: No execution 
+- Monitoring and Control:
+    - Control schedule
+- Closing: No closing
+
+--- 
+- Define Activities:
+    - Decompose the work into activity detail
+    - Difference between work packages in WBS  
+    - Inputs: 
+        - Scope Baseline
+        - Enterprise Environmental Factors
+        - Organizational Process Assets
+    - Tools: Decomposition, Rolling Wave Planning, Templates, Expert Judgment
+    - Outputs: Activity List, Activity Attributes, Milestone List 
+- Sequence Activities
+    - Arranging activities in the order they must be performed 
+    - Inputs:
+        - Activity List
+        - Activity Attributes
+        - Milestone List
+        - Project Scope Statement
+        - Organizational Process Assets
+    - Tools: Precedence Diagramming Method (PDM), Dependency Determination, Apply Leads and Lags, Schedule Network Templates
+        - PDM: Scheduling activities, Type of project schedule network diagram, Nodes represent activities (“Activity on Node”), Arrows show dependencies. Examples SLIDES 
+    - Outputs: Project Schedule Network Diagrams, Project Document Updates 
+- Estimate Activity resources 
+    - How long will an activity take?
+    - Understanding the number of resources
+    - Inputs:
+        - Activity List
+        - Activity Attributes
+        - Resource Calendars
+        - Enterprise Environmental Factors
+        - Organizational Process Assets
+    - Tools: Expert Judgment, Alternatives Analysis, Published Estimates Data, Bottom-Up Estimation, Project Management Software
+    - Outputs: Activity Resource Requirements, Resource Breakdown Structure, Project Document Updates
+-Estimate Activity Duration
+    - Each activity is analyzed to estimate how long it will take
+    - Important difference between duration and effort
+    - Inputs:
+        - Activity List
+        - Activity Attributes
+        - Activity Resource Requirements
+        - Resource Calendar
+        - Project Scope Statement
+        - Enterprise Environmental Factors
+        - Organizational Process Assets
+    - Tools: Expert Judgment, Analogous Estimating, Parametric Estimating, Three-Point Estimates
+    - Outputs: Activity Duration Estimates, Project Document Updates
+- Develop schedule 
+    - One of the largest processes (21 inputs, tools, outputs)
+    - Schedule is one of the most important parts of the project 
+    - Inputs:
+        - Activity List
+        - Activity Attributes
+        - Project Schedule Network Diagrams
+        - Activity Resource Requirements
+        - Resource Calendars
+        - Activity Duration Estimates
+        - Project Scope Statement
+        - Enterprise Environmental Factors
+        - Organizational Process Assets
+    - Tools: 
+        - Schedule Network Analysis
+        - Critical Path Method (CPM) - example SLIDES 
+        - Critical Chain Method
+        - Resource Levelling: 
+            - Resource needs meet up with the organization’s ability to supply resource
+            - Calculate and analyze all path (CPM)
+            - Assign resources
+            - Adjust plan to reality
+        - What-If-Scenario Analysis
+        - Applying Leads and Lags
+        - Schedule Compression:
+            - Crashing: Applying more resources to reduce duration, Crashing usually increases cost
+            - Fast tracking: Performing activities in parallel, Fast tracking usually increases project risk 
+    - Outputs:Project Schedule, Schedule Baseline, Schedule Data, Project Document Updates 
+- Control schedule
+    - Compare work results to the plan, Change proactively. Project manager should always be in front of the project 
+    - Inputs: 
+        - Project Management Plan
+        - Project Schedule
+        - Work Performance Information
+        - Organizational Process Assets
+    - Tools: 
+        - Performance Reviews
+        - Variance Analysis
+        - Project Management Software
+        - Resource Levelling
+        - What-If-Scenario Analysis
+        - Adjusting Leads and Lags
+        - Schedule Compression and scheduling tool
+    - Outputs: 
+        - Work Performance Measurements, Organizational Process Assets Updates, Change Requests, Project Management Plan Updates, Project Document Updates 
