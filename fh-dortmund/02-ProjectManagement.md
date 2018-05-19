@@ -384,3 +384,81 @@ semester: Summer 2018
         - Schedule Compression and scheduling tool
     - Outputs: 
         - Work Performance Measurements, Organizational Process Assets Updates, Change Requests, Project Management Plan Updates, Project Document Updates 
+
+## Cost Management
+- Similarities to Time Management
+- Costs should be Planned, Quantified and Measured
+- Tie costs to activities and resources, and build estimates from the bottom
+- Initiating: no initiation
+- Planning:
+    - Estimate Costs
+    - Determine Budget
+- Execution:  No execution
+- Monitoring and Control
+    - Control Costs
+- Closing: No closing
+
+--- 
+- Estimate Costs
+    - Each schedule activity is analyzed (Time, Resource, Cost)
+    - Inputs
+        - Scope Baseline
+        - Project Schedule
+        - Human Resource Plan
+        - Risk Register
+        - Enterprise Environmental Factors
+        - Organizational Process Assets
+    - Tools: 
+        - Analogous Estimating
+        - Parametric Estimating
+        - Bottom-Up Estimating
+        - Three-Point Estimates
+        - Reserve Analysis
+        - Cost of Quality (CoQ)
+        - Project Management Estimating Software
+        - Vendor Bid Analysis
+    - Outputs: Activity Cost Estimates, Basis of Estimates, Project Document Updates
+
+- Determine Budget
+    - Budget = Cost Performance Baseline
+    - Map cash flow and likely expenditures to time phases
+    - Inputs:
+        - Activity Cost Estimates
+        - Basis for Estimates
+        - Scope Baseline
+        - Project Schedule
+        - Resource Calendars
+        - Contracts
+        - Organizational Process Assets
+    -  Tools: Cost Aggregation, Reserve Analysis, Expert Judgment, Historical Relationships, Funding Limit Reconciliation
+    - Outputs: Cost Performance Baseline, Project Funding Requirements, Project Document Updates
+
+- Control Costs
+    - Monitor costs carefully and proactively, and measure what was executed against what was planned
+    - Inputs:
+        - Project Management Plan
+        - Project Funding Requirements
+        - Work Performance Information
+        - Organizational Process Assets
+   - Tools
+        - Earned Value Measurement
+            - Achieved value
+            - Spent time/money
+            - Calculation of key figures:  What was planned?, What is achieved?
+            - Calculation of estimates
+        - Forecasting
+        - To-Complete Performance Index (TCPI)
+        - Performance Reviews
+        - Variance Analysis
+        - Project Management Software
+    - Life Cycle Costing:  Not only considering product development cost, but also what is the total cost of ownership (TCO)? (Purchasing/creating of product, Operations, Disposal )
+    - Value Engineering:  Get more benefit/value out of the project (increase bottom line, decrease costs, Improve quality, Shorten schedule)
+    - Outputs:
+        - Work Performance Measurements
+        - Budget Forecasts
+        - Organizational Process Assets Updates
+        - Change Requests
+        - Project Management Plan Updates
+        - Project Document Updates
+
+    - Triad: Scope -> Schedule -> Budget
