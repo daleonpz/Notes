@@ -598,3 +598,58 @@ semester: Summer 2018
         - Performance Reports
     - Tools: Risk Reassessment, Risk Audits, Variance and Trend Analysis, Technical Performance Measurement, Reserve Analysis, Status Meetings
     - Outputs: Risk Register Updates, Organization Process Assets Updates, Change Requests, Project Management Plan Updates, Project Document Updates
+
+## Human Resource Management
+- Building a team and Leading People
+- Motivate and Persuade
+- Project Managers must help define the roles and influence everyone on the Project
+
+- Initiating: No initiation
+- Planning: 
+    - Develop Human Resource Plan
+- Execution: 
+    - Acquire Project Team
+    - Develop Project Team
+    - Manage Project Team
+
+---
+- Develop Human Resource Plan
+    - How to staff, manage, team-build, assess, and improve the project team
+    - Inputs:
+        - Activity Resource Requirement
+        - Enterprise Environmental Factors
+        - Organizational Process Assets
+    - Tools: Organization Charts and Position Descriptions, Networking, Organizational Theory
+    - Outputs: Human Resource Plan
+
+- Acquire Project Team
+    - Get the right people working on the project
+    - Inputs:
+        - Project Management Plan
+        - Enterprise Environmental Factors
+        - Organizational Process Assets
+    - Tools: Pre-Assignment, Negotiation, Acquisition, Virtual Teams
+    - Outputs:  Project Staff Assignments, Resource Calendars, Project Management Plan Updates
+
+- Develop Project Team
+    - A team performs better than a group of disconnected individuals
+    - Most effective when done early
+    - Inputs:
+        - Project Staff Assignments
+        - Project Management Plan
+        - Resource Calendars
+    - Tools: Interpersonal Skills, Training, Team-Building Activities, Ground Rules, Co-Location, Recognition and Rewards
+    - Tuckman‘s Model and Maslow‘s Hierarchy of Needs (CHECK SLIDES)
+    - Outputs: Team Performance Assessments, Enterprise Environmental Factors Updates
+
+- Manage Project Team
+    - People can be unpredictable: Some may leave the project, Different experience, Different motivation, so it is important to consider all factors to achieve high team performance
+    - Inputs:
+        - Project Staff Assignments
+        - Project Management Plan
+        - Team Performance Assessments
+        - Performance Reports
+        - Organizational Process Assets
+    - Tools: Observation and Conversation, Project Performance Appraisals, Conflict Management, Issue Log, Interpersonal Skills
+    - Methods of Conflict Management and Constructive and Destructive Team Roles (White board SLIDES)
+    - Outputs: Enterprise Environmental Factors Updates, Organizational Process Assets Updates, Project Management Plan Updates, Change Requests
