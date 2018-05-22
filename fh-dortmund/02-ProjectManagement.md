@@ -532,7 +532,7 @@ semester: Summer 2018
     - Identify which risks could impact the project, understand nature of these risks
     - performed multiple times because risks change and evolve
     - Risk Categories:  Known Unknowns ( Natural disasters), unknown Unknowns (9/11)
-   ![Risk Categories](images/PM_risk_cat.png)
+   ![Risk Categories](images/PM_risks_cat.png)
     - Inputs:
         - Activity Cost Estimates
         - Activity Duration Estimates
