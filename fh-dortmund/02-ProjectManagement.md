@@ -653,3 +653,70 @@ semester: Summer 2018
     - Tools: Observation and Conversation, Project Performance Appraisals, Conflict Management, Issue Log, Interpersonal Skills
     - Methods of Conflict Management and Constructive and Destructive Team Roles (White board SLIDES)
     - Outputs: Enterprise Environmental Factors Updates, Organizational Process Assets Updates, Project Management Plan Updates, Change Requests
+
+## Communication Management
+- Covers all tasks related to Producing, Compiling, Sending, Storing, Distributing, Managing project records
+- Always proactive and in precise way 
+
+- Initiating: Identify Stakeholders
+- Planning: Plan Communications
+- Execution: 
+    - Distribute Information
+    - Manage Stakeholders Expectations
+- Monitoring and Control: Report Performance
+
+---
+- Identify Stakeholders
+    - To satisfy the stakeholders expectation and avoid derailing of the project
+    - Inputs:
+        - Project Charter
+        - Procurement Documents
+        - Enterprise Environmental Factors
+        - Organizational Process Assets
+    - Tools: Stakeholder Analysis (EXAMPLE SLIDES),  Expert Judgment
+    - Outputs: Stakeholder Register, Stakeholder Management Strategy
+
+- Plan Communication:
+    - Define how often communication will be distributed and updated, and which stakeholder will receive what information
+    - Inputs:
+        - Stakeholder Register
+        - Stakeholder Management Strategy
+        - Enterprise Environmental Factors
+        - Organizational Process Assets
+    - Tools (EXAMPLE SLIDES): Communication Requirements Analysis, Communication Technology, Communication Models, Communication Methods
+    - Outputs: Communication Management Plan, Project Document Updates
+
+- Distribute Information
+    - Execution of the communication management plan and update stakeholders on the progress of the
+project
+    - Inputs:
+        - Project Management Plan
+        - Performance Reports
+        - Organizational Process Assets
+    - Tools: Communication Methods, Information Distribution Tools
+    - Outputs: Organizational Process Assets Updates
+
+- Manage Stakeholder Expectations
+    - Manage stakeholders actively and keep them up to date
+    - Identify and resolve stakeholder concerns in a proactive and timely manner
+    - Inputs:
+        - Stakeholder Register
+        - Stakeholder Management Strategy
+        - Project Management Plan
+        - Issue Log
+        - Change Log
+        - Organizational Process Assets
+    - Tools:  Communication Methods, Interpersonal Skills, Management Skills
+    - Outputs: Organizational Process Assets Updates, Change Requests, Project Management Plan Updates, Project Document Updates
+
+- Report Performance
+    - Report to the stakeholders how the project is progressing against the plan
+    - Focused on reporting against the performance baseline
+    - Inputs:
+        - Project Management Plan
+        - Work Performance Information
+        - Work Performance Measurements
+        - Budget Forecasts
+        - Organizational Process Assets
+    - Tools: Variance Analysis, Forecasting Methods, Communication Methods, Reporting Systems
+
