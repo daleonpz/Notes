@@ -462,3 +462,139 @@ semester: Summer 2018
         - Project Document Updates
 
     - Triad: Scope -> Schedule -> Budget
+
+## Risk Management
+- Project Manager is in control and proactively managing events, avoiding as many problems as possible
+- Philosophy: Act instead of Re-Act
+- **Risk**:  is related to an uncertain event, may effect the project for good or for bad
+- **Risk estimation** quantitative estimation of damage and probability of a risk
+- **Risk assessment** process of determining the acceptability of a risk
+- **Risk management** process of risk reduction, process of making a risk acceptable
+
+- Basics: 
+    - Risks are dealing with the future
+    - A risk might have one or several causes, and have one or several effects
+    - Risk vs Chance: Risk coming true = problem, Chance coming true = opportunity
+
+- Initiating: No initiation
+- Planning: 
+    - Plan Risk Management
+    - Outputs: Risk management plan
+    - Identify Risks
+    - Output: Risks register
+    - Perform Qualitative Analysis
+    - Output: Risks register updates
+    - Perform Quantitative Analysis
+    - Output: Risks register updates
+    - Plan Risk Responses
+    - Output: Risk-related contract decisions s
+- Execution: No execution
+- Monitoring and Control:
+    - Monitor and Control Risks
+    - Output: Risks register updates, change requests
+- Closing: No closing
+
+- Process Assignment
+    - Risk Estimation
+        - Identify Risks
+        - Qualitative Analysis
+        - Quantitative Analysis
+    - Risk Assessment
+        - Plan Risk Responses 
+    - Risk Management
+        - Plan Risk Management
+        - Monitor and Control Risks
+
+**Plan Risk Management** produces a _Risk management plan_, this plan is used to **Identify Risks**, after that it's needed to do a **Qualitative and quantitative analysis**, in order to **Plan Risk Responses**, to finally **Monitor and Control Risks**.
+
+---
+- Plan Risk Management
+    - Creating the risk management plan, planning also the remaining 5 processes (identify risk up to monitor and control).
+    - General and high-level plan
+    - Project risks that can affect the organization
+    - Inputs:
+        - Project Scope Statement
+        - Cost Management Plan
+        - Schedule Management Plan
+        - Communications Management Plan
+        - Enterprise Environmental Factors
+        - Organizational Process Assets
+     - Tools:  Planning Meetings and Analysis
+            -  Analysis Tools:  Risk Breakdown Structure,  Risk Matrix (EXAMPLE SLIDES)
+     - Outputs:  Risk Management Plan
+
+    - Risk Management Plan: 
+        - Roadmap to the other 5 risk management processes
+        - Defines tolerable level of risk for the project, how risk will be managed and categorized, how risk finding will be communicated, and who will be responsible for risk activities 
+        - Amount of time and costs that will be allotted to risk activities
+
+- Identify Risk
+    - Identify which risks could impact the project, understand nature of these risks
+    - performed multiple times because risks change and evolve
+    - Risk Categories:  Known Unknowns ( Natural disasters), unknown Unknowns (9/11)
+   ![Risk Categories](images/PM_risk_cat.png)
+    - Inputs:
+        - Activity Cost Estimates
+        - Activity Duration Estimates
+        - Scope Baseline
+        - Stakeholder Register
+        - Cost Management Plan
+        - Schedule Management Plan 
+        - Quality Management Plan
+        - Project Documents
+        - Enterprise Environmental Factors
+        - Organizational Process Assets
+    - Tools: Documentation Reviews, Information Gathering Techniques, Checklist Analysis, Assumption Analysis, Diagramming Techniques, SWOT Analysis, Expert Judgment (SWOT Analysis in SLIDES)
+    - Outputs:  Risk Register (EXAMPLE SLIDES) 
+
+- Perform Qualitative Risk Analysis:
+    - Usually done rapidly
+    - it determines which risks are the highest priority, the probability of occurring and the impact on the project
+    - Inputs: 
+        - Risk Register
+        - Risk Management Plan
+        - Project Scope Statement
+        - Organizational Process Assets
+    - Tools: Risk Probability and Impact Assessment, Probability and Impact Matrix (PIM - EXAMPLE SLIDES), Risk Data Quality Assessment, Risk Categorization, Risk Urgency Assessment, Expert Judgment
+    - Outputs: Risk Register Updates
+
+- Perform Quantitative Risk Analysis
+    - Assign a projected value and Quantify the risks (cost, time)
+    - Inputs: 
+        - Risk Register
+        - Risk Management Plan
+        - Cost Management Plan
+        - Schedule Management Plan
+        - Organizational Process
+        - Assets
+    - Tools: 
+        - Data Gathering and Representation Techniques: Interviewing, Probability Distributions
+        - Expert Judgment
+        - Quantitative Risk Analysis and Modeling Techniques: Sensitivity Analysis, Expected Monetary Value Analysis, Decision Tree Analysis (EXAMPLE SLIDES), Tornado Diagrams, Modeling and Simulation
+    - Outputs: Risk Register Updates
+
+- Qualitative vs. Quantitative: 
+    - Qualitative is about rough estimates and priority: Probability (high/low), Impact (high/low)
+    - Quantitative is about calculations & figures: Probability (%) x Impact (€)
+
+- Plan Risk Responses:
+    - Create a detailed plan for managing and handling the risk
+    - Inputs: 
+        - Risk Register
+        - Risk Management Plan
+    - Tools: 
+        - Strategies for Negative Risks or Threats: Avoid, Transfer, Mitigate, Accept
+        - Strategies for Positive Risks or Opportunities: Exploit, Share, Enhance, Accept
+        - Contingent Response Strategies
+        - Expert Judgment
+    - Outputs: Risk Register Updates, risk Related Contract Decisions, project Management Plan Updates, Project Document Updates
+
+- Monitor and Control Risks
+    - Look back over the plan, and compare with the execution that has taken place
+    - Inputs: 
+        - Risk Register
+        - Project Management Plan
+        - Work Performance Information
+        - Performance Reports
+    - Tools: Risk Reassessment, Risk Audits, Variance and Trend Analysis, Technical Performance Measurement, Reserve Analysis, Status Meetings
+    - Outputs: Risk Register Updates, Organization Process Assets Updates, Change Requests, Project Management Plan Updates, Project Document Updates
