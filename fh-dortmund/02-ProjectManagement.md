@@ -810,3 +810,5 @@ Cost Performance Index (CPI): Rate at which the project performance is meeting c
 ![EVM - At a Glance](images/PM_EVM_01.png)
 ![EVM - At a Glance](images/PM_EVM_02.png)
 
+# Process Models
+CHECK SLIDES
