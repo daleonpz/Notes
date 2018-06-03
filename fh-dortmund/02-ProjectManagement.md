@@ -720,3 +720,93 @@ project
         - Organizational Process Assets
     - Tools: Variance Analysis, Forecasting Methods, Communication Methods, Reporting Systems
 
+# Earned Value Management
+## Motivation
+- Deviation between what is planned and the actual execution
+- The status and the forecast of the project
+- Take correctives measurements 
+
+- Budget: 1.115.000 € (100 %)
+- Planned Value: 406.000 € (36 %)
+- Actual Cost: 366.000 € (33 %)
+- Earned Value: 30 % (335.000 €) - estimated
+
+- Key Figures - CPI
+    - Cost Performance Index = EV/AC
+    - 30% Earned Value / 33% Actual Cost
+    - CPI = 0,91
+    - Less money spent than planned (335K<336K) but also less value achieved (30%<33%), more money used that planned
+
+- Key Figures - SPI
+    - Schedule Performance Index = EV/PV
+    - 30% Earned Value / 36% Planned Value
+    - SPI = 0,83
+    - Project is behind schedule!, more time needed that planned to get the achieved value
+
+- Forecast with EVM 
+    - Estimate At Completion (EAC), Budget At Completion (BAC)
+    - EAC_OPT = AC + (BAC – EV) / 1
+    - EAC_REAL = AC + (BAC – EV) / CPI
+    - EAC_PESS = AC + (BAC – EV) / (CPI x SPI)
+
+    - Example (BAC = 1.115.000 €)
+    - EAC_OPT = 366K + (1_115K - 335K0) = 1.146.000 €
+    - EAC_REAL = 1.219.000 €
+    - EAC_PESS = 1.390.000 €
+
+    - Graphical examples SLIDES
+
+## Key Figures
+- Budget At Completion (BAC):  How much was originally planned for this project to cost.  Is the total budget for the project
+- Planned Value (PV): How much work should have been completed at a point in time based on the plan.
+    - Derived by measuring planned work completed at a point in time
+    - PV = BAC * Planned%Completed
+- Earned Value (EV):  How much work was actually completed during a given period of time
+    - Derived by measuring actual work completed at a point in the schedule
+    - EV = BAC * Actual%Completed
+- Actual Cost (AC):  Money spent during a given period of time, sum of the costs for the given period of time
+- Cost Variance (CV):Difference between what we expected to spend and what we actually spent
+    - CV = EV - AC
+- Schedule Variance (SV):  Difference between where we planned to be in the schedule and where we are in the schedule
+    - SV = EV - PV
+Cost Performance Index (CPI): Rate at which the project performance is meeting cost expectations during a given period of time
+    - CPI = EV / AC
+    - Higher index is good (>1)
+- Schedule Performance Index (SPI):  Rate at which the project performance is meeting schedule expectations up to a point in time
+    - SPI = EV / PV
+    - Higher index is good (>1)
+- Estimate At Completion (EAC): Projecting the total cost at completion based on project performance up to a point in time
+    - EAC = AC + BAC – EV (opt.)
+    - EAC = BAC / pow(CPI, c) (real.)
+    - EAC = AC +  (BAC – EC) / pow(SPI, c) (pess.)
+- Estimate To Completion (ETC):  Projecting how much more will be spent on the project, based on past performance
+    - ETC = EAC - AC
+- Variance At Completion (VAC): The difference between what was budgeted and what will actually be spent
+    - VAC = BAC - EAC
+- To-Complete Performance Index (TCPI): Performance that must be achieved in order to meet financial or schedule goals
+    - TCPI = (BAC – EV) / RemainingFunds
+    - TCPI = (BAC – EV) / (BAC – AC)
+    - Lower index is good
+
+- Exercise SLIDES
+
+## About Earned value management (EVM)
+- What is EVM about?
+    - Comparison of planned and actual cost not significant (10% behind plan, 39% work completed, still 132.587€ budget available)
+    - What performance was achieved till now - compared to the plan?
+    - What are the actual costs for the currently achieved result?
+- What is the benefit of EVM?
+    - Assessment of project status, Forecast of remaining project costs and duration
+    - Statement about efficiency
+- What is EVM doing?
+    - Examination of reference date, and proportion of: Effort (costs) to Earning (progress of result achievement)
+- Key figures
+    - Progress according to plan (planned value)
+    - Actual progress (earned value)
+    - Costs (actual costs)
+- EVM Problems: Inconsistent wording, Several variations, Determination of the earned value
+- EVM Preconditions: Work is planned, Work is broken down into work packages, Progress of achieved work performance, costs and milestones is measurable, All actual costs are known, Deviations are rated, Changes of the base plan are managed
+
+![EVM - At a Glance](images/PM_EVM_01.png)
+![EVM - At a Glance](images/PM_EVM_02.png)
+
