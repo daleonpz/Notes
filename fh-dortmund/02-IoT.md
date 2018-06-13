@@ -32,14 +32,6 @@ semester: Summer 2018
     - A real-time system must response to an stimuli from the controlled object within an interval given by the environment
     - Hard real-time system: if the deadline is not met, it will have catastrophic consequences
 
-## CHECKPOINT
-- What is Internet of Things? 
-- What is Edge Computing?
-- What are key drivers of Edge Computing?
-- What are common characteristics of embedded systems?
-- Describe the two types of discretization?  How can they be implemented?
-- What are the elements of the embedded systems control loop?
-
 ## Embedded Systems Hardware
  - Input
     - Embedded systems hardware is frequently used in a loop (hardware in a loop)
@@ -112,6 +104,12 @@ semester: Summer 2018
 - Scheduling in real-time Systems: READ SLIDES 
 
 ## CHECKPOINT 
+- What is Internet of Things? 
+- What is Edge Computing?
+- What are key drivers of Edge Computing?
+- What are common characteristics of embedded systems?
+- Describe the two types of discretization?  How can they be implemented?
+- What are the elements of the embedded systems control loop?
 - Processing energy efficiency: ranking per type of processor? 
 - What is a Microcontroller? 
 - What is a System on Chip?
@@ -170,4 +168,95 @@ semester: Summer 2018
     - Wake-up latencies
         - Clock-speed increase after power-safe mode
         - Re-activate CPU / DSP´s systems after power-safe mode
+
+# Real-time Networks
+## Fundamental Concepts
+- The OSI reference model, setup and mode of operation
+    - Defined in ISO norm 7498, the Reference Model for Open System Interconnection (OSI) presents a model for the representation of inter-computer data exchange.
+    - Important protocols, i.e. TCP/IP or SNA (System Network Architecture, IBM), already existed when the OSI model was standardized by ISO. Therefore, these protocols not always abide by the architecture as described by the OSI model.
+
+- Layers, services and protocols
+    - The OSI model defines seven layers. Components assigned to such a layer use services of the subordinate layer while offering their own services to their superordinate layer. The interface between these layers are defined by so-called **service access points (SAP)**. Every layer concerns itself with a part of the functions necessary for the exchange of information between computer systems.
+    - Every instance of layer n strictly communicates with another instance of layer n in the opposite computer system. The data exchanged between these layers takes the form of **protocol data units (PDU)**.
+    - During the exchange of data, every layer uses services of its subordinate layer.  Every data packet therefore travels through layers 7 to 1 of the sending system, is send over the physical medium to the target system and reaches the receiving application by travelling through layers 1 to 7.  
+    - PCI: protocol control information
+
+![Communication between layers](images/IOT_osi_layer_comm.png)
+
+- Layer functions
+    - Layer 1 - Physical Layer: encompasses the physical transfer of bits between the computer systems. This includes gaining access to the medium and its physical properties.
+    - Layer 2 - Data Link Layer: This layer manages incoming and outgoing streams (divided into packets) of data, and also offers control mechanisms for the detection of bit errors
+    - Layer 3 - Network Layer: The network layer handles switching-oriented functions. This includes the routing services. While the data link layer (layer 2) is only responsible for the transmission between two successive transmission mediums (such as end or transit systems), the networks layer handels the transmission from the sender to the eventual receiver.  This is the uppermost layer absolutely required to send data.
+    - Layer 4 - Transport Layer: Layer 4 acts as the border between the lower, transport oriented layers and the upper, application-oriented layers. At this level, the network used for data exchange is no longer relevant. Layer 4 only deals with the addresses of the sending and receiving systems, and control flow and transmission errors. .
+    - Layer 5 - Session Layer: This layer no longer deals with single connections, rather managing sessions, a logical connection between two applications of the uppermost layer.
+    - Layer 6 - Presentation Layer: The presentation layer handles conversion between different encodings, such that both applications may communicate with each other.
+    - Layer 7 - Application Layer: The last link between transmission medium and application, this layer holds the actual connection to the application process. 
+
+
+## Physical Layer and Data Link Layer
+
+![Communication between End-Points](images/IOT_comm_endpoints.png)
+
+- Encodings
+    - Source encoding: Assigment of source data to a binary representation, reducing redundant data (data compression)
+    - Channel encoding: Adding redundancy to check for transmission errors, e.g.  parity bit, CRC (Cyclic Redundancy Check)
+    - Line coding: Assignment of digital data elements to analog or digital signal elements of the transmission line
+
+- Baseband Transmission, Carrier-bound Transmission
+    - Baseband transmission: Transmission of an analog or digital signal over the medium without modulation. The signal is transmitted using the original frequency range.
+    - Carrier-bound transmission: Transmission of signals using a modulation. The signal is transmitted in the carrier‘s frequency range.
+
+    - Properties of encodings;  Direct current-free (DC-free), Own provisioning of the clock signal (self synchronized)
+    - Often-used line codings:
+        - NRZ: Not Return to Zero, not DC-free, not self synchronized
+        - RZ: Return to Zero, not DC-free, not self synchronized
+        - Manchester: Ethernet, DC-free and self synchronized
+        - AMI: Alternate Mark Inversion, three levels, DC-free, not self synchronized
+
+![Encoding](images/IOT_encoding.png)
+
+    - Properties of digital line codings, clock recovery
+        - All Manchester encodings allow for clock recovery, but need twice as much
+bandwidth as the NRZ code.
+        - The NRZ code does not provide clock recovery due to not providing a state change when receiving unfavorable bit strings. Using this code therefore requires bit conversion to avoid many '0' in a row, for example (4B/5B conversion) 
+
+- Temporal inspection of collision detection (worst case)
+    (a) A sends Packet (t = 0 )
+    (b) The packet has almost reached B (t ≈ τ )
+    (c) B sends packet due to line being detected as free ⇒ collision occurs (t = τ )
+    (d) Destroyed packet reaches A after t = 2τ
+
+- Collision detection
+    - Depending on: Bit rate, Minimal frame length, Maximum cable length
+    - Example:  Bit rate 10 Mbit Ethernet, Minimal frame length 64 Byte = 512 Bit, Maximum cable length 2500 m
+    - Can a collision be detected before the frame is completely send over the line?
+
+    - Propagation speed V: V = 2/3 * 300.000 km/s = 200 ∗ 10
+    - Transit time 𝜏 from A to B per bit with s = 2500m cable length:  𝜏 = s/V -> 13 us. 
+    - Send time full frame 𝑇  for minimal frame length of 512 Bit: 512 x 𝑇 = 512 * 0,1 µs = 51 us
+    - Condition to reach target of collision detection before frame send process is completed: 51us>13us (Condition met! Target may be achieved!)
+
+
+- CSMA/CD (Carrier Sense Multiple Access/Collision Detection)
+    - Ethernet uses a bus structure, both in physical and logical terms. Every packet send reaches all stations and can be read by them (broadcast network)
+    - All stations share the transmission channel and therefore compete for its transmission capacity.
+    - This competitive situation requires the use of a protocol that guarantees that at any given time only one station is transmitting.
+    - The CSMA/CD (Carrier Sense Mutliple Access/Collision Detetion) protocol fulfills this requirement. It exists in several variations.
+    - The CSMA/CD protocols are random access procedures. All stations connected to the ethernet may, in principal, access the transmission medium at any time. However, a station may only send data if the medium is currently free (not used by another station), due to two stations sending simultaneously resulting in a collision and the loss of data.  Each station ready to send therefore needs to check the channel for an ongoing transmission (Listen Before Talk, LBT).
+
+- Ethernet frame according to Ethernet II:
+
+![Ethernet frame](images/IOT_ethernet_frame.png)
+
+    - The preambel is used to synchronize the receiver. It is, including the Start Frame Delimiter (SFD), an oscillation of 6,4 µ s length (8 Bytes of 1010... ).
+    - Each frame has a minimum size of 64 Byte in order to reach the minimum timerequired for collision detection to work. If the data is too short, padding is added.
+    - As Frame Check Sequence (FCS), the cyclic redundancy check CRC32 is used(Cyclic Redundancy Check with 32 Bit).
+
+- Construction of Ethernet addresses (MAC)
+    -  Each MAC address has a length of six bytes (48 Bit).
+    - Traditionally, MACs are displayed as a string of six double-digit hex numbers, separated by colons.
+    - Bit 0 of the first byte determines if the address is a unicast (0) or broadcast/multicast address (1) handelt. The broadcast address is FF:FF:FF:FF:FF:FF.
+    - Bit 1 of the first byte determines if the address is administrated globally (0) or locally (1). Network cards use a worldwide unique MAC address, globally administrated by the IEEE and its vendor.
+    - The first 24 bits (bit 3 to 24) of each global MAC contain a vendor number assigned by the IEEE (also known as OUI – Organizationally Unique Identifier).  The remaining bits are assigned by the vendor.
+
 
