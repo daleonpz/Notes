@@ -257,4 +257,4 @@ bandwidth as the NRZ code.
     - Bit 1 of the first byte determines if the address is administrated globally (0) or locally (1). Network cards use a worldwide unique MAC address, globally administrated by the IEEE and its vendor.
     - The first 24 bits (bit 3 to 24) of each global MAC contain a vendor number assigned by the IEEE (also known as OUI – Organizationally Unique Identifier).  The remaining bits are assigned by the vendor.
 
-
+- (THE REST OF REAL-TIME NETWORKS in SLIDES)
