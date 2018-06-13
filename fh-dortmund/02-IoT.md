@@ -202,6 +202,8 @@ semester: Summer 2018
     - Channel encoding: Adding redundancy to check for transmission errors, e.g.  parity bit, CRC (Cyclic Redundancy Check)
     - Line coding: Assignment of digital data elements to analog or digital signal elements of the transmission line
 
+![Encoding](images/IOT_encoding.png)
+
 - Baseband Transmission, Carrier-bound Transmission
     - Baseband transmission: Transmission of an analog or digital signal over the medium without modulation. The signal is transmitted using the original frequency range.
     - Carrier-bound transmission: Transmission of signals using a modulation. The signal is transmitted in the carrier‘s frequency range.
@@ -212,9 +214,6 @@ semester: Summer 2018
         - RZ: Return to Zero, not DC-free, not self synchronized
         - Manchester: Ethernet, DC-free and self synchronized
         - AMI: Alternate Mark Inversion, three levels, DC-free, not self synchronized
-
-![Encoding](images/IOT_encoding.png)
-
     - Properties of digital line codings, clock recovery
         - All Manchester encodings allow for clock recovery, but need twice as much
 bandwidth as the NRZ code.
