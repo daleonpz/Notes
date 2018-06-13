@@ -243,10 +243,9 @@ bandwidth as the NRZ code.
     - The CSMA/CD (Carrier Sense Mutliple Access/Collision Detetion) protocol fulfills this requirement. It exists in several variations.
     - The CSMA/CD protocols are random access procedures. All stations connected to the ethernet may, in principal, access the transmission medium at any time. However, a station may only send data if the medium is currently free (not used by another station), due to two stations sending simultaneously resulting in a collision and the loss of data.  Each station ready to send therefore needs to check the channel for an ongoing transmission (Listen Before Talk, LBT).
 
-- Ethernet frame according to Ethernet II:
-
 ![Ethernet frame](images/IOT_ethernet_frame.png)
 
+- Ethernet frame according to Ethernet II:
     - The preambel is used to synchronize the receiver. It is, including the Start Frame Delimiter (SFD), an oscillation of 6,4 µ s length (8 Bytes of 1010... ).
     - Each frame has a minimum size of 64 Byte in order to reach the minimum timerequired for collision detection to work. If the data is too short, padding is added.
     - As Frame Check Sequence (FCS), the cyclic redundancy check CRC32 is used(Cyclic Redundancy Check with 32 Bit).
