@@ -173,9 +173,9 @@ image here cpld
     - The initial value given to a signal or variable defines the objects’s state at `t = 0`, just before the simulator enters the first cycle. A hardware reset, in contrast, remains ready to reconduct the circuit into a predetermined start state at any time `t ≥ 0`. This asks for distributing a dedicated signal to the bistables, both in the circuit and in its HDL model.
 
 - Facilities for model parametrization
-    - Generics: As stated earlier, signals carry dynamic, i.e. time-varying, information between processes and indirectly also between design entities. Generics, in contrast, serve to disseminate static, i.e. time- invariant, details to design entities.
+    - **Generics**: As stated earlier, signals carry dynamic, i.e. time-varying, information between processes and indirectly also between design entities. Generics, in contrast, serve to disseminate static, i.e. time- invariant, details to design entities.
 
-```vhdl
+    ```vhdl
 component parityoddw -- w-input odd parity gate
     generic (
         WIDTH : natural range 2 to 32; -- number of inputs with supported range
@@ -194,8 +194,7 @@ constant NUMBITS : natural = 12;
                 generic map ( WIDTH => NUMBITS, TCD => 0.05 ns, TPD => (NUMBITS * 0.1 ns) )
                 port map ( Inp_DI => DataVec_D , Oup_DO => Parbit_D );
 .....
-```
-
+    ```
     - up to four HDL models may occur during a VLSI design cycle to capture a circuit-to-be at distinct levels of detail. Designers also experiment with alternative circuit architectures to compare them in terms of gate count, longest path delay, energy efficiency, and other figures of merit. VHDL accommodates all this need by allowing a design entity to have more than one architecture body.
 
 ```vhdl
