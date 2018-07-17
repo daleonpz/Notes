@@ -8,24 +8,24 @@ semester: Summer 2018
 - **Observation 1.1.** Microelectronics is the enabler of information technology.
 - An integrated circuit (IC) is an electronic component that incorporates and interconnects a multitude of miniature electronic devices, mostly transistors, on a single piece of semiconductor material, typically silicon.
 
-## size point fo view
+## Size point fo view
 - In a world obsessed with records, a foremost question asks “How large is that circuit?”.
     - **Die size** is a poor metric for design complexity because the geometric dimensions of a circuit greatly vary as a function of technology generation, fabrication depth, and design style.
     - **Transistor count** is a much better indication. Still, comparing across logic families is problematic as the number of devices necessary to implement some given function varies.3
     - **Gate equivalents** attempt to capture a design’s hardware complexity independently from its actual circuit style and fabrication technology. One gate equivalent (GE) stands for a two- input nand gate and corresponds to four MOSFETs in static CMOS; a flip-flop takes roughly 7 GEs. Memory circuits are rated according to storage capacity in bits. 
 
-## marketing pov
+## Marketing pov
 - general purpose IC: The function of a general-purpose IC is either so simple or so generic that the component is being used in a multitude of applications and typically sold in huge quantities.
 - application specific IC
     - glue logic
     - The term system-on- a-chip (SoC) has been coined to reflect the development of the ASICs
 
-## fabrication POV
+## Fabrication POV
 - full custom IC: layers are patterned according to user specifications.
 - semi custom IC: Only a small subset of fabrication layers is unique to each design. there is a master preprocessed layer or template, in which the gates, transistor or whatever will be interconnected depends on user needs using a connection layer. 
 - field programmable logic: . No custom photomasks are involved. Field- programmable logic (FPL) devices are best viewed as “soft hardware"
 
-## developer POV
+## Developer POV
 - hand layout: slow, expensive, prone to errors, but it can out performs synthesis based designs
 - Cell libraries and schematic entry: cell libraries encapsulates the physical details and allows a faster and easier development using schematics entries. The developer has to connect in a schematic blocks.
     - microcells: flip-flop, logic gates, registers
@@ -120,7 +120,7 @@ image here cpld
 
 -  In digital circuit theory, sequential logic is a type of logic circuit whose output depends not only on the present value of its input signals but on the sequence of past inputs, the input history. This is in contrast to combinational logic, whose output is a function of only the present input. That is, sequential logic has state (memory) while combinational logic does not. 
 
-## key concepts and constructs of VHDL
+## Key concepts and constructs of VHDL
 - Circuit hierarchy and connectivity
     - Abstraction, modularity, and repetition further help to arrive at manageable circuit descriptions. Any HDL that wants itself useful must support these techniques.
     - The interface is specified in the entity declaration whereas the details of its implementation are captured in a language element called architecture body, or architecture for short
@@ -141,7 +141,7 @@ image here cpld
 
 - A discrete replacement for electrical signals
     - Distinguishing between logic 0 and 1 is inadequate for modeling the binary signals found in digital circuits. A more elaborate multi-valued logic system must be sought that is capable of capturing the effects of both node voltage and source impedance 
-    - Node voltage is quantized into three logic states:
+    - Node voltage is quantized into three logic states:  
             - low: logic low, that is below Ul.
             - high: logic high, that is above Uh.
             - unknown: may be either “low”, “high”, or anywhere in the forbidden interval in between, e.g. as a result from a short between two conflicting drivers.
