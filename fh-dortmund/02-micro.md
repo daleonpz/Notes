@@ -142,16 +142,16 @@ image here cpld
 - A discrete replacement for electrical signals
     - Distinguishing between logic 0 and 1 is inadequate for modeling the binary signals found in digital circuits. A more elaborate multi-valued logic system must be sought that is capable of capturing the effects of both node voltage and source impedance 
     - Node voltage is quantized into three logic states:  
-            - low: logic low, that is below Ul.  
-            - high: logic high, that is above Uh.  
-            - unknown: may be either “low”, “high”, or anywhere in the forbidden interval in between, e.g. as a result from a short between two conflicting drivers.  
+            - **low**: logic low, that is below Ul.  
+            - **high**: logic high, that is above Uh.  
+            - **unknown**: may be either “low”, “high”, or anywhere in the forbidden interval in between, e.g. as a result from a short between two conflicting drivers.  
     - The amount of current that a subcircuit can sink or source  gets mapped onto three discrete drive strengths:  
-            - strong: the low impedance value commonly exhibited by a driving output.  
-            - high-impedance: the almost infinite impedance exhibited by a disabled three-state output.  
-            - weak: an impedance somewhere between “strong” and “high-impedance”  
+            - **strong**: the low impedance value commonly exhibited by a driving output.  
+            - **high-impedance**: the almost infinite impedance exhibited by a disabled three-state output.  
+            - **weak**: an impedance somewhere between “strong” and “high-impedance”  
     - Two extra values have been added, namely:  
-            - uninitialized: has never been assigned any value, e.g. the internal state of a storage element immediately after power-up, distinguished from “unknown" as the latter can arise from causes other than failed initialization (applicable to simulation only).  
-            - don’t care: whether the node is “low” or “high” is considered immaterial, used by designers to leave the choice to the logic optimization tool (applicable to synthesis only).  
+            - **uninitialized**: has never been assigned any value, e.g. the internal state of a storage element immediately after power-up, distinguished from “unknown" as the latter can arise from causes other than failed initialization (applicable to simulation only).  
+            - **don’t care**: whether the node is “low” or “high” is considered immaterial, used by designers to leave the choice to the logic optimization tool (applicable to synthesis only).  
 
 ![std logic values](images/micro_std_logic_values.png)
 
@@ -163,7 +163,7 @@ image here cpld
     - A signal, in contrast, is a typical element of VHDL. It is defined over time, which implies that a
     - A signal not only holds a present value, but also past values, plus those values that are anticipated to become manifest in the future. The effect of a signal assignment is not felt before the delay specified in the after clause has expired.
 
-![Signal vs Variables](images/micro_signal_vs_var.png)
+    ![Signal vs Variables](images/micro_signal_vs_var.png)
     
     - VHDL signals convey time-varying information between processes via the event queue. They are instrumental in process invocation which is directed by the same mechanism.  Variables, in contrast, are confined to within a process statement or a subprogram and do not interact with the event queue in any way.
     - A signal assignment does not become effective before the delay specified in the after clause has expired. In the absence of an explicit indication, there is a delay of one simulation cycle, so the effect can never be felt in the next statement. This sharply contrasts with a variable assignment the effect of which is felt immediately.
