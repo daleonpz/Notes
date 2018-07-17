@@ -110,3 +110,6 @@ image here cpld
     - Situations where agility is crucial because specifications are subject to change at any time,
     - Products that sell in modest quantities or where time to market is paramount, and for
     - Products that need to be reconfigured from remote.
+
+
+- (put somewhere): In digital circuit theory, sequential logic is a type of logic circuit whose output depends not only on the present value of its input signals but on the sequence of past inputs, the input history. This is in contrast to combinational logic, whose output is a function of only the present input. That is, sequential logic has state (memory) while combinational logic does not. 
