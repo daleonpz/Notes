@@ -255,7 +255,7 @@ end record;
 - Timing constrains
     - A timing constraint is a user-defined target for some timing quantity that the final circuit must meet.
 
-![Trade off](images/micro_tradeoffs.png)
+    ![Trade off](images/micro_tradeoffs.png)
 
     - Timing-related HDL constructs are for simulation purposes exclusively and get ignored during synthesis. They serve to model the behavior of existing circuits, not to impose target
     - As a workaround, timing and other synthesis directives must be expressed with the aid of proprietary language extensions or with scripting languages such as Tcl
