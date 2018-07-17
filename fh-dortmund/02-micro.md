@@ -206,12 +206,18 @@ for all: xnor2_gate use entity GTECH_XNOR2(behavioral);
 ```
 
 - Concepts borrowed from programming languages
+    - VHDL supports information hiding and incremental compilation.
+    - A `subtype` shares the operations with its parent type, but differs in that it takes on a subset of data values only.
 
 ```vhdl
+subtype day is integer range 1 to 31;
+
 constant FERMAT_PRIME_4 : integer := 65537;
 variable Brd : real := 2.48678E5;
+
 -- enum
 type month is (JANUARY, FEBRUARY, ... , DECEMBER);
+
 -- type declaration
 type audiosample is signed(23 downto 0);
 
@@ -222,13 +228,6 @@ type date is record
     date_day : day;
 end record;
 ```
-
-    - A subtype shares the operations with its parent type, but differs in that it takes on a subset of data values only.
-
-```vhdl
-subtype day is integer range 1 to 31;
-```
-    - VHDL supports information hiding and incremental compilation.
 
 ## Automatic circuit synthesis from hdl models
 - Automatic synthesis aims at turning some sort of behavioral description into a gate-level netlist with as little human intervention as possible.
