@@ -142,16 +142,16 @@ image here cpld
 - A discrete replacement for electrical signals
     - Distinguishing between logic 0 and 1 is inadequate for modeling the binary signals found in digital circuits. A more elaborate multi-valued logic system must be sought that is capable of capturing the effects of both node voltage and source impedance 
     - Node voltage is quantized into three logic states:  
-            - low: logic low, that is below Ul.
-            - high: logic high, that is above Uh.
-            - unknown: may be either “low”, “high”, or anywhere in the forbidden interval in between, e.g. as a result from a short between two conflicting drivers.
-    - The amount of current that a subcircuit can sink or source  gets mapped onto three discrete drive strengths:
-            - strong: the low impedance value commonly exhibited by a driving output.
-            - high-impedance: the almost infinite impedance exhibited by a disabled three-state output.
-            - weak: an impedance somewhere between “strong” and “high-impedance”
-    - Two extra values have been added, namely:
-            - uninitialized: has never been assigned any value, e.g. the internal state of a storage element immediately after power-up, distinguished from “unknown" as the latter can arise from causes other than failed initialization (applicable to simulation only).
-            - don’t care: whether the node is “low” or “high” is considered immaterial, used by designers to leave the choice to the logic optimization tool (applicable to synthesis only).
+            - low: logic low, that is below Ul.  
+            - high: logic high, that is above Uh.  
+            - unknown: may be either “low”, “high”, or anywhere in the forbidden interval in between, e.g. as a result from a short between two conflicting drivers.  
+    - The amount of current that a subcircuit can sink or source  gets mapped onto three discrete drive strengths:  
+            - strong: the low impedance value commonly exhibited by a driving output.  
+            - high-impedance: the almost infinite impedance exhibited by a disabled three-state output.  
+            - weak: an impedance somewhere between “strong” and “high-impedance”  
+    - Two extra values have been added, namely:  
+            - uninitialized: has never been assigned any value, e.g. the internal state of a storage element immediately after power-up, distinguished from “unknown" as the latter can arise from causes other than failed initialization (applicable to simulation only).  
+            - don’t care: whether the node is “low” or “high” is considered immaterial, used by designers to leave the choice to the logic optimization tool (applicable to synthesis only).  
 
 ![std logic values](images/micro_std_logic_values.png)
 
