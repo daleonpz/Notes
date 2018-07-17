@@ -153,9 +153,9 @@ image here cpld
             - **uninitialized**: has never been assigned any value, e.g. the internal state of a storage element immediately after power-up, distinguished from “unknown" as the latter can arise from causes other than failed initialization (applicable to simulation only).  
             - **don’t care**: whether the node is “low” or “high” is considered immaterial, used by designers to leave the choice to the logic optimization tool (applicable to synthesis only).  
 
-![std logic values](images/micro_std_logic_values.png)
+    ![std logic values](images/micro_std_logic_values.png)
 
-![arithmetic](images/micro_arithmetics.png)
+    ![arithmetic](images/micro_arithmetics.png)
 
 - An event-driven scheme of execution
     - In VHDL simulation, the continuum of time gets subdivided by events each of which occurs at a precise moment of simulation time. An event is said to happen whenever the value of a signal changes.
