@@ -91,7 +91,8 @@ manipulate payload data
 - SPLD: simple programmable logic devices
 - CPLD: Complex programmable logic devices
 - PAL: programmable array logic 
-image here cpld
+
+![CPLD](images/micro_cpld.png)
 
 - FPGA: field programmable gate array
     - Many configurable logic cells are arranged in a two-dimensional array with bundles of parallel wires in between. 
