@@ -10,16 +10,16 @@ title: Deutsch Wörterbuch
 - verbrauchen: Heute haben wir alle Weltesresourcen verbraucht
 - leisten: Sie haben mir einen guten Dienst geleist
 - zugeben: ich muss zugeben, ich habe die schlechte Wahl ausgewählt.
-- ertragen
-- streiken
-- reichen
-- entfernen
-- bewohnen
-- wecken(+etwas)
-- mustern
-- abbringen
-- wagen (etwas)
-- bemerken
+- ertragen: Diese Temperatur könnten wir nicht ertragen. Sie ist zu heiz.
+- streiken: Die Busfahrer  streiken eine Woche lang
+- reichen: Kannst du mir mal das Salz reichen?
+- entfernen: Die Bewohnere wurden entfernt
+- bewohnen: Jetzt bewohnt ihr dieses Land
+- wecken(+etwas): die Drifting  guys wecken mich jeden Nacht. Ich hasse sie.
+- mustern: Die Polizei mustert das Haus, um Spuren zu finden
+- abbringen: ich muss meine Hausaufgabe machen. nicht bring mich davor ab, meine Hausaufgabe zu machen.  
+- wagen (etwas): du wagst nicht zu springen.
+- bemerken;  haben Sie letzte Woche den Hinweis bemerkt? 
 
 # Nomen: 
 - der Wald (ä-er)
@@ -33,8 +33,6 @@ title: Deutsch Wörterbuch
 # adjektive: 
 - umgekehrt: bei mir ist es umgekehrt. ich meine, das funktioniert nicht für mich.
 - ungefähr: ich habe umgefähr 110 Euro. ich habe genau 109.9 Euros 
-- umgekehrt
-- ungefähr
 - selten
 - wahnsinning
 - durchschnittlich
