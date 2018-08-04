@@ -20,6 +20,8 @@ title: Deutsch Wörterbuch
 - abbringen: ich muss meine Hausaufgabe machen. nicht bring mich davor ab, meine Hausaufgabe zu machen.  
 - wagen (etwas): du wagst nicht zu springen.
 - bemerken;  haben Sie letzte Woche den Hinweis bemerkt? 
+- betrachten: 
+- zugreifen
 
 # Nomen: 
 - der Wald (ä-er)
@@ -39,6 +41,8 @@ title: Deutsch Wörterbuch
 - entfernt
 - einsamer 
 - bezaubernd
+- nützlich
+- nötig 
 
 # adverb
 - überhaupt 
