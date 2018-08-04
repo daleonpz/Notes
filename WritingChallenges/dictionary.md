@@ -20,17 +20,18 @@ title: Deutsch Wörterbuch
 - abbringen: ich muss meine Hausaufgabe machen. nicht bring mich davor ab, meine Hausaufgabe zu machen.  
 - wagen (etwas): du wagst nicht zu springen.
 - bemerken;  haben Sie letzte Woche den Hinweis bemerkt? 
-- betrachten: 
-- zugreifen
+- betrachten:  ich betrachten sie als Freundin.
+- zugreifen: ich kann den Server nicht zugreifen
+- verwenden: der Spruch wird regelmäßig verwendet 
 
 # Nomen: 
-- der Wald (ä-er)
-- die Wand (Wände)
-- der Erwachsene (-n)
-- das Geheimnis (-se)
-- das Abwasser
-- der Durchschnitt (-e)
-- die Stimme (-n)
+- der Wald (ä-er):  Wegen der hochen Temperature fing der Wand Feuer.
+- die Wand (Wände): ich habe Posters an die Wand gehängt
+- der Erwachsene (-n):  Erwachsenen waren einst Kinder 
+- das Geheimnis (-se):  das ist ein Geheimnis, das niemand weißt. 
+- das Abwasser: wir müssen Abwasser nicht trinken. Das ist nicht sauber 
+- der Durchschnitt (-e): Im Durchschnitt, wie viel Geld verdienst du pro Monat? 
+- die Stimme (-n): Deine Stimme ist sehr bezaubernd. Es ist, als würde man einem Engel beim Singen zuhören
 
 # adjektive: 
 - umgekehrt: bei mir ist es umgekehrt. ich meine, das funktioniert nicht für mich.
@@ -43,6 +44,7 @@ title: Deutsch Wörterbuch
 - bezaubernd
 - nützlich
 - nötig 
+- neugierig
 
 # adverb
 - überhaupt 
@@ -57,5 +59,7 @@ title: Deutsch Wörterbuch
 - weder ... noch
     ich spreche mit ihm weder über Politik noch über Geogpraphie
 
-
+- je adjektive comp ..., desto adjektive comp ...
+    je mehr ich lerne, desto mehr gefällt es mir
+    je schwieriger es ist, desto weniger Lust habe ich
 
