@@ -27,6 +27,7 @@ title: Deutsch Wörterbuch
 - auskommen:
 - verschwenden: 
 - festlegen: 
+- schätzen: 
 
 # Nomen: 
 - der Wald (ä-er):  Wegen der hochen Temperature fing der Wand Feuer.
@@ -36,6 +37,7 @@ title: Deutsch Wörterbuch
 - das Abwasser: wir müssen Abwasser nicht trinken. Das ist nicht sauber 
 - der Durchschnitt (-e): Im Durchschnitt, wie viel Geld verdienst du pro Monat? 
 - die Stimme (-n): Deine Stimme ist sehr bezaubernd. Es ist, als würde man einem Engel beim Singen zuhören
+- die Mühe (-n): 
 
 # adjektive: 
 - umgekehrt: bei mir ist es umgekehrt. ich meine, das funktioniert nicht für mich.
