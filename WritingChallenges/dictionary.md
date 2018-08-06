@@ -29,6 +29,7 @@ title: Deutsch Wörterbuch
 - festlegen: 
 - schätzen: 
 - untersagen:
+- kümmern
 
 # Nomen: 
 - der Wald (ä-er):  Wegen der hochen Temperature fing der Wand Feuer.
@@ -40,6 +41,7 @@ title: Deutsch Wörterbuch
 - die Stimme (-n): Deine Stimme ist sehr bezaubernd. Es ist, als würde man einem Engel beim Singen zuhören
 - die Mühe (-n): 
 - die Verantwortung (-en):
+- die Wahrnehmung (-en): 
 
 # adjektive: 
 - umgekehrt: bei mir ist es umgekehrt. ich meine, das funktioniert nicht für mich.
