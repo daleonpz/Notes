@@ -28,6 +28,7 @@ title: Deutsch Wörterbuch
 - verschwenden: 
 - festlegen: 
 - schätzen: 
+- untersagen:
 
 # Nomen: 
 - der Wald (ä-er):  Wegen der hochen Temperature fing der Wand Feuer.
@@ -38,6 +39,7 @@ title: Deutsch Wörterbuch
 - der Durchschnitt (-e): Im Durchschnitt, wie viel Geld verdienst du pro Monat? 
 - die Stimme (-n): Deine Stimme ist sehr bezaubernd. Es ist, als würde man einem Engel beim Singen zuhören
 - die Mühe (-n): 
+- die Verantwortung (-en):
 
 # adjektive: 
 - umgekehrt: bei mir ist es umgekehrt. ich meine, das funktioniert nicht für mich.
