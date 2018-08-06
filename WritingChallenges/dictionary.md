@@ -29,7 +29,8 @@ title: Deutsch Wörterbuch
 - festlegen: 
 - schätzen: 
 - untersagen:
-- kümmern
+- kümmern:
+- zunehmen:
 
 # Nomen: 
 - der Wald (ä-er):  Wegen der hochen Temperature fing der Wand Feuer.
