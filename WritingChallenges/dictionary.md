@@ -23,6 +23,10 @@ title: Deutsch Wörterbuch
 - betrachten:  ich betrachten sie als Freundin.
 - zugreifen: ich kann den Server nicht zugreifen
 - verwenden: der Spruch wird regelmäßig verwendet 
+- vermeiden: 
+- auskommen:
+- verschwenden: 
+- festlegen: 
 
 # Nomen: 
 - der Wald (ä-er):  Wegen der hochen Temperature fing der Wand Feuer.
@@ -45,6 +49,7 @@ title: Deutsch Wörterbuch
 - nützlich
 - nötig 
 - neugierig
+- verwirrt 
 
 # adverb
 - überhaupt 
