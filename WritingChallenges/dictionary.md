@@ -31,6 +31,8 @@ title: Deutsch Wörterbuch
 - untersagen:
 - kümmern:
 - zunehmen:
+- wandern: 
+- annehmen:
 
 # Nomen: 
 - der Wald (ä-er):  Wegen der hochen Temperature fing der Wand Feuer.
