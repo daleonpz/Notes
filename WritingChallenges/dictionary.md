@@ -3,9 +3,13 @@ title: Deutsch Wörterbuch
 ---
 
 # verben: 
-- erscheinen: Jemand ist vor meinem Fenster erschienen.
+- erscheinen: 
+    Jemand ist vor meinem Fenster erschienen.
+    Heute war ich im Calisthenicspark, und viele Leute sind nirgendwo erschieden. 
 - widmen: ich habe dir das Buch gewidmet
-- begegnen: Manchmal bin ich mit Erwachsenen begegnet 
+- begegnen:
+    Manchmal bin ich mit Erwachsenen begegnet 
+    ja..  heute bin ich mit Sergey begegnet.
 - zeichnen: ich zeichne ein Pferd in der Schule 
 - verbrauchen: Heute haben wir alle Weltesresourcen verbraucht
 - leisten: Sie haben mir einen guten Dienst geleist
@@ -13,26 +17,45 @@ title: Deutsch Wörterbuch
 - ertragen: Diese Temperatur könnten wir nicht ertragen. Sie ist zu heiz.
 - streiken: Die Busfahrer  streiken eine Woche lang
 - reichen: Kannst du mir mal das Salz reichen?
-- entfernen: Die Bewohnere wurden entfernt
+- entfernen: 
+    Die Bewohnere wurden entfernt
+    Wir haben die Fenster entfernt
 - bewohnen: Jetzt bewohnt ihr dieses Land
 - wecken(+etwas): die Drifting  guys wecken mich jeden Nacht. Ich hasse sie.
-- mustern: Die Polizei mustert das Haus, um Spuren zu finden
+- mustern: 
+    Die Polizei mustert das Haus, um Spuren zu finden
+    Ich musste Pedros Code gemustert, um Fehler zu finden
 - abbringen: ich muss meine Hausaufgabe machen. nicht bring mich davor ab, meine Hausaufgabe zu machen.  
 - wagen (etwas): du wagst nicht zu springen.
-- bemerken;  haben Sie letzte Woche den Hinweis bemerkt? 
-- betrachten:  ich betrachten sie als Freundin.
+- bemerken:
+    haben Sie letzte Woche den Hinweis bemerkt? 
+    hast du etwas Neues bemerkt? 
+- betrachten:  
+    ich betrachten sie als Freundin.
+    wollen Sie meine Briefkarte betrachten?
 - zugreifen: ich kann den Server nicht zugreifen
-- verwenden: der Spruch wird regelmäßig verwendet 
-- vermeiden: 
+- verwenden: 
+    der Spruch wird regelmäßig verwendet 
+- vermeiden:
+    ich vemeide, spät aufzuwachen 
 - auskommen:
+    Wie kommst du mit deinem Chef aus?
 - verschwenden: 
+    Heute mit Pedros Code habe ich viele Stunden verschwendet
 - festlegen: 
+    Trump hat eine neune Regierung festgelegt
 - schätzen: 
+    ich schätze deine Mühe 
 - untersagen:
+    er hat mich untersagt, hier zu rauchen
 - kümmern:
+    die Verbraucher kümmern sich um alles. 
 - zunehmen:
-- wandern: 
+    die Feindlichkeit gegen Ausländer hat zugenommen 
+- wandern:
+    warte auf mich!! ich wandere 
 - annehmen:
+    ich nehme an, dass er etwas schrekliches machen hat
 
 # Nomen: 
 - der Wald (ä-er):  Wegen der hochen Temperature fing der Wand Feuer.
@@ -49,8 +72,8 @@ title: Deutsch Wörterbuch
 # adjektive: 
 - umgekehrt: bei mir ist es umgekehrt. ich meine, das funktioniert nicht für mich.
 - ungefähr: ich habe umgefähr 110 Euro. ich habe genau 109.9 Euros 
-- selten
-- wahnsinning
+- selten: wie oft machst du das? nicht oft, selten mache ich das
+- wahnsinning: was ist mir dir passiert? Gestern warst du wahnsinning
 - durchschnittlich
 - entfernt
 - einsamer 
