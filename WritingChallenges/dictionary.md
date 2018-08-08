@@ -56,6 +56,7 @@ title: Deutsch Wörterbuch
     warte auf mich!! ich wandere 
 - annehmen:
     ich nehme an, dass er etwas schrekliches machen hat
+- abhalten
 
 # Nomen: 
 - der Wald (ä-er):  Wegen der hochen Temperature fing der Wand Feuer.
