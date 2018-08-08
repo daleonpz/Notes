@@ -91,6 +91,7 @@ title: Deutsch Wörterbuch
 - einen Blick darauf werfen 
 - hängt von ... ab
 - das kommnt darauf an 
+- in wie fern? 
 
 # construction: 
 - weder ... noch
