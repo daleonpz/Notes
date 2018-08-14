@@ -57,6 +57,12 @@ title: Deutsch Wörterbuch
 - annehmen:
     ich nehme an, dass er etwas schrekliches machen hat
 - abhalten
+- beleidigen
+- herausfinden
+- enthüllen
+- erstellen
+- versinken
+- anbinden
 
 # Nomen: 
 - der Wald (ä-er):  Wegen der hochen Temperature fing der Wand Feuer.
@@ -69,6 +75,9 @@ title: Deutsch Wörterbuch
 - die Mühe (-n): 
 - die Verantwortung (-en):
 - die Wahrnehmung (-en): 
+- die Fähigkeit
+- die Menge (-n)
+- die Gefahr (-en)
 
 # adjektive: 
 - umgekehrt: bei mir ist es umgekehrt. ich meine, das funktioniert nicht für mich.
@@ -83,6 +92,7 @@ title: Deutsch Wörterbuch
 - nötig 
 - neugierig
 - verwirrt 
+- verlegen
 
 # adverb
 - überhaupt 
