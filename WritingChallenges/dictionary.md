@@ -21,18 +21,20 @@ title: Deutsch Wörterbuch
     Die Bewohnere wurden entfernt
     Wir haben die Fenster entfernt
 - bewohnen: Jetzt bewohnt ihr dieses Land
-- wecken(+etwas): die Drifting  guys wecken mich jeden Nacht. Ich hasse sie.
+- wecken(+etwas): 
+    die Drifting  guys wecken mich jeden Nacht. Ich hasse sie.
 - mustern: 
     Die Polizei mustert das Haus, um Spuren zu finden
     Ich musste Pedros Code gemustert, um Fehler zu finden
 - abbringen: ich muss meine Hausaufgabe machen. nicht bring mich davor ab, meine Hausaufgabe zu machen.  
-- wagen (etwas): du wagst nicht zu springen.
+- wagen (etwas):
+    du wagst nicht zu springen.
 - bemerken:
     haben Sie letzte Woche den Hinweis bemerkt? 
     hast du etwas Neues bemerkt? 
 - betrachten:  
     ich betrachten sie als Freundin.
-    wollen Sie meine Briefkarte betrachten?
+    wollen Sie meine Briefkarte betrachten? ich brauche die Arbeit
 - zugreifen: ich kann den Server nicht zugreifen
 - verwenden: 
     der Spruch wird regelmäßig verwendet 
@@ -49,20 +51,22 @@ title: Deutsch Wörterbuch
 - untersagen:
     er hat mich untersagt, hier zu rauchen
 - kümmern:
-    die Verbraucher kümmern sich um alles. 
+    die Verbraucher kümmern sich um alles.
+    ich kümmere mich um meinen Hund 
 - zunehmen:
     die Feindlichkeit gegen Ausländer hat zugenommen 
 - wandern:
     warte auf mich!! ich wandere 
 - annehmen:
     ich nehme an, dass er etwas schrekliches machen hat
-- abhalten
 - beleidigen
+    er hat mich beileidigt. er hat mir gesagt, dass ich Scheiße bin
 - herausfinden
-- enthüllen
+    Es dauerte eine Weile, bis ich herausfand, woher er kam
 - erstellen
-- versinken
+    Wir wollen die Dokumentation erstellen, weil keine es gibt.
 - anbinden
+    Dieser Hund ist angeburden worde.
 
 # Nomen: 
 - der Wald (ä-er):  Wegen der hochen Temperature fing der Wand Feuer.
@@ -75,7 +79,7 @@ title: Deutsch Wörterbuch
 - die Mühe (-n): 
 - die Verantwortung (-en):
 - die Wahrnehmung (-en): 
-- die Fähigkeit
+- die Fähigkeit (-e): 
 - die Menge (-n)
 - die Gefahr (-en)
 
