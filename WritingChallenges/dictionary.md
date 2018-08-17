@@ -67,6 +67,8 @@ title: Deutsch Wörterbuch
     Wir wollen die Dokumentation erstellen, weil keine es gibt.
 - anbinden
     Dieser Hund ist angeburden worde.
+- verarbeiten
+- verwirren
 
 # Nomen: 
 - der Wald (ä-er):  Wegen der hochen Temperature fing der Wand Feuer.
