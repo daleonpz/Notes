@@ -69,7 +69,42 @@ title: Deutsch Wörterbuch
     Dieser Hund ist angeburden worde.
 - verarbeiten
 - verwirren
-
+- besprechen:
+    Wir besprechen die Situation
+- geschehen
+    Es geschieht oft
+- beachten 
+    Bitte beachten Sie die allgemeinen Hinweise
+- bedecken
+    Jemand hat die Leiche mit einem Tuch bedeckt
+- gehorchen 
+    Sie müssen dem Bischof gehorchen
+- zerbrechen
+- überwinden:
+    er hat seine Angst überwunden
+- reagieren
+    wie regiert die Politik?
+- ansiedeln
+    Die Einrichtungen hat angesiedelt
+- befinden:
+    ich befinde mich im Zuhause
+- trauen
+    ich traue diese Leute nicht
+- überzeugen
+    Erst nach Vorlage der Beweise konnte ich ihn überzeugen    
+- raten
+    Ich rate dir dazu, die Chance zu ergreifen.
+    Lass mich raten, wer das Gast ist.
+- einstellen
+     Nachdem das Thermostat richtig eingestellt war, hatte er es endlich warm in der Wohnung.
+- betreiben
+    den Abschluss einer Arbeit energisch betreibeen
+- beteiligen
+    Wir kaufen unserer Mutter  ein Geschenk. Beteiligst du dich? 
+- feststellen 
+    Der Notar stellte fest, dass der Vertrag noch nicht unterschrifftreif war
+    
+    
 # Nomen: 
 - der Wald (ä-er):  Wegen der hochen Temperature fing der Wand Feuer.
 - die Wand (Wände): ich habe Posters an die Wand gehängt
@@ -84,6 +119,11 @@ title: Deutsch Wörterbuch
 - die Fähigkeit (-e): 
 - die Menge (-n)
 - die Gefahr (-en)
+- die Einrichtung (-en)
+- das Vertrauen 
+- die Vorlage (-n)
+- der Beweis (-e)
+- die Fläche (-n)
 
 # adjektive: 
 - umgekehrt: bei mir ist es umgekehrt. ich meine, das funktioniert nicht für mich.
@@ -99,6 +139,8 @@ title: Deutsch Wörterbuch
 - neugierig
 - verwirrt 
 - verlegen
+- entsprechend
+- beteiligt
 
 # adverb
 - überhaupt 
