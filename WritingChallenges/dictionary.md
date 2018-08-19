@@ -103,7 +103,10 @@ title: Deutsch Wörterbuch
     Wir kaufen unserer Mutter  ein Geschenk. Beteiligst du dich? 
 - feststellen 
     Der Notar stellte fest, dass der Vertrag noch nicht unterschrifftreif war
-    
+- beschränk:
+    Der Eingang wurde bescränkt 
+- ermöglichen
+    Du kannst unseren Zugang ermöglichen
     
 # Nomen: 
 - der Wald (ä-er):  Wegen der hochen Temperature fing der Wand Feuer.
