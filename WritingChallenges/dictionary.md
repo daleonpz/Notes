@@ -107,6 +107,10 @@ title: Deutsch Wörterbuch
     Der Eingang wurde bescränkt 
 - ermöglichen
     Du kannst unseren Zugang ermöglichen
+- provozieren
+- erregen
+    eine erregte Diskussion
+    ihr Anblick erregte ihn
     
 # Nomen: 
 - der Wald (ä-er):  Wegen der hochen Temperature fing der Wand Feuer.
