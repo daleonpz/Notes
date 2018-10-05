@@ -111,6 +111,8 @@ title: Deutsch Wörterbuch
 - erregen
     eine erregte Diskussion
     ihr Anblick erregte ihn
+- verderben:
+    Lass uns essen ohne uns den Magen zu verderben
     
 # Nomen: 
 - der Wald (ä-er):  Wegen der hochen Temperature fing der Wand Feuer.
