@@ -8,45 +8,62 @@ title: Deutsch Wörterbuch
     - Ich konnte den Sprung nicht machen, weil du mich abgelenkt hast. 
 - vermasseln:
     - _wenn jemand etwas falsch macht_
-    - ich vermasseln es immer. Warum kann ich das nicht richtig machen?
+    - ich vermassel es immer. Warum kann ich das nicht richtig machen?
 - anfassen:
+    - _wenn man seinen Finger oder seine Hand auf etwas legt_
     - Fass es nicht an! das ist meines
-- erscheinen: 
+- erscheinen:
     - Jemand ist vor meinem Fenster erschienen.
     - Heute war ich im Calisthenicspark, und viele Leute sind nirgendwo erschieden. 
 - widmen: 
     - ich habe dir das Buch gewidmet
 - begegnen:
+    - _wenn man jemand unerwartet trifft_ 
     - Manchmal bin ich mit Erwachsenen begegnet 
     - ja..  heute bin ich mit Sergey begegnet.
-- zeichnen: 
+- zeichnen:
+    - _wenn jemand mit Bleistifften  ein Modell von etwas macht_ 
     - ich zeichne ein Pferd in der Schule 
-- verbrauchen: 
+- verbrauchen:
+    - _wenn jemand für sich selbst Resourcen nutzt_  
     - Heute haben wir alle Weltesresourcen verbraucht
 - leisten: 
+    - _wenn jemand ein Job für jemand anderen gemacht hat_
     - Sie haben mir einen guten Dienst geleist
-- zugeben: 
+- zugeben:
+    - nächstes mal werdt ihr zugeben sollen, dass ich richtig war. 
     - ich muss zugeben, ich habe die schlechte Wahl ausgewählt.
 - ertragen: 
     - Diese Temperatur könnten wir nicht ertragen. Sie ist zu heiz.
 - streiken: 
+    - _wenn die Arbeiter aufhören zu arbeiten_ 
     - Die Busfahrer  streiken eine Woche lang
 - reichen: 
+    - _wenn jemand etwas nimmt, um jemand anderem zu geben_ 
     - Kannst du mir mal das Salz reichen?
-- entfernen: 
+- entfernen:
     - Die Bewohnere wurden entfernt
     - Wir haben die Fenster entfernt
 - bewohnen: 
     - Jetzt bewohnt ihr dieses Land
-- wecken(+etwas): 
+- wecken(+etwas):
+    - _aufwachen_  
     - die Drifting  guys wecken mich jede Nacht. Ich hasse sie.
-- mustern: 
+- mustern:
+    - _wenn man sich die Details ansieht, um etwas zu finden_ 
     - Die Polizei mustert das Haus, um Spuren zu finden
     - Ich musste Pedros Code gemustert, um Fehler zu finden
-- abbringen: 
+- abbringen:
+    - _wenn man jemanden davon abhählt, etwas zu tun_
     - ich muss meine Hausaufgabe machen. nicht bring mich davor ab, meine Hausaufgabe zu machen.  
+- abhalten:
+    - _abbringen_ 
 - wagen (etwas):
+    - _wenn man sich traut, etwas gefährlich zu tun_
     - du wagst nicht zu springen.
+- trauen:
+    - _wenn man keine Zweifel an jemanden hat_
+    - ich traue diseen Leuten nicht, sie sind mir suspekt
 - bemerken:
     - haben Sie letzte Woche den Hinweis bemerkt? 
     - hast du etwas Neues bemerkt? 
@@ -133,9 +150,10 @@ title: Deutsch Wörterbuch
 - verderben:
     - Lass uns essen ohne uns den Magen zu verderben
 - 
-
     
 # Nomen: 
+- der Zweifel (die): 
+ 
 - der Wald (ä-er):  
     - Wegen der hochen Temperature fing der Wand Feuer.
 - die Wand (Wände): 
