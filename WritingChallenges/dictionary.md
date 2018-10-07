@@ -3,6 +3,14 @@ title: Deutsch Wörterbuch
 ---
 
 # verben: 
+- ablenken:
+    - _wenn man sich nicht mehr konzentrieren kannt, weil etwas anderes passiert ist_
+    - Ich konnte den Sprung nicht machen, weil du mich abgelenkt hast. 
+- vermasseln:
+    - _wenn jemand etwas falsch macht_
+    - ich vermasseln es immer. Warum kann ich das nicht richtig machen?
+- anfassen:
+    - Fass es nicht an! das ist meines
 - erscheinen: 
     - Jemand ist vor meinem Fenster erschienen.
     - Heute war ich im Calisthenicspark, und viele Leute sind nirgendwo erschieden. 
@@ -31,7 +39,7 @@ title: Deutsch Wörterbuch
 - bewohnen: 
     - Jetzt bewohnt ihr dieses Land
 - wecken(+etwas): 
-    - die Drifting  guys wecken mich jeden Nacht. Ich hasse sie.
+    - die Drifting  guys wecken mich jede Nacht. Ich hasse sie.
 - mustern: 
     - Die Polizei mustert das Haus, um Spuren zu finden
     - Ich musste Pedros Code gemustert, um Fehler zu finden
@@ -153,8 +161,12 @@ title: Deutsch Wörterbuch
 - die Vorlage (-n)
 - der Beweis (-e)
 - die Fläche (-n)
+- die Aufmerksamkeit (-en)
+    - Darf ich um eure Aufmerksamkeit bitte?
 
-# adjektive: 
+# Adjektive: 
+- abgelenkt
+- peinlich
 - umgekehrt: 
     - bei mir ist es umgekehrt. ich meine, das funktioniert nicht für mich.
 - ungefähr: 
@@ -175,9 +187,13 @@ title: Deutsch Wörterbuch
 - entsprechend
 - beteiligt
 
-# adverb
+# Adverb
+- unbedingt:
+    - ich wollte das unbedingt machen. 
 - überhaupt 
 - aufmerksam
+- Angeblich:
+    - angeblich war es deine Schuld
 
 # Ausdrücken:  
 - einen Blick darauf werfen 
@@ -194,3 +210,5 @@ title: Deutsch Wörterbuch
     - je mehr ich lerne, desto mehr gefällt es mir
     - je schwieriger es ist, desto weniger Lust habe ich
 
+- nicht nur, sondern ... auch
+    - Ich lese nicht nur, sondern schreibe auch
