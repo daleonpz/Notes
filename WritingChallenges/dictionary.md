@@ -3,6 +3,14 @@ title: Deutsch Wörterbuch
 ---
 
 # verben: 
+- zerstören:
+    - Wir Menschen sind gut im zerstören.
+- verbringen:
+    - verbringt man sein ganzes Leben mit einer Person?
+- ausleben:
+    - das muss alles erstmal ausgelebt werden 
+- verfolgen:
+    - Sie verfolgen eine imaginäre Checklist 
 - ablenken:
     - _wenn man sich nicht mehr konzentrieren kannt, weil etwas anderes passiert ist_
     - Ich konnte den Sprung nicht machen, weil du mich abgelenkt hast. 
@@ -153,7 +161,7 @@ title: Deutsch Wörterbuch
     
 # Nomen: 
 - der Zweifel (die): 
- 
+- die Vielseitigkeit (-e):  
 - der Wald (ä-er):  
     - Wegen der hochen Temperature fing der Wand Feuer.
 - die Wand (Wände): 
@@ -179,10 +187,11 @@ title: Deutsch Wörterbuch
 - die Vorlage (-n)
 - der Beweis (-e)
 - die Fläche (-n)
-- die Aufmerksamkeit (-en)
+- die Aufmerksamkeit (-e)
     - Darf ich um eure Aufmerksamkeit bitte?
 
 # Adjektive: 
+- lahm
 - abgelenkt
 - peinlich
 - umgekehrt: 
