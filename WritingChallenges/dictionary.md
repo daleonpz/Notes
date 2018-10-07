@@ -4,8 +4,8 @@ title: Deutsch Wörterbuch
 
 # verben: 
 - erscheinen: 
-    Jemand ist vor meinem Fenster erschienen.
-    Heute war ich im Calisthenicspark, und viele Leute sind nirgendwo erschieden. 
+    - Jemand ist vor meinem Fenster erschienen.
+    - Heute war ich im Calisthenicspark, und viele Leute sind nirgendwo erschieden. 
 - widmen: ich habe dir das Buch gewidmet
 - begegnen:
     Manchmal bin ich mit Erwachsenen begegnet 
@@ -113,6 +113,8 @@ title: Deutsch Wörterbuch
     ihr Anblick erregte ihn
 - verderben:
     Lass uns essen ohne uns den Magen zu verderben
+- 
+
     
 # Nomen: 
 - der Wald (ä-er):  Wegen der hochen Temperature fing der Wand Feuer.
@@ -160,6 +162,7 @@ title: Deutsch Wörterbuch
 - hängt von ... ab
 - das kommnt darauf an 
 - in wie fern? 
+- eine Stelle bekommen. 
 
 # construction: 
 - weder ... noch
