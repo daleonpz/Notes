@@ -3,6 +3,15 @@ title: Deutsch Wörterbuch
 ---
 
 # verben: 
+- unterstützen:
+    - Das Video Team unterstütz.
+- vorstrecken:
+    - Du müsstest wohl das Zugticket vorstrecken
+- antriggern:
+    - Soll ich das schonmal antriggern?
+- 
+- sammeln:
+    - Bitte Themen auch hier gerne sammeln 
 - zerstören:
     - Wir Menschen sind gut im zerstören.
 - verbringen:
@@ -115,6 +124,7 @@ title: Deutsch Wörterbuch
 - verwirren
 - besprechen:
     - Wir besprechen die Situation
+    - Das müsstest du mit Eclipse besprechen
 - geschehen
     - Es geschieht oft
 - beachten 
@@ -160,6 +170,7 @@ title: Deutsch Wörterbuch
 - 
     
 # Nomen: 
+- die Abteilung (-en):
 - der Zweifel (die): 
 - die Vielseitigkeit (-e):  
 - der Wald (ä-er):  
