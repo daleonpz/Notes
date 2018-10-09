@@ -2,7 +2,10 @@
 title: Deutsch Wörterbuch
 ---
 
-# verben: 
+# verben:
+- stören:
+    - Der Imker darf die Bienen nicht stören 
+- verschmelzen
 - unterstützen:
     - Das Video Team unterstütz.
 - vorstrecken:
@@ -202,6 +205,8 @@ title: Deutsch Wörterbuch
     - Darf ich um eure Aufmerksamkeit bitte?
 
 # Adjektive: 
+- merkwürdig
+- locker 
 - lahm
 - abgelenkt
 - peinlich
