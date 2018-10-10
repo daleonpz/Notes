@@ -4,18 +4,21 @@ title: Deutsch Wörterbuch
 
 # verben:
 - stören:
+    - _wenn der Zustand des Systems sich ungewöhnlich verhält_
     - Der Imker darf die Bienen nicht stören 
 - verschmelzen
 - unterstützen:
+    - _wenn einer dem  anderen bei seiner Arbeit hilft_
     - Das Video Team unterstütz.
 - vorstrecken:
     - Du müsstest wohl das Zugticket vorstrecken
 - antriggern:
+    - _umgangssprache: die Bewerbung abschinken_
     - Soll ich das schonmal antriggern?
-- 
 - sammeln:
     - Bitte Themen auch hier gerne sammeln 
 - zerstören:
+    - _alles kaputtmachen_
     - Wir Menschen sind gut im zerstören.
 - verbringen:
     - verbringt man sein ganzes Leben mit einer Person?
