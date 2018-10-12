@@ -242,6 +242,7 @@ title: Deutsch Wörterbuch
     - angeblich war es deine Schuld
 
 # Ausdrücken:  
+- mag sich wer anschließen? 
 - einen Blick darauf werfen 
 - hängt von ... ab
 - das kommnt darauf an 
