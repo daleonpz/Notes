@@ -5,6 +5,9 @@ title: Deutsch Wörterbuch
 # Verben:
 - begeistern:
     - ich bin so begeistert
+- übertreiben:
+    - Die Werbung übertreibt oft die Vorteile eines Produkts.
+    - Du hast alles schlecht übertrieben
 - stören:
     - _wenn der Zustand des Systems sich ungewöhnlich verhält_
     - Der Imker darf die Bienen nicht stören 
