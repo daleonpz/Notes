@@ -2,19 +2,21 @@
 title: Deutsch Wörterbuch
 ---
 
-# verben:
+# Verben:
+- begeistern:
+    - ich bin so begeistert
 - stören:
     - _wenn der Zustand des Systems sich ungewöhnlich verhält_
     - Der Imker darf die Bienen nicht stören 
 - verschmelzen
 - unterstützen:
     - _wenn einer dem  anderen bei seiner Arbeit hilft_
-    - Das Video Team unterstütz.
+    - Das Video Team unterstützt.
 - vorstrecken:
     - Du müsstest wohl das Zugticket vorstrecken
 - antriggern:
-    - _umgangssprache: die Bewerbung abschinken_
-    - Soll ich das schonmal antriggern?
+    - _Umgangssprache: die Bewerbung abschicken_
+    - Soll ich das schon mal antriggern?
 - sammeln:
     - Bitte Themen auch hier gerne sammeln 
 - zerstören:
@@ -23,11 +25,11 @@ title: Deutsch Wörterbuch
 - verbringen:
     - verbringt man sein ganzes Leben mit einer Person?
 - ausleben:
-    - das muss alles erstmal ausgelebt werden 
+    - das muss alles erstmals ausgelebt werden 
 - verfolgen:
-    - Sie verfolgen eine imaginäre Checklist 
+    - Sie verfolgen eine imaginäre Checkliste 
 - ablenken:
-    - _wenn man sich nicht mehr konzentrieren kannt, weil etwas anderes passiert ist_
+    - _wenn man sich nicht mehr konzentrieren kann, weil etwas anderes passiert ist_
     - Ich konnte den Sprung nicht machen, weil du mich abgelenkt hast. 
 - vermasseln:
     - _wenn jemand etwas falsch macht_
@@ -37,7 +39,7 @@ title: Deutsch Wörterbuch
     - Fass es nicht an! das ist meines
 - erscheinen:
     - Jemand ist vor meinem Fenster erschienen.
-    - Heute war ich im Calisthenicspark, und viele Leute sind nirgendwo erschieden. 
+    - Heute war ich im Calisthenicspark, und viele Leute sind nirgendwo erschienen. 
 - widmen: 
     - ich habe dir das Buch gewidmet
 - begegnen:
@@ -45,16 +47,16 @@ title: Deutsch Wörterbuch
     - Manchmal bin ich mit Erwachsenen begegnet 
     - ja..  heute bin ich mit Sergey begegnet.
 - zeichnen:
-    - _wenn jemand mit Bleistifften  ein Modell von etwas macht_ 
+    - _wenn jemand mit Bleistiften  ein Modell von etwas macht_ 
     - ich zeichne ein Pferd in der Schule 
 - verbrauchen:
-    - _wenn jemand für sich selbst Resourcen nutzt_  
-    - Heute haben wir alle Weltesresourcen verbraucht
+    - _wenn jemand für sich selbst Ressourcen nutzt_  
+    - Heute haben wir alle Weltesressourcen verbraucht
 - leisten: 
     - _wenn jemand ein Job für jemand anderen gemacht hat_
-    - Sie haben mir einen guten Dienst geleist
+    - Sie haben mir einen guten Dienst geleistet
 - zugeben:
-    - nächstes mal werdt ihr zugeben sollen, dass ich richtig war. 
+    - nächstes mal werdet ihr zugeben sollen, dass ich richtig war. 
     - ich muss zugeben, ich habe die schlechte Wahl ausgewählt.
 - ertragen: 
     - Diese Temperatur könnten wir nicht ertragen. Sie ist zu heiz.
@@ -65,7 +67,7 @@ title: Deutsch Wörterbuch
     - _wenn jemand etwas nimmt, um jemand anderem zu geben_ 
     - Kannst du mir mal das Salz reichen?
 - entfernen:
-    - Die Bewohnere wurden entfernt
+    - Die Bewohnern wurden entfernt
     - Wir haben die Fenster entfernt
 - bewohnen: 
     - Jetzt bewohnt ihr dieses Land
@@ -77,7 +79,7 @@ title: Deutsch Wörterbuch
     - Die Polizei mustert das Haus, um Spuren zu finden
     - Ich musste Pedros Code gemustert, um Fehler zu finden
 - abbringen:
-    - _wenn man jemanden davon abhählt, etwas zu tun_
+    - _wenn man jemanden davon abhält, etwas zu tun_
     - ich muss meine Hausaufgabe machen. nicht bring mich davor ab, meine Hausaufgabe zu machen.  
 - abhalten:
     - _abbringen_ 
@@ -86,7 +88,7 @@ title: Deutsch Wörterbuch
     - du wagst nicht zu springen.
 - trauen:
     - _wenn man keine Zweifel an jemanden hat_
-    - ich traue diseen Leuten nicht, sie sind mir suspekt
+    - ich traue diesen Leuten nicht, sie sind mir suspekt
 - bemerken:
     - haben Sie letzte Woche den Hinweis bemerkt? 
     - hast du etwas Neues bemerkt? 
@@ -98,7 +100,7 @@ title: Deutsch Wörterbuch
 - verwenden: 
     - der Spruch wird regelmäßig verwendet 
 - vermeiden:
-    - ich vemeide, spät aufzuwachen 
+    - ich vermeide, spät aufzuwachen 
 - auskommen:
     - Wie kommst du mit deinem Chef aus?
 - verschwenden: 
@@ -117,15 +119,15 @@ title: Deutsch Wörterbuch
 - wandern:
     - warte auf mich!! ich wandere 
 - annehmen:
-    - ich nehme an, dass er etwas schrekliches machen hat
+    - ich nehme an, dass er etwas schreckliches machen hat
 - beleidigen
-    - er hat mich beileidigt. er hat mir gesagt, dass ich Scheiße bin
+    - er hat mich beleidigt. er hat mir gesagt, dass ich Scheiße bin
 - herausfinden
     - Es dauerte eine Weile, bis ich herausfand, woher er kam
 - erstellen
     - Wir wollen die Dokumentation erstellen, weil keine es gibt.
 - anbinden
-    - Dieser Hund ist angeburden worde.
+    - Dieser Hund ist angebunden worde.
 - verarbeiten
 - verwirren
 - besprechen:
@@ -158,7 +160,7 @@ title: Deutsch Wörterbuch
 - einstellen
     - Nachdem das Thermostat richtig eingestellt war, hatte er es endlich warm in der Wohnung.
 - betreiben
-    - den Abschluss einer Arbeit energisch betreibeen
+    - den Abschluss einer Arbeit energisch betreiben
 - beteiligen
     - Wir kaufen unserer Mutter  ein Geschenk. Beteiligst du dich? 
 - feststellen 
@@ -180,7 +182,7 @@ title: Deutsch Wörterbuch
 - der Zweifel (die): 
 - die Vielseitigkeit (-e):  
 - der Wald (ä-er):  
-    - Wegen der hochen Temperature fing der Wand Feuer.
+    - Wegen der hohen Temperaturen fing der Wand Feuer.
 - die Wand (Wände): 
     - ich habe Posters an die Wand gehängt
 - der Erwachsene (-n):  
@@ -216,11 +218,11 @@ title: Deutsch Wörterbuch
 - umgekehrt: 
     - bei mir ist es umgekehrt. ich meine, das funktioniert nicht für mich.
 - ungefähr: 
-    - ich habe umgefähr 110 Euro. ich habe genau 109.9 Euros 
+    - ich habe ungefähr 110 Euro. ich habe genau 109.9 Euros 
 - selten: 
     - wie oft machst du das? nicht oft, selten mache ich das
-- wahnsinning: 
-    - was ist mir dir passiert? Gestern warst du wahnsinning
+- wahnsinnig: 
+    - was ist mir dir passiert? Gestern warst du wahnsinnig
 - durchschnittlich
 - entfernt
 - einsamer 
@@ -245,15 +247,15 @@ title: Deutsch Wörterbuch
 - mag sich wer anschließen? 
 - einen Blick darauf werfen 
 - hängt von ... ab
-- das kommnt darauf an 
+- das kommt darauf an 
 - in wie fern? 
 - eine Stelle bekommen. 
 
-# construction: 
+# Konstruktion: 
 - weder ... noch
-    - ich spreche mit ihm weder über Politik noch über Geogpraphie
+    - ich spreche mit ihm weder über Politik noch über Geographie
 
-- je adjektive comp ..., desto adjektive comp ...
+- je Adjektiv comp ..., desto Adjektiv comp ...
     - je mehr ich lerne, desto mehr gefällt es mir
     - je schwieriger es ist, desto weniger Lust habe ich
 
