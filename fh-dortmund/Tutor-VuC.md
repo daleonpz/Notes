@@ -119,3 +119,45 @@ service "mynginxapp" deleted
 $ kubectl delete deployment mynginxapp
 deployment "mynginxapp" deleted
 ```
+
+## Other tutorial
+- check cluster info
+
+```sh
+$ kubectl cluster-info
+Kubernetes master is running at https://192.168.42.12:8443
+CoreDNS is running at https://192.168.42.12:8443/api/v1/namespaces/kube-system/services/kube-dns:dns/proxy
+
+```
+
+Let’s create a server.js file with the following content:
+
+```javascript
+var http = require('http');
+ 
+var handleRequest = function(request, response) {
+  console.log('Received request for URL: ' + request.url);
+  response.writeHead(200);
+  response.end('Hello World!');
+};
+var www = http.createServer(handleRequest);
+www.listen(8080);
+
+```
+
+- Test it 
+
+```sh
+$ node server.js &
+[1] 15970
+
+$ curl http://localhost:8080
+Received request for URL: /
+Hello World!
+
+# Kill the process node
+$ kill -9 15970 
+```
+
+- Convert to docker container
+
