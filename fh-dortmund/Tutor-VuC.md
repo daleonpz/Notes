@@ -161,3 +161,103 @@ $ kill -9 15970
 
 - Convert to docker container
 
+
+
+## New containter
+
+
+My app `server.js`
+
+```java
+var http = require('http');
+ 
+var handleRequest = function(request, response) {
+  console.log('Received request for URL: ' + request.url);
+  response.writeHead(200);
+  response.end('Hello World!');
+};
+var www = http.createServer(handleRequest);
+www.listen(8080);
+```
+
+Deployment file  `rolling-update.yaml`
+```yaml
+apiVersion: v1
+kind: Pod
+metadata:
+  name: rolling-update 
+spec:
+  restartPolicy: Never
+  containers:
+  - name: nginx-container
+    image: nginx
+
+```
+
+Create a file called `Dockerfile`
+
+```sh
+FROM node:6.9.2
+EXPOSE 8080
+
+# Create app directory
+RUN mkdir -p /usr/src/app
+WORKDIR /usr/src/app
+
+COPY server.js .
+CMD node server.js
+```
+
+build our image
+
+```sh
+docker build -t hello-node:v1 .
+```
+
+Create a deployment for our app
+
+```sh
+kubectl get deployment
+kubectl get pods
+```
+
+Expose our app, so we can inspect it 
+
+```sh
+kubectl get services
+```
+
+```sh
+kubectl expose deployment hello-node --type=NodePort
+kubectl get services 
+```
+
+Access to our app using the web browser. Use the provided web address given by
+
+```sh
+minikube service hello-node
+```
+
+Or you can also `curl` the command
+
+
+```sh
+curl $(minikube service hello-node --url)
+```
+
+Update the app by change the `respond.end` and build with docker as `hello-node:v2`
+
+```java 
+response.end('Hello World Again!')
+```
+
+Update the app
+
+```sh
+kubectl set image deployment/hello-node hello-node=hello-node:v2
+
+```
+
+
+
+
