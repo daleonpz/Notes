@@ -3,6 +3,8 @@ title: Deutsch Wörterbuch
 ---
 
 # Verben:
+- erledigen:
+    - ich habe  meine Aufgabe  schnell erledigt
 - begeistern:
     - ich bin so begeistert
 - übertreiben:
@@ -264,3 +266,6 @@ title: Deutsch Wörterbuch
 
 - nicht nur, sondern ... auch
     - Ich lese nicht nur, sondern schreibe auch
+
+- entweder ... oder
+    - ich kocher entweder Kartoffeln oder Reis
