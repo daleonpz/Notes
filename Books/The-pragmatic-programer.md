@@ -104,5 +104,54 @@ right. But the  "start-up fatigue" will be there. So try to ask for something re
     - Flexible architecture
 - **Tip 15**: Use tracer bullets to find the target
     - If the tracer bullet hits the target, then so are the regular bullets
+    - Tracer development is consistent with the idea that a project is never finished: there will always be changes required and functions to add. It is an incremental approach.
+    - Model based approach. Traceability
+    - The distinction is important enough to warrant repeating. Prototyping generates disposable code. Tracer code is lean but complete, and forms part of the skeleton of the final system
+    - Benefits:
+    	- Users get to see something working early
+	- Developers build a structure to work in
+	- You have an integration platform.
+	- You have something to demonstrate.
+	- You have a better feel for progress.
+- **Tip 16**: Prototype to learn	
+     - You can prototype anything that carries risk. Anything that hasn't been tried before, or that is absolutely critical to the final system. Anything unproven, experimental, or doubtful. Anything you aren't comfortable with. 
+     - you can ignore Robustnesn, completeness, correctness and style
+     -  You must make it very clear that this code is disposable, incomplete, and unable to be completed.
+     
+- **Tip 17** Program Close to the Problem domain
+	- If you are writing in the problem domain, you can also perform domain-specific validation, reporting problems in terms your users can understand.
 
-    
+**Tip 18**: Estimate to Avoid Surprises
+	- By learning to estimate, and by developing this skill to the point where you have an intuitive feel for the magnitudes of things, you will be able to show an apparent magical ability to determine their feasibility
+	- One of the interesting things about estimating is that the units you use make a difference in the interpretation of the result.
+	- Duration: 1-15 days -> days
+	- Duration: 3-8 weeks -> weeks
+	- Duration: 8-30 weeks -> months
+	- Duration: 30+ -> think hard before giving an estimation
+	- So, if after doing all the necessary work, you decide that a project will take 125 working days (25 weeks), you might want to deliver an estimate of "about six months."
+	- Basic estimating trick that always gives good answers: ask someone who's already done it. 
+	- We think it's a great idea to record your estimates so you can see how close you were.
+	- What to Say When Asked for an Estimate: You say "I'll get back to you."	
+
+# Ch03: The basic tools
+- Tools amplify your talent. The better your tools, and the better you know how to use them, the more productive you can be.
+- **Tip 20**: Keep Knowledge in Plain Text
+	- We believe that the best format for storing knowledge persistently is plain text.
+	- benefits? 
+		- Insurance against obsolescence: Human-readable forms of data, and self-describing data, will outlive all other forms of data and the applications that created them.  
+		- Leverage: Virtually every tool in the computing universe, from source code management systems to compiler environments to editors and stand-alone filters, can operate on plain text 
+		- Easier testing: If you use plain text to create synthetic data to drive system tests, then it is a simple matter to add, update, or modify the test data without having to create any special tools to do so
+
+- **Tip 21**: Use the Power of Command Shells
+	- A benefit of GUIs is WYSIWYG—what you see is what you get. The disadvantage is WYSIAYG—what you see is all you get.
+- **Tip 22**: Use a Single Editor Well
+	- Choose an editor, know it thoroughly, and use it for all editing tasks. If you use a single editor (or set of keybindings) across all text editing activities, you don't have to stop and think to accomplish text manipulation: the necessary keystrokes will be a reflex. The editor will be an extension of your hand; the keys will sing as they slice their way through text and thought.   
+
+- **Tip 23**: Always Use Source Code Control
+- **Tip 24**: Fix the Problem, Not the Blame
+	- Unfortunately, modern computer systems are still limited to doing what you tell them to do, not necessarily what you want them to do.
+	- Once you think you know what is going on, it's time to find out what the program thinks is going on.
+	- Rubber duck debugging
+
+**Tip 26**: "select" Isn't Broken
+	- It is much more likely that the bug exists in the application code under development. It is generally more profitable to assume that the application code is incorrectly calling into a library than to assume that the library itself is broken. 
