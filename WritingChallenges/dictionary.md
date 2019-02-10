@@ -255,6 +255,7 @@ title: Deutsch Wörterbuch
 - das kommt darauf an 
 - in wie fern? 
 - eine Stelle bekommen. 
+- dann wohl eher nicht
 
 # Konstruktion: 
 - weder ... noch
