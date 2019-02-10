@@ -173,7 +173,7 @@ right. But the  "start-up fatigue" will be there. So try to ask for something re
 		- Passive code generators are run once to produce a result.Passive code generators save typing. They are basically parameterized templates, generating a given output from a set of inputs. Once the result is produced, it becomes a full-fledged source file in the project; it will be edited, compiled, and placed under source control just like any other file. Its origins will be forgotten.
 		- Active code generators are used each time their results are required.  Often, active code generators read some form of script or control file to produce their results.
 
-#Ch04: Pragmatic Paranoia
+# Ch04: Pragmatic Paranoia
 - **Tip 30**: You Can't Write Perfect Software
 - **Tip 31**: Design with Contracts
 	- It is a simple yet powerful technique that focuses on documenting (and agreeing to) the rights and responsibilities of software modules to ensure program correctness.
@@ -199,7 +199,7 @@ right. But the  "start-up fatigue" will be there. So try to ask for something re
  	assert(string != NULL); 
  	... 
 ```
-
+  
 	- Don't use assertions in place of real error handling.
 	- Leave Assertions Turned On
 		- testing cannot find all the bugs.
@@ -260,7 +260,7 @@ right. But the  "start-up fatigue" will be there. So try to ask for something re
 
 - **Tip 43**: Use Blackboards to Coordinate Workflow
 
-#Ch06: While you are Coding
+# Ch06: While you are Coding
 - **Tip 44**: Don't Program by Coincidence
 	- Fred doesn't know why the code is failing because he didn't know why it worked in the first place. It seemed to work, given the limited "testing" that Fred did, but that was just a coincidence. Buoyed by false confidence, Fred charged ahead into oblivion
 	- Always be aware of what you are doing. Fred let things get slowly out of hand, until he ended up boiled
