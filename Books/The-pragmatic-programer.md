@@ -199,7 +199,7 @@ right. But the  "start-up fatigue" will be there. So try to ask for something re
  	assert(string != NULL); 
  	... 
 ```
-  
+-  
 	- Don't use assertions in place of real error handling.
 	- Leave Assertions Turned On
 		- testing cannot find all the bugs.
