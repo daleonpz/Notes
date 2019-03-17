@@ -225,7 +225,9 @@ right. But the  "start-up fatigue" will be there. So try to ask for something re
 		- Large C or C++ projects where the command to link a unit test is longer than the test program itself 
 		- "Simple" changes to one module that propagate through unrelated modules in the system 
 		- Developers who are afraid to change code because they aren't sure what might be affected
-	- The Law of Demeter for Functions **ADD IMAGE HERE**
+	- The Law of Demeter for Functions:
+
+![The Law of Demeter for Functions](images/pragmatic-demeter-function.png)
 
 - **Tip 37**: Configure, Don't Integrate
 	- we want to make our systems highly configurable.
