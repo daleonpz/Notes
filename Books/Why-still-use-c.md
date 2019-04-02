@@ -13,6 +13,7 @@ author: James W. Grenning
 - Encapsulation is the packaging of hidden data and the functions that operate on that data.  You can practice encapsulation in C, but few people do. In C++ encapsulation is part of the language: basic building block **class**.
 
 -  Encapsulation has a cost.  It is not generally regarded as high, but it does have a cost.  Each call to a member function has a hidden additional parameter, the pointer to the encapsulated data structure (a.k.a. the ‘this’ pointer).  Keep in mind that you are probably  already paying this cost when you pass the pointer to a data structure around.   
+
 ## Object Oriented Design:
 - OO is an engineering tool.  It allows the software engineer to create a loosely coupled software system.  The idea of reducing coupling has been talked about for decades in the computer science field.
 - It is possible to create interfaces to parts of the system as a mechanism to decouple one part of the system from another.  Then those parts can be varied independently.
