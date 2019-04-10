@@ -30,3 +30,8 @@
 - **Mirroring** but in terms of conversation is as simple as repeating the last three words the other person just said. This will trigger the _paraphrasing chip_ on the other person brain.
 
 - Negotiations is not about winning or losing, it's about make the other person feel good about his/her choice. 
+
+- **Deep Work** it's superefficient learning, no distractions at all.
+- Learning from different sources and topics will improves your creativity because you will be able to combine more things.
+- When learning, under the right conditions no sleep depravation for example, is hard means that it will be more meaningful and will stimulate the creation of new connections in your brain.
+- Have a journal of all you learn,  think, have interest or create, because that's an efficient way to make the knowledge stick.
